@@ -1,0 +1,959 @@
+
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Degree audit | ZU Student Access Portal</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="/static/zu-emblem.png">
+<script>
+  try {
+    document.documentElement.dataset.theme = localStorage.getItem("zu-theme") || "light";
+    document.documentElement.dataset.accent = localStorage.getItem("zu-accent") || "burgundy";
+  } catch (_) {}
+</script>
+<link rel="stylesheet" href="/static/app.css">
+<script src="/static/vendor/tailwind.js"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } };</script>
+  <script src="/static/app.js" defer></script>
+  <script src="/static/vendor/alpine.js" defer></script>
+  <script type="application/json" id="palette-data">[{"hint": "Home", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/", "label": "Dashboard"}, {"hint": "Academics", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/transcript/", "label": "Academic transcript"}, {"hint": "Academics", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/audit/", "label": "Degree audit"}, {"hint": "Academics", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/gpa/", "label": "GPA calculator"}, {"hint": "Courses", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/schedule/", "label": "Class schedule"}, {"hint": "Courses", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/", "label": "My courses"}, {"hint": "Courses", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/exams/", "label": "Exam schedule"}, {"hint": "Student Essentials", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/attendance/", "label": "Class attendance"}, {"hint": "Student Essentials", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/holds/", "label": "Holds"}, {"hint": "Student Essentials", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/library/", "label": "Library services"}, {"hint": "Student Essentials", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/parking/", "label": "Smart parking"}, {"hint": "Student Essentials", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/entry-log/", "label": "Campus entry log"}, {"hint": "Quick Links", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/links/", "label": "Advisor, people \u0026 news"}, {"hint": "Course", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20539/", "label": "ENG360 Film and Literature"}, {"hint": "Course", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20163/", "label": "PSY321 Biological Basis for Behavior"}, {"hint": "Course", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20161/", "label": "PSY340 Mental Health and Psychological Disorders"}, {"hint": "Course", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20332/", "label": "CHL100 Chinese Language Level 1"}, {"hint": "Course", "href": "/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20159/", "label": "PSY330 Personality and Individual Differences"}]</script>
+  <script type="application/json" id="assistant-config">{"chips": ["What classes do I have today?", "What is my GPA?", "Am I at risk for attendance?", "Can I register?", "When is my next exam?", "Library loan rules"], "key": "202418289", "lang": "en", "text": {"clear": "New chat", "close": "Close", "error": "I couldn\u0027t reach the assistant. Please try again.", "expired": "Your session has ended. Please sign in again.", "greeting": "Hi Ahmed! How can I help you today?", "open": "Open assistant", "placeholder": "Ask a question\u2026", "send": "Send", "subtitle": "Answers from your own record", "thinking": "Typing\u2026", "title": "ZU Assistant"}}</script>
+<script src="/static/static-site.js" defer></script></head>
+<body x-data="shell()" @keydown.window="keys($event)">
+  <div class="scrim" x-show="drawer" x-cloak @click="drawer = false"></div>
+
+  <aside class="sidebar" :class="drawer && 'open'" aria-label="Main menu">
+    <a href="/s/02a8bcd92686a2a530eb0f57a6768824/en/" class="brand">
+      <span class="brand-mark"><img src="/static/zu-emblem.png" alt="Zayed University"></span>
+      <span><span class="display font-bold block leading-tight">Student Access</span><span class="text-xs side-muted">2026 Fall Semester</span></span>
+    </a>
+    <nav class="side-scroll">
+      
+      <div class="nav-group">Home</div>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M10 20v-6h4v6"/></svg><span>Dashboard</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">Academics</div>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/transcript/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg><span>Academic transcript</span>
+        
+      </a>
+      
+      <a class="nav-link active" href="/s/02a8bcd92686a2a530eb0f57a6768824/en/audit/" aria-current="page">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M9 11.5l2.2 2.2L15.5 9.5M12 3l7 3v5.5c0 4.5-3 7.8-7 9.5-4-1.700-7-5-7-9.500V6z"/></svg><span>Degree audit</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/gpa/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 3h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM8.500 7h7M8.500 12h.01M12 12h.01M15.500 12h.01M8.500 16h.01M12 16h.01M15.500 16h.01"/></svg><span>GPA calculator</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">Courses</div>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/schedule/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 6.500h16V20H4zM4 10.500h16M8.500 3.500v5M15.500 3.500v5"/></svg><span>Class schedule</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 4.500A1.500 1.500 0 0 1 6.500 3H19v15H6.500A1.500 1.500 0 0 0 5 19.500zM5 19.500A1.500 1.500 0 0 0 6.500 21H19v-3"/></svg><span>My courses</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/exams/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg><span>Exam schedule</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">Student Essentials</div>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/attendance/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4.500 21c.6-4 3.700-6 7.500-6s6.900 2 7.500 6"/></svg><span>Class attendance</span>
+        <span class="nav-badge warn">1</span>
+      </a>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/holds/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 10.500h12V21H6zM8.500 10.500V7.500a3.500 3.500 0 0 1 7 0v3"/></svg><span>Holds</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/library/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 4h3v16H5zM10 4h3v16h-3zM15 4.500l3-.8 3.600 15.500-3 .8z"/></svg><span>Library services</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/parking/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 16.500h14v-4l-1.800-5a2 2 0 0 0-1.900-1.300H7.700a2 2 0 0 0-1.900 1.300L4 12.500h16M5 16.500V19M19 16.500V19M7.500 14.500v.01M16.500 14.500v.01"/></svg><span>Smart parking</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/entry-log/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 21V4.500L15 3v18M3.500 21h17M15 5.500h3.500V21M11.500 12.500v.01"/></svg><span>Campus entry log</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">Quick Links</div>
+      
+      <a class="nav-link " href="/s/02a8bcd92686a2a530eb0f57a6768824/en/links/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M9 11a3.500 3.500 0 1 0 0-7 3.500 3.500 0 0 0 0 7zM2.500 20c.5-3.500 3-5.500 6.500-5.500s6 2 6.500 5.500M16 4.500a3.500 3.500 0 0 1 0 6.500M18 14.800c2 .7 3.200 2.500 3.500 5.200"/></svg><span>Advisor, people &amp; news</span>
+        
+      </a>
+      
+      
+    </nav>
+    <div class="side-user">
+      <span class="side-avatar">AS</span>
+      <span class="min-w-0"><span class="block text-sm font-semibold truncate">Ahmed Al Shamsi</span><span class="block text-xs tnum side-muted">202418289</span></span>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar no-print">
+      <button class="icon-btn lg:hidden" @click="drawer = true" aria-label="Open menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <button class="search-btn" @click="openFinder()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20.500 20.500 16 16"/></svg><span class="truncate">Find a page or course</span><span class="kbd hide-sm">Ctrl K</span></button>
+      <span class="ml-auto text-sm muted font-medium hide-md">Wed 18 Nov 2026</span>
+      <span class="ml-auto show-md"></span>
+
+      <div class="relative" @click.outside="appearance = false">
+        <button class="icon-btn" @click="appearance = !appearance" :aria-expanded="appearance" aria-label="Appearance" title="Appearance"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 3a9 9 0 1 0 0 18c1.300 0 2-1 2-2 0-1.300-1-1.700-1-2.800 0-1 .8-1.700 1.800-1.700H17a4 4 0 0 0 4-4C21 6 17 3 12 3zM7.500 11.500v.01M9.500 7.500v.01M14.500 7.500v.01M17 11v.01"/></svg></button>
+        <div class="popover card" x-show="appearance" x-cloak>
+          <div class="label mb-2">Color theme</div>
+          <div class="flex gap-2 flex-wrap">
+            
+            <button class="swatch" style="background:#8E2A42" :class="accent === 'burgundy' && 'on'" @click="setAccent('burgundy')" :aria-pressed="accent === 'burgundy'" aria-label="Burgundy" title="Burgundy"><span x-show="accent === 'burgundy'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#7A1F82" :class="accent === 'plum' && 'on'" @click="setAccent('plum')" :aria-pressed="accent === 'plum'" aria-label="Plum" title="Plum"><span x-show="accent === 'plum'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#0D6E6E" :class="accent === 'teal' && 'on'" @click="setAccent('teal')" :aria-pressed="accent === 'teal'" aria-label="Teal" title="Teal"><span x-show="accent === 'teal'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#1E5696" :class="accent === 'ocean' && 'on'" @click="setAccent('ocean')" :aria-pressed="accent === 'ocean'" aria-label="Ocean" title="Ocean"><span x-show="accent === 'ocean'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#2E6B3E" :class="accent === 'forest' && 'on'" @click="setAccent('forest')" :aria-pressed="accent === 'forest'" aria-label="Forest" title="Forest"><span x-show="accent === 'forest'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+          </div>
+          <div class="label mt-4 mb-2">Mode</div>
+          <div class="segmented">
+            <button :class="theme === 'light' && 'on'" @click="setTheme('light')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 16.500a4.500 4.500 0 1 0 0-9 4.500 4.500 0 0 0 0 9zM12 2.500v2M12 19.500v2M4.500 12h-2M21.500 12h-2M5.300 5.300l1.400 1.400M17.300 17.300l1.400 1.400M18.700 5.300l-1.400 1.400M6.700 17.300l-1.400 1.400"/></svg><span>Light</span></button>
+            <button :class="theme === 'dark' && 'on'" @click="setTheme('dark')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M20 14.500A8.500 8.500 0 0 1 9.500 4a8.500 8.500 0 1 0 10.500 10.500z"/></svg><span>Dark</span></button>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn-ghost lang-btn" lang="ar" href="/s/02a8bcd92686a2a530eb0f57a6768824/ar/audit/"><span data-raw>العربية</span></a>
+      <form method="get" action="/" data-static class="m-0" @submit="clearChat()"><button class="btn btn-ghost" style="min-height:40px" title="Sign out" aria-label="Sign out"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none" class="flip"><path d="M10 4H5v16h5M15.500 8l4 4-4 4M19.500 12H9.500"/></svg><span class="hide-sm">Sign out</span></button></form>
+    </div>
+    <main class="content">
+<div class="flex items-start justify-between gap-3"><header class="mb-5">
+  <h1 class="text-2xl sm:text-3xl font-bold m-0">Degree audit</h1>
+  <p class="muted mt-1 mb-0 text-sm sm:text-base">Bachelor of Science in Psychology</p>
+</header><a class="btn btn-ghost no-print" href="/s/02a8bcd92686a2a530eb0f57a6768824/en/export/audit.pdf" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 4v11M7.500 10.500 12 15l4.500-4.500M4.500 20h15"/></svg><span class="hide-sm">Export PDF</span><span class="sr-only">Export PDF</span></a></div>
+
+<section class="card p-5 sm:p-6 mb-3">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <div class="label">Overall progress</div>
+      <div class="display tnum text-5xl font-bold mt-1">50%</div>
+      <div class="muted text-sm mt-1 tnum">60 of 120 required credits complete</div>
+    </div>
+    <div class="grid grid-cols-3 gap-5 sm:gap-8 text-sm">
+      <div><div class="flex items-center gap-1.5 label"><span class="w-2.5 h-2.5 rounded-sm fill-done inline-block"></span>Done</div><div class="display tnum text-2xl font-bold">20</div><div class="muted text-xs tnum">60 cr</div></div>
+      <div><div class="flex items-center gap-1.5 label"><span class="w-2.5 h-2.5 rounded-sm fill-progress inline-block"></span>In progress</div><div class="display tnum text-2xl font-bold">5</div><div class="muted text-xs tnum">15 cr</div></div>
+      <div><div class="flex items-center gap-1.5 label"><span class="w-2.5 h-2.5 rounded-sm fill-remaining inline-block"></span>Remaining</div><div class="display tnum text-2xl font-bold">15</div><div class="muted text-xs tnum">45 cr</div></div>
+    </div>
+  </div>
+  <div class="stack mt-4" role="img" aria-label="60 credits done, 15 in progress, 45 remaining">
+    <span class="fill-done" style="width:50.0%"></span>
+    <span class="fill-progress" style="width:12.5%"></span>
+    <span class="fill-remaining" style="flex:1"></span>
+  </div>
+  <div class="flex flex-wrap gap-2 mt-4 text-xs">
+    <span class="chip chip-plain">Graduation credits: 60 / 120</span>
+    <span class="chip chip-good">Minimum GPA 2.00: met (3.58)</span>
+  </div>
+</section>
+
+<details class="explain mb-4">
+  <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 11v5M12 7.800v.01"/></svg> How is this worked out?</summary>
+  <p class="mt-2 mb-0 max-w-3xl">Each requirement of your program is matched to your record. A passed course or accepted transfer credit is <strong>Done</strong>, a course you are registered in this term is <strong>In progress</strong>, and anything else is <strong>Remaining</strong>. Courses outside the named requirements fill your elective slots. Progress = completed requirement credits ÷ 120.</p>
+</details>
+
+<div x-data="{ show: 'all' }">
+  <div class="flex flex-wrap gap-2 mb-3" role="group" aria-label="Filter requirements">
+    <button class="pill" :class="show === 'all' && 'on'" @click="show = 'all'">All 40</button>
+    <button class="pill" :class="show === 'remaining' && 'on'" @click="show = 'remaining'">Remaining 15</button>
+    <button class="pill" :class="show === 'progress' && 'on'" @click="show = 'progress'">In progress 5</button>
+    <button class="pill" :class="show === 'done' && 'on'" @click="show = 'done'">Done 20</button>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-3 items-start">
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'done done done done done'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">Semester 1</h2>
+        <span class="label tnum">15 / 15 credits</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE100
+            <span class="font-normal">· Academic Foundations and Development</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2024 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">B</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE110
+            <span class="font-normal">· Reasoning with Data</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2024 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">B</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE120
+            <span class="font-normal">· Islamic Culture</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2024 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE140
+            <span class="font-normal">· Critical Analysis and Composition</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2024 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE150
+            <span class="font-normal">· Fundamentals of Innovation and Entrepreneurship</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2024 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A-</span>
+        
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'done done done done done'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">Semester 2</h2>
+        <span class="label tnum">15 / 15 credits</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE105
+            <span class="font-normal">· Workplace Readiness and Professional Skills</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2025 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE126
+            <span class="font-normal">· Contemporary Emirati Studies</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2025 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">C+</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE145
+            <span class="font-normal">· Arabic Concepts for Native Speakers</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2025 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">B</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE155
+            <span class="font-normal">· Digital Humanities</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2025 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            FYE195
+            <span class="font-normal">· Artificial Intelligence Essentials and Applications</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2025 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A-</span>
+        
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'done done done done done'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">Semester 3</h2>
+        <span class="label tnum">15 / 15 credits</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY212
+            <span class="font-normal">· Introduction to Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2025 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY207
+            <span class="font-normal">· Developmental Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2025 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">B+</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY310
+            <span class="font-normal">· Introduction to Counseling</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2025 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ENG222
+            <span class="font-normal">· English in the Professions I</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2025 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ARA211
+            <span class="font-normal">· Masterpieces of Arabic Literature</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · ZU Elective · 2025 Fall Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'done done done done done'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">Semester 4</h2>
+        <span class="label tnum">15 / 15 credits</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY363
+            <span class="font-normal">· Social Psychology I</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2026 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY325
+            <span class="font-normal">· Cognitive Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2026 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">B+</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ARA345
+            <span class="font-normal">· Advanced Arabic Skills</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2026 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A-</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            HSS353
+            <span class="font-normal">· Politics of Identity</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · ZU Elective · 2026 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">B-</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="Done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ISU202
+            <span class="font-normal">· Principles of Sustainability</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · ZU Elective · 2026 Spring Semester
+            
+          </div>
+        </div>
+        <span class="grade ">A</span>
+        
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'progress progress progress progress progress'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">Semester 5</h2>
+        <span class="label tnum">0 / 15 credits</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="In progress"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY330
+            <span class="font-normal">· Personality and Individual Differences</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2026 Fall Semester
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20159/">In progress</a>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="In progress"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY340
+            <span class="font-normal">· Mental Health and Psychological Disorders</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2026 Fall Semester
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20161/">In progress</a>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="In progress"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY321
+            <span class="font-normal">· Biological Basis for Behavior</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · 2026 Fall Semester
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20163/">In progress</a>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="In progress"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ENG360
+            <span class="font-normal">· Film and Literature</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · ZU Elective · 2026 Fall Semester
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20539/">In progress</a>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="In progress"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            CHL100
+            <span class="font-normal">· Chinese Language Level 1</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · ZU Elective · 2026 Fall Semester
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/02a8bcd92686a2a530eb0f57a6768824/en/courses/20332/">In progress</a>
+        
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'remaining remaining remaining remaining remaining'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">Semester 6</h2>
+        <span class="label tnum">0 / 15 credits</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY366
+            <span class="font-normal">· Research Methods I</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY371
+            <span class="font-normal">· Organizational Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY375
+            <span class="font-normal">· Health Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY410
+            <span class="font-normal">· Individual and Family Assessment</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ZU Elective
+            <span class="font-normal">· ZU Elective (any course from the list)</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · ZU Elective
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'remaining remaining remaining remaining remaining'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">Semester 7</h2>
+        <span class="label tnum">0 / 15 credits</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY413
+            <span class="font-normal">· Psychological Interventions</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY425
+            <span class="font-normal">· Cognitive Psychology II: Reasoning, Problem Solving and Decision Making</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY430
+            <span class="font-normal">· Cultural Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY466
+            <span class="font-normal">· Research Methods II</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ZU Elective
+            <span class="font-normal">· ZU Elective (any course from the list)</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · ZU Elective
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'remaining remaining remaining remaining remaining'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">Semester 8</h2>
+        <span class="label tnum">0 / 15 credits</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY451
+            <span class="font-normal">· Seminar in Applied Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY463
+            <span class="font-normal">· Positive Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY490
+            <span class="font-normal">· Internship in Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            PSY491
+            <span class="font-normal">· Senior Project in Psychology</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="Remaining"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ZU Elective
+            <span class="font-normal">· ZU Elective (any course from the list)</span>
+          </div>
+          <div class="muted text-xs">
+            3 cr · ZU Elective
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">Remaining</span>
+      </div>
+      
+    </section>
+  
+  </div>
+</div>
+
+
+</main>
+  </div>
+
+  <nav class="bottom-nav no-print" aria-label="Quick menu">
+    <a href="/s/02a8bcd92686a2a530eb0f57a6768824/en/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M10 20v-6h4v6"/></svg>Home</a>
+    <a href="/s/02a8bcd92686a2a530eb0f57a6768824/en/transcript/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg>Grades</a>
+    <a href="/s/02a8bcd92686a2a530eb0f57a6768824/en/schedule/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 6.500h16V20H4zM4 10.500h16M8.500 3.500v5M15.500 3.500v5"/></svg>Schedule</a>
+    <a href="/s/02a8bcd92686a2a530eb0f57a6768824/en/attendance/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4.500 21c.6-4 3.700-6 7.500-6s6.900 2 7.500 6"/></svg>Attendance</a>
+    <button @click="drawer = true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 7h16M4 12h16M4 17h16"/></svg>More</button>
+  </nav>
+
+  <div class="scrim" style="z-index:55" x-show="finder" x-cloak @click="finder = false"></div>
+  <div class="palette card" x-show="finder" x-cloak role="dialog" aria-label="Find a page or course">
+    <div class="flex items-center gap-2 px-3" style="border-bottom:1px solid rgb(var(--line))">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20.500 20.500 16 16"/></svg>
+      <input x-ref="finderInput" x-model="query" @input="cursor = 0" @keydown.down.prevent="move(1)" @keydown.up.prevent="move(-1)" @keydown.enter.prevent="go()" class="w-full border-0 bg-transparent py-3.5 text-[15px] outline-none" style="color:inherit;font:inherit" placeholder="Try “attendance” or a course code" aria-label="Search">
+    </div>
+    <div class="p-2">
+      <template x-for="(item, i) in results" :key="item.href">
+        <a class="palette-item" :class="i === cursor && 'on'" :href="item.href" @mouseenter="cursor = i"><span x-text="item.label"></span><span class="muted text-xs" x-text="item.hint"></span></a>
+      </template>
+      <p class="muted text-sm px-3 py-2 m-0" x-show="!results.length">Nothing matches that search.</p>
+    </div>
+  </div>
+
+  <div class="assistant no-print" x-data="assistant()">
+    <section class="chat card" x-show="open" x-cloak role="dialog" :aria-label="text.title">
+      <header class="chat-head">
+        <span class="chat-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800zM19 16l.8 2.200 2.200.8-2.200.8L19 22l-.8-2.200-2.200-.8 2.200-.8z"/></svg></span>
+        <div class="min-w-0 flex-1"><div class="font-semibold text-sm" x-text="text.title"></div><div class="text-xs chat-sub" x-text="text.subtitle"></div></div>
+        <button class="chat-icon" x-show="messages.length" @click="reset()" :title="text.clear" :aria-label="text.clear"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M20 11a8 8 0 0 0-14.300-4L3.500 9.500M3.500 4v5.500H9M4 13a8 8 0 0 0 14.300 4l2.200-2.500M20.500 20v-5.500H15"/></svg></button>
+        <button class="chat-icon" @click="open = false" :title="text.close" :aria-label="text.close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </header>
+      <div class="chat-log" x-ref="chatLog" aria-live="polite">
+        <div class="bubble bot" dir="auto" x-text="text.greeting"></div>
+        <div class="chat-chips" x-show="!messages.length">
+          <template x-for="chip in chips" :key="chip"><button class="chat-chip" @click="send(chip)" x-text="chip"></button></template>
+        </div>
+        <template x-for="(m, i) in messages" :key="i">
+          <div>
+            <div class="bubble" :class="m.role === 'user' ? 'me' : 'bot'" dir="auto" x-text="m.content"></div>
+            <div class="chat-links" x-show="m.links && m.links.length">
+              <template x-for="l in (m.links || [])" :key="l.href"><a class="chat-link" :href="l.href" :target="isExternal(l.href) ? '_blank' : null" :rel="isExternal(l.href) ? 'noopener' : null" x-text="l.label"></a></template>
+            </div>
+          </div>
+        </template>
+        <div class="bubble bot typing" x-show="busy"><i></i><i></i><i></i><span class="sr-only" x-text="text.thinking"></span></div>
+      </div>
+      <form class="chat-form" @submit.prevent="send()">
+        <input class="input" x-ref="chatInput" x-model="draft" maxlength="1500" dir="auto" :placeholder="text.placeholder" :aria-label="text.placeholder" autocomplete="off">
+        <button class="btn btn-primary chat-send" :disabled="busy || !draft.trim()" :aria-label="text.send" :title="text.send"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none" class="flip"><path d="M4 12 20 4l-4 16-3.500-6.500zM12.500 13.500 20 4"/></svg></button>
+      </form>
+    </section>
+    <button class="chat-fab" @click="toggle()" :aria-expanded="open" :aria-label="text.open" :title="text.open">
+      <span x-show="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800zM19 16l.8 2.200 2.200.8-2.200.8L19 22l-.8-2.200-2.200-.8 2.200-.8z"/></svg></span><span x-show="open" x-cloak><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+    </button>
+  </div>
+</body>
+</html>

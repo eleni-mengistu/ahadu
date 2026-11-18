@@ -1,0 +1,260 @@
+
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <title>FYE100 | ZU Student Access Portal</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="/static/zu-emblem.png">
+<script>
+  try {
+    document.documentElement.dataset.theme = localStorage.getItem("zu-theme") || "light";
+    document.documentElement.dataset.accent = localStorage.getItem("zu-accent") || "burgundy";
+  } catch (_) {}
+</script>
+<link rel="stylesheet" href="/static/app.css">
+<script src="/static/vendor/tailwind.js"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } };</script>
+  <script src="/static/app.js" defer></script>
+  <script src="/static/vendor/alpine.js" defer></script>
+  <script type="application/json" id="palette-data">[{"hint": "Home", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/", "label": "Dashboard"}, {"hint": "Academics", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/transcript/", "label": "Academic transcript"}, {"hint": "Academics", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/audit/", "label": "Degree audit"}, {"hint": "Academics", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/gpa/", "label": "GPA calculator"}, {"hint": "Courses", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/schedule/", "label": "Class schedule"}, {"hint": "Courses", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/courses/", "label": "My courses"}, {"hint": "Courses", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/exams/", "label": "Exam schedule"}, {"hint": "Student Essentials", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/attendance/", "label": "Class attendance"}, {"hint": "Student Essentials", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/holds/", "label": "Holds"}, {"hint": "Student Essentials", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/library/", "label": "Library services"}, {"hint": "Student Essentials", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/parking/", "label": "Smart parking"}, {"hint": "Student Essentials", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/entry-log/", "label": "Campus entry log"}, {"hint": "Quick Links", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/links/", "label": "Advisor, people \u0026 news"}, {"hint": "Course", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/courses/20203/", "label": "FYE100 Academic Foundations and Development"}, {"hint": "Course", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/courses/20210/", "label": "FYE110 Reasoning with Data"}, {"hint": "Course", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/courses/20221/", "label": "FYE140 Critical Analysis and Composition"}, {"hint": "Course", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/courses/20216/", "label": "FYE120 Islamic Culture"}, {"hint": "Course", "href": "/s/fa275e5c4dc6555991fa59c415ee91ca/en/courses/20223/", "label": "FYE150 Fundamentals of Innovation and Entrepreneurship"}]</script>
+  <script type="application/json" id="assistant-config">{"chips": ["What classes do I have today?", "What is my GPA?", "Am I at risk for attendance?", "Can I register?", "When is my next exam?", "Library loan rules"], "key": "202694128", "lang": "en", "text": {"clear": "New chat", "close": "Close", "error": "I couldn\u0027t reach the assistant. Please try again.", "expired": "Your session has ended. Please sign in again.", "greeting": "Hi Saif! How can I help you today?", "open": "Open assistant", "placeholder": "Ask a question\u2026", "send": "Send", "subtitle": "Answers from your own record", "thinking": "Typing\u2026", "title": "ZU Assistant"}}</script>
+<script src="/static/static-site.js" defer></script></head>
+<body x-data="shell()" @keydown.window="keys($event)">
+  <div class="scrim" x-show="drawer" x-cloak @click="drawer = false"></div>
+
+  <aside class="sidebar" :class="drawer && 'open'" aria-label="Main menu">
+    <a href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/" class="brand">
+      <span class="brand-mark"><img src="/static/zu-emblem.png" alt="Zayed University"></span>
+      <span><span class="display font-bold block leading-tight">Student Access</span><span class="text-xs side-muted">2026 Fall Semester</span></span>
+    </a>
+    <nav class="side-scroll">
+      
+      <div class="nav-group">Home</div>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M10 20v-6h4v6"/></svg><span>Dashboard</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">Academics</div>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/transcript/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg><span>Academic transcript</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/audit/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M9 11.5l2.2 2.2L15.5 9.5M12 3l7 3v5.5c0 4.5-3 7.8-7 9.5-4-1.700-7-5-7-9.500V6z"/></svg><span>Degree audit</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/gpa/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 3h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM8.500 7h7M8.500 12h.01M12 12h.01M15.500 12h.01M8.500 16h.01M12 16h.01M15.500 16h.01"/></svg><span>GPA calculator</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">Courses</div>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/schedule/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 6.500h16V20H4zM4 10.500h16M8.500 3.500v5M15.500 3.500v5"/></svg><span>Class schedule</span>
+        
+      </a>
+      
+      <a class="nav-link active" href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/courses/" aria-current="page">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 4.500A1.500 1.500 0 0 1 6.500 3H19v15H6.500A1.500 1.500 0 0 0 5 19.500zM5 19.500A1.500 1.500 0 0 0 6.500 21H19v-3"/></svg><span>My courses</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/exams/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg><span>Exam schedule</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">Student Essentials</div>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/attendance/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4.500 21c.6-4 3.700-6 7.500-6s6.900 2 7.500 6"/></svg><span>Class attendance</span>
+        <span class="nav-badge warn">2</span>
+      </a>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/holds/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 10.500h12V21H6zM8.500 10.500V7.500a3.500 3.500 0 0 1 7 0v3"/></svg><span>Holds</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/library/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 4h3v16H5zM10 4h3v16h-3zM15 4.500l3-.8 3.600 15.500-3 .8z"/></svg><span>Library services</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/parking/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 16.500h14v-4l-1.800-5a2 2 0 0 0-1.900-1.300H7.700a2 2 0 0 0-1.900 1.300L4 12.500h16M5 16.500V19M19 16.500V19M7.500 14.500v.01M16.500 14.500v.01"/></svg><span>Smart parking</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/entry-log/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 21V4.500L15 3v18M3.500 21h17M15 5.500h3.500V21M11.500 12.500v.01"/></svg><span>Campus entry log</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">Quick Links</div>
+      
+      <a class="nav-link " href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/links/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M9 11a3.500 3.500 0 1 0 0-7 3.500 3.500 0 0 0 0 7zM2.500 20c.5-3.500 3-5.500 6.500-5.500s6 2 6.500 5.500M16 4.500a3.500 3.500 0 0 1 0 6.500M18 14.800c2 .7 3.200 2.500 3.500 5.200"/></svg><span>Advisor, people &amp; news</span>
+        
+      </a>
+      
+      
+    </nav>
+    <div class="side-user">
+      <span class="side-avatar">SR</span>
+      <span class="min-w-0"><span class="block text-sm font-semibold truncate">Saif Al Rumaithi</span><span class="block text-xs tnum side-muted">202694128</span></span>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar no-print">
+      <button class="icon-btn lg:hidden" @click="drawer = true" aria-label="Open menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <button class="search-btn" @click="openFinder()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20.500 20.500 16 16"/></svg><span class="truncate">Find a page or course</span><span class="kbd hide-sm">Ctrl K</span></button>
+      <span class="ml-auto text-sm muted font-medium hide-md">Wed 18 Nov 2026</span>
+      <span class="ml-auto show-md"></span>
+
+      <div class="relative" @click.outside="appearance = false">
+        <button class="icon-btn" @click="appearance = !appearance" :aria-expanded="appearance" aria-label="Appearance" title="Appearance"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 3a9 9 0 1 0 0 18c1.300 0 2-1 2-2 0-1.300-1-1.700-1-2.800 0-1 .8-1.700 1.800-1.700H17a4 4 0 0 0 4-4C21 6 17 3 12 3zM7.500 11.500v.01M9.500 7.500v.01M14.500 7.500v.01M17 11v.01"/></svg></button>
+        <div class="popover card" x-show="appearance" x-cloak>
+          <div class="label mb-2">Color theme</div>
+          <div class="flex gap-2 flex-wrap">
+            
+            <button class="swatch" style="background:#8E2A42" :class="accent === 'burgundy' && 'on'" @click="setAccent('burgundy')" :aria-pressed="accent === 'burgundy'" aria-label="Burgundy" title="Burgundy"><span x-show="accent === 'burgundy'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#7A1F82" :class="accent === 'plum' && 'on'" @click="setAccent('plum')" :aria-pressed="accent === 'plum'" aria-label="Plum" title="Plum"><span x-show="accent === 'plum'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#0D6E6E" :class="accent === 'teal' && 'on'" @click="setAccent('teal')" :aria-pressed="accent === 'teal'" aria-label="Teal" title="Teal"><span x-show="accent === 'teal'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#1E5696" :class="accent === 'ocean' && 'on'" @click="setAccent('ocean')" :aria-pressed="accent === 'ocean'" aria-label="Ocean" title="Ocean"><span x-show="accent === 'ocean'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#2E6B3E" :class="accent === 'forest' && 'on'" @click="setAccent('forest')" :aria-pressed="accent === 'forest'" aria-label="Forest" title="Forest"><span x-show="accent === 'forest'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+          </div>
+          <div class="label mt-4 mb-2">Mode</div>
+          <div class="segmented">
+            <button :class="theme === 'light' && 'on'" @click="setTheme('light')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 16.500a4.500 4.500 0 1 0 0-9 4.500 4.500 0 0 0 0 9zM12 2.500v2M12 19.500v2M4.500 12h-2M21.500 12h-2M5.300 5.300l1.400 1.400M17.300 17.300l1.400 1.400M18.700 5.300l-1.400 1.400M6.700 17.300l-1.400 1.400"/></svg><span>Light</span></button>
+            <button :class="theme === 'dark' && 'on'" @click="setTheme('dark')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M20 14.500A8.500 8.500 0 0 1 9.500 4a8.500 8.500 0 1 0 10.500 10.500z"/></svg><span>Dark</span></button>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn-ghost lang-btn" lang="ar" href="/s/fa275e5c4dc6555991fa59c415ee91ca/ar/courses/20203/"><span data-raw>العربية</span></a>
+      <form method="get" action="/" data-static class="m-0" @submit="clearChat()"><button class="btn btn-ghost" style="min-height:40px" title="Sign out" aria-label="Sign out"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none" class="flip"><path d="M10 4H5v16h5M15.500 8l4 4-4 4M19.500 12H9.500"/></svg><span class="hide-sm">Sign out</span></button></form>
+    </div>
+    <main class="content">
+
+<a class="link mb-3" href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/courses/">← My courses</a>
+<header class="mb-5 mt-2">
+  <div class="label tnum">FYE100 · Section 501 · CRN 20203 · 3 credits</div>
+  <h1 class="text-2xl sm:text-3xl font-bold m-0 mt-0.5">Academic Foundations and Development</h1>
+</header>
+
+<section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4">
+  <div class="card p-4"><div class="label">When</div><div class="font-semibold mt-1">Mon, Wed</div><div class="muted text-sm tnum">11:00–12:15</div></div>
+  <div class="card p-4"><div class="label">Room</div><div class="font-semibold mt-1">AUH-E3-003</div><div class="muted text-sm">AUH campus</div></div>
+  <div class="card p-4"><div class="label">Instructor</div><div class="font-semibold mt-1">Dr. Amal Youssef</div><a class="link" href="mailto:amal.youssef@demo.zu.ac.ae">Send email</a></div>
+  <div class="card p-4"><div class="label">Final exam</div><div class="font-semibold mt-1 tnum">Tue 8 Dec 2026</div><div class="muted text-sm tnum">08:30–10:30 · AUH-Exam Hall 1</div></div>
+</section>
+
+<div class="grid lg:grid-cols-3 gap-4 items-start">
+  <section class="card overflow-hidden lg:col-span-2">
+    <div class="card-head pb-3">
+      <div><h2 class="card-title">Marks so far</h2><div class="label">80% of the course graded, 20% still to come</div></div>
+      <div class="text-right"><div class="display tnum text-2xl font-bold">73.2%</div><div class="label">Tracking at C</div></div>
+    </div>
+    
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Assessment</th><th class="hide-sm">Date</th><th class="num">Weight</th><th class="num">Score</th><th class="num">Adds</th></tr></thead>
+      <tbody><tr><td class="font-medium">Quiz 1</td><td class="hide-sm tnum whitespace-nowrap">10 Sep 2026</td><td class="num">10%</td><td class="num whitespace-nowrap">63 / 100</td><td class="num">6.3</td></tr><tr><td class="font-medium">Assignment 1</td><td class="hide-sm tnum whitespace-nowrap">28 Sep 2026</td><td class="num">15%</td><td class="num whitespace-nowrap">85 / 100</td><td class="num">12.8</td></tr><tr><td class="font-medium">Midterm Exam</td><td class="hide-sm tnum whitespace-nowrap">8 Oct 2026</td><td class="num">25%</td><td class="num whitespace-nowrap">64 / 100</td><td class="num">16.0</td></tr><tr><td class="font-medium">Quiz 2</td><td class="hide-sm tnum whitespace-nowrap">29 Oct 2026</td><td class="num">10%</td><td class="num whitespace-nowrap">63 / 100</td><td class="num">6.3</td></tr><tr><td class="font-medium">Project / Assignment 2</td><td class="hide-sm tnum whitespace-nowrap">12 Nov 2026</td><td class="num">20%</td><td class="num whitespace-nowrap">86 / 100</td><td class="num">17.2</td></tr></tbody>
+    </table></div>
+    
+  </section>
+
+  <div class="space-y-4">
+    
+    <a href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/attendance/" class="card p-5">
+      <div class="flex items-center justify-between gap-2"><h2 class="card-title">Attendance</h2><span class="chip chip-good"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg>On track</span></div>
+      <div class="display tnum text-3xl font-bold mt-2">0.0%</div>
+      <div class="muted text-sm tnum">0 absences of 30 meetings · as of 16 Nov 2026</div>
+      
+    </a>
+    
+    
+    <section class="card p-5">
+      <h2 class="card-title">About this course</h2>
+      <p class="muted text-sm mt-2 mb-0 leading-relaxed">This course is designed to empower students with skills, knowledge, and connections necessary for both academic, personal and career success at Zayed University. Through interactive workshops, projects, self-assessment exercises, and engaging discussions, students will forge valuable networks with peers, faculty, and staff, while accessing a wealth of campus resources tailored to support their journey. Students will embark on exploration of their personal strengths, weaknesses, values, and personality, gaining insights that will guide them in leveraging their unique attributes. The curriculum...</p>
+      
+    </section>
+    
+  </div>
+</div>
+</main>
+  </div>
+
+  <nav class="bottom-nav no-print" aria-label="Quick menu">
+    <a href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M10 20v-6h4v6"/></svg>Home</a>
+    <a href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/transcript/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg>Grades</a>
+    <a href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/schedule/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 6.500h16V20H4zM4 10.500h16M8.500 3.500v5M15.500 3.500v5"/></svg>Schedule</a>
+    <a href="/s/fa275e5c4dc6555991fa59c415ee91ca/en/attendance/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4.500 21c.6-4 3.700-6 7.500-6s6.900 2 7.500 6"/></svg>Attendance</a>
+    <button @click="drawer = true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 7h16M4 12h16M4 17h16"/></svg>More</button>
+  </nav>
+
+  <div class="scrim" style="z-index:55" x-show="finder" x-cloak @click="finder = false"></div>
+  <div class="palette card" x-show="finder" x-cloak role="dialog" aria-label="Find a page or course">
+    <div class="flex items-center gap-2 px-3" style="border-bottom:1px solid rgb(var(--line))">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20.500 20.500 16 16"/></svg>
+      <input x-ref="finderInput" x-model="query" @input="cursor = 0" @keydown.down.prevent="move(1)" @keydown.up.prevent="move(-1)" @keydown.enter.prevent="go()" class="w-full border-0 bg-transparent py-3.5 text-[15px] outline-none" style="color:inherit;font:inherit" placeholder="Try “attendance” or a course code" aria-label="Search">
+    </div>
+    <div class="p-2">
+      <template x-for="(item, i) in results" :key="item.href">
+        <a class="palette-item" :class="i === cursor && 'on'" :href="item.href" @mouseenter="cursor = i"><span x-text="item.label"></span><span class="muted text-xs" x-text="item.hint"></span></a>
+      </template>
+      <p class="muted text-sm px-3 py-2 m-0" x-show="!results.length">Nothing matches that search.</p>
+    </div>
+  </div>
+
+  <div class="assistant no-print" x-data="assistant()">
+    <section class="chat card" x-show="open" x-cloak role="dialog" :aria-label="text.title">
+      <header class="chat-head">
+        <span class="chat-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800zM19 16l.8 2.200 2.200.8-2.200.8L19 22l-.8-2.200-2.200-.8 2.200-.8z"/></svg></span>
+        <div class="min-w-0 flex-1"><div class="font-semibold text-sm" x-text="text.title"></div><div class="text-xs chat-sub" x-text="text.subtitle"></div></div>
+        <button class="chat-icon" x-show="messages.length" @click="reset()" :title="text.clear" :aria-label="text.clear"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M20 11a8 8 0 0 0-14.300-4L3.500 9.500M3.500 4v5.500H9M4 13a8 8 0 0 0 14.300 4l2.200-2.500M20.500 20v-5.500H15"/></svg></button>
+        <button class="chat-icon" @click="open = false" :title="text.close" :aria-label="text.close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </header>
+      <div class="chat-log" x-ref="chatLog" aria-live="polite">
+        <div class="bubble bot" dir="auto" x-text="text.greeting"></div>
+        <div class="chat-chips" x-show="!messages.length">
+          <template x-for="chip in chips" :key="chip"><button class="chat-chip" @click="send(chip)" x-text="chip"></button></template>
+        </div>
+        <template x-for="(m, i) in messages" :key="i">
+          <div>
+            <div class="bubble" :class="m.role === 'user' ? 'me' : 'bot'" dir="auto" x-text="m.content"></div>
+            <div class="chat-links" x-show="m.links && m.links.length">
+              <template x-for="l in (m.links || [])" :key="l.href"><a class="chat-link" :href="l.href" :target="isExternal(l.href) ? '_blank' : null" :rel="isExternal(l.href) ? 'noopener' : null" x-text="l.label"></a></template>
+            </div>
+          </div>
+        </template>
+        <div class="bubble bot typing" x-show="busy"><i></i><i></i><i></i><span class="sr-only" x-text="text.thinking"></span></div>
+      </div>
+      <form class="chat-form" @submit.prevent="send()">
+        <input class="input" x-ref="chatInput" x-model="draft" maxlength="1500" dir="auto" :placeholder="text.placeholder" :aria-label="text.placeholder" autocomplete="off">
+        <button class="btn btn-primary chat-send" :disabled="busy || !draft.trim()" :aria-label="text.send" :title="text.send"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none" class="flip"><path d="M4 12 20 4l-4 16-3.500-6.500zM12.500 13.500 20 4"/></svg></button>
+      </form>
+    </section>
+    <button class="chat-fab" @click="toggle()" :aria-expanded="open" :aria-label="text.open" :title="text.open">
+      <span x-show="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800zM19 16l.8 2.200 2.200.8-2.200.8L19 22l-.8-2.200-2.200-.8 2.200-.8z"/></svg></span><span x-show="open" x-cloak><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+    </button>
+  </div>
+</body>
+</html>

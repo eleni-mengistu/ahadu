@@ -90,14 +90,19 @@ function assistant() {
       this.busy = true;
       this.$nextTick(() => this.scroll());
       try {
-        const response = await fetch("/api/assistant", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message, history }),
-        });
-        if (response.status === 401) throw new Error("expired");
-        if (!response.ok) throw new Error("failed");
-        const reply = await response.json();
+        let reply;
+        if (window.zuAnswer) {
+          reply = await window.zuAnswer(message, this.lang);
+        } else {
+          const response = await fetch("/api/assistant", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message, history }),
+          });
+          if (response.status === 401) throw new Error("expired");
+          if (!response.ok) throw new Error("failed");
+          reply = await response.json();
+        }
         this.messages.push({ role: "assistant", content: reply.reply, links: reply.links || [] });
       } catch (error) {
         this.messages.push({ role: "assistant", content: error.message === "expired" ? this.text.expired : this.text.error, links: [] });

@@ -1,0 +1,949 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>التدقيق الأكاديمي | بوابة طالب جامعة زايد</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="/static/zu-emblem.png">
+<script>
+  try {
+    document.documentElement.dataset.theme = localStorage.getItem("zu-theme") || "light";
+    document.documentElement.dataset.accent = localStorage.getItem("zu-accent") || "burgundy";
+  } catch (_) {}
+</script>
+<link rel="stylesheet" href="/static/app.css">
+<script src="/static/vendor/tailwind.js"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } };</script>
+  <script src="/static/app.js" defer></script>
+  <script src="/static/vendor/alpine.js" defer></script>
+  <script type="application/json" id="palette-data">[{"hint": "\u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/", "label": "\u0644\u0648\u062d\u0629 \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062a"}, {"hint": "\u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u0623\u0643\u0627\u062f\u064a\u0645\u064a\u0629", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/transcript/", "label": "\u0627\u0644\u0633\u062c\u0644 \u0627\u0644\u0623\u0643\u0627\u062f\u064a\u0645\u064a"}, {"hint": "\u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u0623\u0643\u0627\u062f\u064a\u0645\u064a\u0629", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/audit/", "label": "\u0627\u0644\u062a\u062f\u0642\u064a\u0642 \u0627\u0644\u0623\u0643\u0627\u062f\u064a\u0645\u064a"}, {"hint": "\u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u0623\u0643\u0627\u062f\u064a\u0645\u064a\u0629", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/gpa/", "label": "\u062d\u0627\u0633\u0628\u0629 \u0627\u0644\u0645\u0639\u062f\u0644"}, {"hint": "\u0627\u0644\u0645\u0642\u0631\u0631\u0627\u062a", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/schedule/", "label": "\u062c\u062f\u0648\u0644 \u0627\u0644\u0645\u062d\u0627\u0636\u0631\u0627\u062a"}, {"hint": "\u0627\u0644\u0645\u0642\u0631\u0631\u0627\u062a", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/", "label": "\u0645\u0642\u0631\u0631\u0627\u062a\u064a"}, {"hint": "\u0627\u0644\u0645\u0642\u0631\u0631\u0627\u062a", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/exams/", "label": "\u062c\u062f\u0648\u0644 \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631\u0627\u062a"}, {"hint": "\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0627\u0644\u0637\u0627\u0644\u0628", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/attendance/", "label": "\u0627\u0644\u062d\u0636\u0648\u0631 \u0648\u0627\u0644\u063a\u064a\u0627\u0628"}, {"hint": "\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0627\u0644\u0637\u0627\u0644\u0628", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/holds/", "label": "\u0627\u0644\u062d\u0638\u0631 \u0648\u0627\u0644\u0645\u0648\u0627\u0646\u0639"}, {"hint": "\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0627\u0644\u0637\u0627\u0644\u0628", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/library/", "label": "\u062e\u062f\u0645\u0627\u062a \u0627\u0644\u0645\u0643\u062a\u0628\u0629"}, {"hint": "\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0627\u0644\u0637\u0627\u0644\u0628", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/parking/", "label": "\u0627\u0644\u0645\u0648\u0627\u0642\u0641 \u0627\u0644\u0630\u0643\u064a\u0629"}, {"hint": "\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0627\u0644\u0637\u0627\u0644\u0628", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/entry-log/", "label": "\u0633\u062c\u0644 \u062f\u062e\u0648\u0644 \u0627\u0644\u062d\u0631\u0645"}, {"hint": "\u0631\u0648\u0627\u0628\u0637 \u0633\u0631\u064a\u0639\u0629", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/links/", "label": "\u0627\u0644\u0645\u0631\u0634\u062f \u0648\u0627\u0644\u0623\u0634\u062e\u0627\u0635 \u0648\u0627\u0644\u0623\u062e\u0628\u0627\u0631"}, {"hint": "\u0627\u0644\u0645\u0642\u0631\u0631", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20509/", "label": "PSY212 \u0645\u0642\u062f\u0645\u0629 \u0641\u064a \u0639\u0644\u0645 \u0627\u0644\u0646\u0641\u0633"}, {"hint": "\u0627\u0644\u0645\u0642\u0631\u0631", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20524/", "label": "ENG222 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0625\u0646\u062c\u0644\u064a\u0632\u064a\u0629 \u0641\u064a \u0627\u0644\u0645\u0647\u0646 1"}, {"hint": "\u0627\u0644\u0645\u0642\u0631\u0631", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20527/", "label": "HIS381 \u0625\u0631\u062b \u0627\u0644\u0634\u064a\u062e \u0632\u0627\u064a\u062f \u0628\u0646 \u0633\u0644\u0637\u0627\u0646 \u0622\u0644 \u0646\u0647\u064a\u0627\u0646"}, {"hint": "\u0627\u0644\u0645\u0642\u0631\u0631", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20511/", "label": "PSY207 \u0639\u0644\u0645 \u0646\u0641\u0633 \u0627\u0644\u0646\u0645\u0648"}, {"hint": "\u0627\u0644\u0645\u0642\u0631\u0631", "href": "/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20518/", "label": "PSY310 \u0645\u0642\u062f\u0645\u0629 \u0641\u064a \u0627\u0644\u0625\u0631\u0634\u0627\u062f"}]</script>
+  <script type="application/json" id="assistant-config">{"chips": ["\u0645\u0627 \u0645\u062d\u0627\u0636\u0631\u0627\u062a\u064a \u0627\u0644\u064a\u0648\u0645\u061f", "\u0643\u0645 \u0645\u0639\u062f\u0644\u064a\u061f", "\u0647\u0644 \u0623\u0646\u0627 \u0645\u0639\u0631\u0636 \u0644\u062e\u0637\u0631 \u0627\u0644\u063a\u064a\u0627\u0628\u061f", "\u0647\u0644 \u064a\u0645\u0643\u0646\u0646\u064a \u0627\u0644\u062a\u0633\u062c\u064a\u0644\u061f", "\u0645\u062a\u0649 \u0627\u062e\u062a\u0628\u0627\u0631\u064a \u0627\u0644\u0642\u0627\u062f\u0645\u061f", "\u0642\u0648\u0627\u0639\u062f \u0627\u0633\u062a\u0639\u0627\u0631\u0629 \u0627\u0644\u0643\u062a\u0628"], "key": "202573268", "lang": "ar", "text": {"clear": "\u0645\u062d\u0627\u062f\u062b\u0629 \u062c\u062f\u064a\u062f\u0629", "close": "\u0625\u063a\u0644\u0627\u0642", "error": "\u062a\u0639\u0630\u0631 \u0627\u0644\u0648\u0635\u0648\u0644 \u0625\u0644\u0649 \u0627\u0644\u0645\u0633\u0627\u0639\u062f. \u062d\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649.", "expired": "\u0627\u0646\u062a\u0647\u062a \u062c\u0644\u0633\u062a\u0643. \u0633\u062c\u0651\u0644 \u0627\u0644\u062f\u062e\u0648\u0644 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649.", "greeting": "\u0645\u0631\u062d\u0628\u0627 \u0634\u064a\u062e\u0629! \u0643\u064a\u0641 \u064a\u0645\u0643\u0646\u0646\u064a \u0645\u0633\u0627\u0639\u062f\u062a\u0643 \u0627\u0644\u064a\u0648\u0645\u061f", "open": "\u0641\u062a\u062d \u0627\u0644\u0645\u0633\u0627\u0639\u062f", "placeholder": "\u0627\u0643\u062a\u0628 \u0633\u0624\u0627\u0644\u0643\u2026", "send": "\u0625\u0631\u0633\u0627\u0644", "subtitle": "\u0625\u062c\u0627\u0628\u0627\u062a \u0645\u0646 \u0633\u062c\u0644\u0643 \u0627\u0644\u062e\u0627\u0635", "thinking": "\u064a\u0643\u062a\u0628\u2026", "title": "\u0645\u0633\u0627\u0639\u062f \u0627\u0644\u062c\u0627\u0645\u0639\u0629"}}</script>
+<script src="/static/static-site.js" defer></script></head>
+<body x-data="shell()" @keydown.window="keys($event)">
+  <div class="scrim" x-show="drawer" x-cloak @click="drawer = false"></div>
+
+  <aside class="sidebar" :class="drawer && 'open'" aria-label="القائمة الرئيسية">
+    <a href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/" class="brand">
+      <span class="brand-mark"><img src="/static/zu-emblem.png" alt="جامعة زايد"></span>
+      <span><span class="display font-bold block leading-tight">بوابة الطالب</span><span class="text-xs side-muted">فصل خريف ⁦2026⁩</span></span>
+    </a>
+    <nav class="side-scroll">
+      
+      <div class="nav-group">الرئيسية</div>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M10 20v-6h4v6"/></svg><span>لوحة المعلومات</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">الشؤون الأكاديمية</div>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/transcript/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg><span>السجل الأكاديمي</span>
+        
+      </a>
+      
+      <a class="nav-link active" href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/audit/" aria-current="page">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M9 11.5l2.2 2.2L15.5 9.5M12 3l7 3v5.5c0 4.5-3 7.8-7 9.5-4-1.700-7-5-7-9.500V6z"/></svg><span>التدقيق الأكاديمي</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/gpa/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 3h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM8.500 7h7M8.500 12h.01M12 12h.01M15.500 12h.01M8.500 16h.01M12 16h.01M15.500 16h.01"/></svg><span>حاسبة المعدل</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">المقررات</div>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/schedule/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 6.500h16V20H4zM4 10.500h16M8.500 3.500v5M15.500 3.500v5"/></svg><span>جدول المحاضرات</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 4.500A1.500 1.500 0 0 1 6.500 3H19v15H6.500A1.500 1.500 0 0 0 5 19.500zM5 19.500A1.500 1.500 0 0 0 6.500 21H19v-3"/></svg><span>مقرراتي</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/exams/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg><span>جدول الاختبارات</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">أساسيات الطالب</div>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/attendance/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4.500 21c.6-4 3.700-6 7.500-6s6.900 2 7.500 6"/></svg><span>الحضور والغياب</span>
+        <span class="nav-badge warn">⁦2⁩</span>
+      </a>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/holds/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 10.500h12V21H6zM8.500 10.500V7.500a3.500 3.500 0 0 1 7 0v3"/></svg><span>الحظر والموانع</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/library/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 4h3v16H5zM10 4h3v16h-3zM15 4.500l3-.8 3.600 15.500-3 .8z"/></svg><span>خدمات المكتبة</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/parking/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 16.500h14v-4l-1.800-5a2 2 0 0 0-1.900-1.300H7.700a2 2 0 0 0-1.900 1.300L4 12.500h16M5 16.500V19M19 16.500V19M7.500 14.500v.01M16.500 14.500v.01"/></svg><span>المواقف الذكية</span>
+        
+      </a>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/entry-log/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 21V4.500L15 3v18M3.500 21h17M15 5.500h3.500V21M11.500 12.500v.01"/></svg><span>سجل دخول الحرم</span>
+        
+      </a>
+      
+      
+      <div class="nav-group">روابط سريعة</div>
+      
+      <a class="nav-link " href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/links/" >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M9 11a3.500 3.500 0 1 0 0-7 3.500 3.500 0 0 0 0 7zM2.500 20c.5-3.500 3-5.500 6.500-5.500s6 2 6.500 5.500M16 4.500a3.500 3.500 0 0 1 0 6.500M18 14.800c2 .7 3.200 2.500 3.500 5.200"/></svg><span>المرشد والأشخاص والأخبار</span>
+        
+      </a>
+      
+      
+    </nav>
+    <div class="side-user">
+      <span class="side-avatar">SR</span>
+      <span class="min-w-0"><span class="block text-sm font-semibold truncate">شيخة الرميثي</span><span class="block text-xs tnum side-muted">⁦202573268⁩</span></span>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar no-print">
+      <button class="icon-btn lg:hidden" @click="drawer = true" aria-label="فتح القائمة"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <button class="search-btn" @click="openFinder()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20.500 20.500 16 16"/></svg><span class="truncate">ابحث عن صفحة أو مقرر</span><span class="kbd hide-sm">Ctrl K</span></button>
+      <span class="ml-auto text-sm muted font-medium hide-md">الأربعاء ⁦18⁩ نوفمبر ⁦2026⁩</span>
+      <span class="ml-auto show-md"></span>
+
+      <div class="relative" @click.outside="appearance = false">
+        <button class="icon-btn" @click="appearance = !appearance" :aria-expanded="appearance" aria-label="المظهر" title="المظهر"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 3a9 9 0 1 0 0 18c1.300 0 2-1 2-2 0-1.300-1-1.700-1-2.800 0-1 .8-1.700 1.800-1.700H17a4 4 0 0 0 4-4C21 6 17 3 12 3zM7.500 11.500v.01M9.500 7.500v.01M14.500 7.500v.01M17 11v.01"/></svg></button>
+        <div class="popover card" x-show="appearance" x-cloak>
+          <div class="label mb-2">لون الواجهة</div>
+          <div class="flex gap-2 flex-wrap">
+            
+            <button class="swatch" style="background:#8E2A42" :class="accent === 'burgundy' && 'on'" @click="setAccent('burgundy')" :aria-pressed="accent === 'burgundy'" aria-label="عنابي" title="عنابي"><span x-show="accent === 'burgundy'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#7A1F82" :class="accent === 'plum' && 'on'" @click="setAccent('plum')" :aria-pressed="accent === 'plum'" aria-label="بنفسجي" title="بنفسجي"><span x-show="accent === 'plum'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#0D6E6E" :class="accent === 'teal' && 'on'" @click="setAccent('teal')" :aria-pressed="accent === 'teal'" aria-label="فيروزي" title="فيروزي"><span x-show="accent === 'teal'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#1E5696" :class="accent === 'ocean' && 'on'" @click="setAccent('ocean')" :aria-pressed="accent === 'ocean'" aria-label="أزرق" title="أزرق"><span x-show="accent === 'ocean'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+            <button class="swatch" style="background:#2E6B3E" :class="accent === 'forest' && 'on'" @click="setAccent('forest')" :aria-pressed="accent === 'forest'" aria-label="أخضر" title="أخضر"><span x-show="accent === 'forest'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span></button>
+            
+          </div>
+          <div class="label mt-4 mb-2">الوضع</div>
+          <div class="segmented">
+            <button :class="theme === 'light' && 'on'" @click="setTheme('light')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 16.500a4.500 4.500 0 1 0 0-9 4.500 4.500 0 0 0 0 9zM12 2.500v2M12 19.500v2M4.500 12h-2M21.500 12h-2M5.300 5.300l1.400 1.400M17.300 17.300l1.400 1.400M18.700 5.300l-1.400 1.400M6.700 17.300l-1.400 1.400"/></svg><span>فاتح</span></button>
+            <button :class="theme === 'dark' && 'on'" @click="setTheme('dark')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M20 14.500A8.500 8.500 0 0 1 9.500 4a8.500 8.500 0 1 0 10.500 10.500z"/></svg><span>داكن</span></button>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn-ghost lang-btn" lang="en" href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/en/audit/"><span data-raw>English</span></a>
+      <form method="get" action="/ar/" data-static class="m-0" @submit="clearChat()"><button class="btn btn-ghost" style="min-height:40px" title="تسجيل الخروج" aria-label="تسجيل الخروج"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none" class="flip"><path d="M10 4H5v16h5M15.500 8l4 4-4 4M19.500 12H9.500"/></svg><span class="hide-sm">تسجيل الخروج</span></button></form>
+    </div>
+    <main class="content">
+<div class="flex items-start justify-between gap-3"><header class="mb-5">
+  <h1 class="text-2xl sm:text-3xl font-bold m-0">التدقيق الأكاديمي</h1>
+  <p class="muted mt-1 mb-0 text-sm sm:text-base">بكالوريوس العلوم في علم النفس</p>
+</header><a class="btn btn-ghost no-print" href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/export/audit.pdf" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 4v11M7.500 10.500 12 15l4.500-4.500M4.500 20h15"/></svg><span class="hide-sm">تصدير PDF</span><span class="sr-only">تصدير PDF</span></a></div>
+
+<section class="card p-5 sm:p-6 mb-3">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <div class="label">التقدم العام</div>
+      <div class="display tnum text-5xl font-bold mt-1">⁦25%⁩</div>
+      <div class="muted text-sm mt-1 tnum">اكتملت ⁦30⁩ من ⁦120⁩ ساعة مطلوبة</div>
+    </div>
+    <div class="grid grid-cols-3 gap-5 sm:gap-8 text-sm">
+      <div><div class="flex items-center gap-1.5 label"><span class="w-2.5 h-2.5 rounded-sm fill-done inline-block"></span>مكتمل</div><div class="display tnum text-2xl font-bold">⁦10⁩</div><div class="muted text-xs tnum">⁦30⁩ ساعة</div></div>
+      <div><div class="flex items-center gap-1.5 label"><span class="w-2.5 h-2.5 rounded-sm fill-progress inline-block"></span>قيد الدراسة</div><div class="display tnum text-2xl font-bold">⁦5⁩</div><div class="muted text-xs tnum">⁦15⁩ ساعة</div></div>
+      <div><div class="flex items-center gap-1.5 label"><span class="w-2.5 h-2.5 rounded-sm fill-remaining inline-block"></span>متبقي</div><div class="display tnum text-2xl font-bold">⁦25⁩</div><div class="muted text-xs tnum">⁦75⁩ ساعة</div></div>
+    </div>
+  </div>
+  <div class="stack mt-4" role="img" aria-label="30 credits done, 15 in progress, 75 remaining">
+    <span class="fill-done" style="width:25.0%"></span>
+    <span class="fill-progress" style="width:12.5%"></span>
+    <span class="fill-remaining" style="flex:1"></span>
+  </div>
+  <div class="flex flex-wrap gap-2 mt-4 text-xs">
+    <span class="chip chip-plain">ساعات التخرج: ⁦30⁩ / ⁦120⁩</span>
+    <span class="chip chip-bad">الحد الأدنى للمعدل ⁦2.00⁩: غير متحقق (⁦1.93⁩)</span>
+  </div>
+</section>
+
+<details class="explain mb-4">
+  <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 11v5M12 7.800v.01"/></svg> كيف تم الحساب؟</summary>
+  <p class="mt-2 mb-0 max-w-3xl">تتم مطابقة كل متطلب في برنامجك مع سجلك. المقرر الناجح أو الساعات المعادلة المقبولة تعد <strong>مكتمل</strong>، والمقرر المسجل هذا الفصل يعد <strong>قيد الدراسة</strong>، وما عدا ذلك يعد <strong>متبقي</strong>. وتملأ المقررات الأخرى خانات المقررات الاختيارية. التقدم = الساعات المكتملة ÷ ⁦120⁩.</p>
+</details>
+
+<div x-data="{ show: 'all' }">
+  <div class="flex flex-wrap gap-2 mb-3" role="group" aria-label="تصفية المتطلبات">
+    <button class="pill" :class="show === 'all' && 'on'" @click="show = 'all'">الكل ⁦40⁩</button>
+    <button class="pill" :class="show === 'remaining' && 'on'" @click="show = 'remaining'">متبقي ⁦25⁩</button>
+    <button class="pill" :class="show === 'progress' && 'on'" @click="show = 'progress'">قيد الدراسة ⁦5⁩</button>
+    <button class="pill" :class="show === 'done' && 'on'" @click="show = 'done'">مكتمل ⁦10⁩</button>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-3 items-start">
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'done done done done done'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">الفصل ⁦1⁩</h2>
+        <span class="label tnum">⁦15⁩ / ⁦15⁩ ساعة</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE100⁩
+            <span class="font-normal"> · الأسس والتطوير الأكاديمي</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل خريف ⁦2025⁩
+            
+          </div>
+        </div>
+        <span class="grade ">C+</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE110⁩
+            <span class="font-normal"> · الاستدلال بالبيانات</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل خريف ⁦2025⁩
+            
+          </div>
+        </div>
+        <span class="grade ">D</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE120⁩
+            <span class="font-normal"> · الثقافة الإسلامية</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل خريف ⁦2025⁩
+            
+          </div>
+        </div>
+        <span class="grade ">C+</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE140⁩
+            <span class="font-normal"> · التحليل النقدي والكتابة</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل خريف ⁦2025⁩
+            
+          </div>
+        </div>
+        <span class="grade ">B</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE150⁩
+            <span class="font-normal"> · أساسيات الابتكار وريادة الأعمال</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل خريف ⁦2025⁩
+            
+          </div>
+        </div>
+        <span class="grade ">C+</span>
+        
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'done done done done done'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">الفصل ⁦2⁩</h2>
+        <span class="label tnum">⁦15⁩ / ⁦15⁩ ساعة</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE105⁩
+            <span class="font-normal"> · الجاهزية لسوق العمل والمهارات المهنية</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل ربيع ⁦2026⁩
+            
+          </div>
+        </div>
+        <span class="grade ">C-</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE126⁩
+            <span class="font-normal"> · الدراسات الإماراتية المعاصرة</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل ربيع ⁦2026⁩
+            
+          </div>
+        </div>
+        <span class="grade ">D</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE145⁩
+            <span class="font-normal"> · مفاهيم عربية للناطقين بها</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل ربيع ⁦2026⁩
+            
+          </div>
+        </div>
+        <span class="grade ">C</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE155⁩
+            <span class="font-normal"> · العلوم الإنسانية الرقمية</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل ربيع ⁦2026⁩
+            
+          </div>
+        </div>
+        <span class="grade ">C-</span>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'done'">
+        <span class="status-dot dot-done" title="مكتمل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦FYE195⁩
+            <span class="font-normal"> · أساسيات الذكاء الاصطناعي وتطبيقاته</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل ربيع ⁦2026⁩
+            
+          </div>
+        </div>
+        <span class="grade ">C</span>
+        
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'progress progress progress progress progress'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">الفصل ⁦3⁩</h2>
+        <span class="label tnum">⁦0⁩ / ⁦15⁩ ساعة</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="قيد الدراسة"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY212⁩
+            <span class="font-normal"> · مقدمة في علم النفس</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل خريف ⁦2026⁩
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20509/">قيد الدراسة</a>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="قيد الدراسة"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY207⁩
+            <span class="font-normal"> · علم نفس النمو</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل خريف ⁦2026⁩
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20511/">قيد الدراسة</a>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="قيد الدراسة"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY310⁩
+            <span class="font-normal"> · مقدمة في الإرشاد</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل خريف ⁦2026⁩
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20518/">قيد الدراسة</a>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="قيد الدراسة"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦ENG222⁩
+            <span class="font-normal"> · اللغة الإنجليزية في المهن ⁦1⁩</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · فصل خريف ⁦2026⁩
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20524/">قيد الدراسة</a>
+        
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'progress'">
+        <span class="status-dot dot-progress" title="قيد الدراسة"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7.500V12l3 2"/></svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦HIS381⁩
+            <span class="font-normal"> · إرث الشيخ زايد بن سلطان آل نهيان</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · اختياري من الجامعة · فصل خريف ⁦2026⁩
+            
+          </div>
+        </div>
+        <a class="chip chip-warn" href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/courses/20527/">قيد الدراسة</a>
+        
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'remaining remaining remaining remaining remaining'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">الفصل ⁦4⁩</h2>
+        <span class="label tnum">⁦0⁩ / ⁦15⁩ ساعة</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY363⁩
+            <span class="font-normal"> · علم النفس الاجتماعي ⁦1⁩</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY325⁩
+            <span class="font-normal"> · علم النفس المعرفي</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦ARA345⁩
+            <span class="font-normal"> · مهارات اللغة العربية المتقدمة</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            اختياري من الجامعة
+            <span class="font-normal"> · مقرر اختياري من الجامعة (أي مقرر من القائمة)</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · اختياري من الجامعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            اختياري من الجامعة
+            <span class="font-normal"> · مقرر اختياري من الجامعة (أي مقرر من القائمة)</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · اختياري من الجامعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'remaining remaining remaining remaining remaining'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">الفصل ⁦5⁩</h2>
+        <span class="label tnum">⁦0⁩ / ⁦15⁩ ساعة</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY330⁩
+            <span class="font-normal"> · الشخصية والفروق الفردية</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY340⁩
+            <span class="font-normal"> · الصحة النفسية والاضطرابات النفسية</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY321⁩
+            <span class="font-normal"> · الأساس البيولوجي للسلوك</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            اختياري من الجامعة
+            <span class="font-normal"> · مقرر اختياري من الجامعة (أي مقرر من القائمة)</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · اختياري من الجامعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            اختياري من الجامعة
+            <span class="font-normal"> · مقرر اختياري من الجامعة (أي مقرر من القائمة)</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · اختياري من الجامعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'remaining remaining remaining remaining remaining'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">الفصل ⁦6⁩</h2>
+        <span class="label tnum">⁦0⁩ / ⁦15⁩ ساعة</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY366⁩
+            <span class="font-normal"> · مناهج البحث ⁦1⁩</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY371⁩
+            <span class="font-normal"> · علم النفس التنظيمي</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY375⁩
+            <span class="font-normal"> · علم النفس الصحي</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY410⁩
+            <span class="font-normal"> · تقييم الفرد والأسرة</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            اختياري من الجامعة
+            <span class="font-normal"> · مقرر اختياري من الجامعة (أي مقرر من القائمة)</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · اختياري من الجامعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'remaining remaining remaining remaining remaining'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">الفصل ⁦7⁩</h2>
+        <span class="label tnum">⁦0⁩ / ⁦15⁩ ساعة</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY413⁩
+            <span class="font-normal"> · التدخلات النفسية</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY425⁩
+            <span class="font-normal"> · علم النفس المعرفي ⁦2⁩: الاستدلال وحل المشكلات واتخاذ القرار</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY430⁩
+            <span class="font-normal"> · علم النفس الثقافي</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY466⁩
+            <span class="font-normal"> · مناهج البحث ⁦2⁩</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            اختياري من الجامعة
+            <span class="font-normal"> · مقرر اختياري من الجامعة (أي مقرر من القائمة)</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · اختياري من الجامعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+    </section>
+  
+    
+    <section class="card overflow-hidden" x-show="show === 'all' || 'remaining remaining remaining remaining remaining'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">الفصل ⁦8⁩</h2>
+        <span class="label tnum">⁦0⁩ / ⁦15⁩ ساعة</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY451⁩
+            <span class="font-normal"> · حلقة في علم النفس التطبيقي</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY463⁩
+            <span class="font-normal"> · علم النفس الإيجابي</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY490⁩
+            <span class="font-normal"> · التدريب العملي في علم النفس</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            ⁦PSY491⁩
+            <span class="font-normal"> · مشروع التخرج في علم النفس</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === 'remaining'">
+        <span class="status-dot dot-remaining" title="متبقي"></span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            اختياري من الجامعة
+            <span class="font-normal"> · مقرر اختياري من الجامعة (أي مقرر من القائمة)</span>
+          </div>
+          <div class="muted text-xs">
+            ⁦3⁩ ساعة · اختياري من الجامعة
+            
+          </div>
+        </div>
+        <span class="chip chip-plain">متبقي</span>
+      </div>
+      
+    </section>
+  
+  </div>
+</div>
+
+
+</main>
+  </div>
+
+  <nav class="bottom-nav no-print" aria-label="القائمة السريعة">
+    <a href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M10 20v-6h4v6"/></svg>الرئيسية</a>
+    <a href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/transcript/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg>الدرجات</a>
+    <a href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/schedule/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 6.500h16V20H4zM4 10.500h16M8.500 3.500v5M15.500 3.500v5"/></svg>الجدول</a>
+    <a href="/s/6ed172a5a7e8a4d6bc6aae891f79a492/ar/attendance/" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4.500 21c.6-4 3.700-6 7.500-6s6.900 2 7.500 6"/></svg>الحضور</a>
+    <button @click="drawer = true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 7h16M4 12h16M4 17h16"/></svg>المزيد</button>
+  </nav>
+
+  <div class="scrim" style="z-index:55" x-show="finder" x-cloak @click="finder = false"></div>
+  <div class="palette card" x-show="finder" x-cloak role="dialog" aria-label="ابحث عن صفحة أو مقرر">
+    <div class="flex items-center gap-2 px-3" style="border-bottom:1px solid rgb(var(--line))">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20.500 20.500 16 16"/></svg>
+      <input x-ref="finderInput" x-model="query" @input="cursor = 0" @keydown.down.prevent="move(1)" @keydown.up.prevent="move(-1)" @keydown.enter.prevent="go()" class="w-full border-0 bg-transparent py-3.5 text-[15px] outline-none" style="color:inherit;font:inherit" placeholder="جرّب «الحضور» أو رمز مقرر" aria-label="بحث">
+    </div>
+    <div class="p-2">
+      <template x-for="(item, i) in results" :key="item.href">
+        <a class="palette-item" :class="i === cursor && 'on'" :href="item.href" @mouseenter="cursor = i"><span x-text="item.label"></span><span class="muted text-xs" x-text="item.hint"></span></a>
+      </template>
+      <p class="muted text-sm px-3 py-2 m-0" x-show="!results.length">لا توجد نتائج مطابقة.</p>
+    </div>
+  </div>
+
+  <div class="assistant no-print" x-data="assistant()">
+    <section class="chat card" x-show="open" x-cloak role="dialog" :aria-label="text.title">
+      <header class="chat-head">
+        <span class="chat-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800zM19 16l.8 2.200 2.200.8-2.200.8L19 22l-.8-2.200-2.200-.8 2.200-.8z"/></svg></span>
+        <div class="min-w-0 flex-1"><div class="font-semibold text-sm" x-text="text.title"></div><div class="text-xs chat-sub" x-text="text.subtitle"></div></div>
+        <button class="chat-icon" x-show="messages.length" @click="reset()" :title="text.clear" :aria-label="text.clear"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M20 11a8 8 0 0 0-14.300-4L3.500 9.500M3.500 4v5.500H9M4 13a8 8 0 0 0 14.300 4l2.200-2.500M20.500 20v-5.500H15"/></svg></button>
+        <button class="chat-icon" @click="open = false" :title="text.close" :aria-label="text.close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </header>
+      <div class="chat-log" x-ref="chatLog" aria-live="polite">
+        <div class="bubble bot" dir="auto" x-text="text.greeting"></div>
+        <div class="chat-chips" x-show="!messages.length">
+          <template x-for="chip in chips" :key="chip"><button class="chat-chip" @click="send(chip)" x-text="chip"></button></template>
+        </div>
+        <template x-for="(m, i) in messages" :key="i">
+          <div>
+            <div class="bubble" :class="m.role === 'user' ? 'me' : 'bot'" dir="auto" x-text="m.content"></div>
+            <div class="chat-links" x-show="m.links && m.links.length">
+              <template x-for="l in (m.links || [])" :key="l.href"><a class="chat-link" :href="l.href" :target="isExternal(l.href) ? '_blank' : null" :rel="isExternal(l.href) ? 'noopener' : null" x-text="l.label"></a></template>
+            </div>
+          </div>
+        </template>
+        <div class="bubble bot typing" x-show="busy"><i></i><i></i><i></i><span class="sr-only" x-text="text.thinking"></span></div>
+      </div>
+      <form class="chat-form" @submit.prevent="send()">
+        <input class="input" x-ref="chatInput" x-model="draft" maxlength="1500" dir="auto" :placeholder="text.placeholder" :aria-label="text.placeholder" autocomplete="off">
+        <button class="btn btn-primary chat-send" :disabled="busy || !draft.trim()" :aria-label="text.send" :title="text.send"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none" class="flip"><path d="M4 12 20 4l-4 16-3.500-6.500zM12.500 13.500 20 4"/></svg></button>
+      </form>
+    </section>
+    <button class="chat-fab" @click="toggle()" :aria-expanded="open" :aria-label="text.open" :title="text.open">
+      <span x-show="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800zM19 16l.8 2.200 2.200.8-2.200.8L19 22l-.8-2.200-2.200-.8 2.200-.8z"/></svg></span><span x-show="open" x-cloak><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+    </button>
+  </div>
+</body>
+</html>

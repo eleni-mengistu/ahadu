@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>تسجيل الدخول | بوابة طالب جامعة زايد</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="/static/zu-emblem.png">
+<script>
+  try {
+    document.documentElement.dataset.theme = localStorage.getItem("zu-theme") || "light";
+    document.documentElement.dataset.accent = localStorage.getItem("zu-accent") || "burgundy";
+  } catch (_) {}
+</script>
+<link rel="stylesheet" href="/static/app.css">
+<script src="/static/vendor/tailwind.js"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } };</script>
+  <script src="/static/vendor/alpine.js" defer></script>
+<script src="/static/static-site.js" defer></script></head>
+<body>
+<main class="login">
+  <section class="login-art">
+    <div class="display font-bold login-title">بوابة الطالب</div>
+    <img class="login-quote" src="/static/zayed-quote.jpg" alt="Education is like a lantern which lights your way in a dark alley. H.H Late Sheikh Zayed bin Sultan Al Nahyan, Former President of the United Arab Emirates">
+    <div class="text-xs opacity-80 login-points">فصل خريف ⁦2026⁩</div>
+  </section>
+
+  <section class="login-side">
+    <a class="btn btn-ghost login-lang" lang="en" href="/"><span data-raw>English</span></a>
+    <form action="#" data-static-login class="w-full max-w-sm" x-data="{ show: false, busy: false }" @submit="busy = true">
+      <img class="login-logo" src="/static/zu-logo-clear.png" alt="جامعة زايد">
+      <h2 class="text-2xl sm:text-3xl font-bold m-0">مرحبا بعودتك</h2>
+      <p class="muted mt-1 mb-6 text-sm">سجّل الدخول برقمك الجامعي وكلمة المرور.</p>
+
+      
+
+      <label class="block mb-4">
+        <span class="block text-sm font-semibold mb-1.5">الرقم الجامعي</span>
+        <input class="input" name="student_id" value="" inputmode="numeric" autocomplete="username" placeholder="مثال: 2023XXXXX" required autofocus>
+      </label>
+      <label class="block mb-5">
+        <span class="block text-sm font-semibold mb-1.5">كلمة المرور</span>
+        <span class="relative block">
+          <input class="input password-input" name="password" :type="show ? 'text' : 'password'" type="password" autocomplete="current-password" placeholder="كلمة المرور" required >
+          <button type="button" class="link password-toggle" @click="show = !show" x-text="show ? 'إخفاء' : 'إظهار'">إظهار</button>
+        </span>
+      </label>
+      <button class="btn btn-primary w-full" type="submit" :disabled="busy"><span x-text="busy ? 'جار تسجيل الدخول…' : 'Sign in'">تسجيل الدخول</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none" class="flip"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </form>
+  </section>
+</main>
+</body>
+</html>
