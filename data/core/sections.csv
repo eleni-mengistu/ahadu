@@ -1,0 +1,121 @@
+﻿crn,term_code,course_code,section,course_title,credits,days,start_time,end_time,campus,room,instructor_id,instructor_name,part_of_term,meetings_allotted
+20101,202610,CIT466,501,Data Analytics,3,"Mon,Wed",08:00,09:15,AUH,AUH-G3-034,Z10350,Dr. Laura Bennett,Full Semester,30
+20106,202610,CIT480,501,IT Entrepreneurship,3,"Tue,Thu",11:00,12:15,AUH,AUH-F1-002,Z10461,Dr. Tomas Novak,Full Semester,30
+20108,202610,IMT376,501,"Game Design, Prototyping and Programming",3,"Tue,Thu",14:00,15:15,AUH,AUH-B1-032,Z10387,Dr. Karim Haddad,Full Semester,30
+20109,202610,INS377,501,IT Project Management,3,"Tue,Thu",09:30,10:45,AUH,AUH-E3-017,Z10387,Dr. Karim Haddad,Full Semester,30
+20112,202610,ANT261,501,Introduction to Culture and Society,3,"Tue,Thu",15:30,16:45,AUH,AUH-B1-045,Z11127,Dr. Chris Hartley,Full Semester,30
+20116,202610,CIT497,501,Senior Project Seminar,1,Wed,13:00,14:50,AUH,AUH-G2-014,Z10424,Dr. Priya Raman,Full Semester,15
+20117,202610,ACC203,601,Managerial Accounting,3,"Mon,Wed",12:30,13:45,DXB,DXB-C2-025,Z10609,Dr. Martin Keller,Full Semester,30
+20120,202610,FIN308,601,Introduction to Finance,3,"Mon,Wed",11:00,12:15,DXB,DXB-A2-045,Z10535,Dr. James Whitfield,Full Semester,30
+20124,202610,ARA345,601,Advanced Arabic Skills,3,"Tue,Thu",12:30,13:45,DXB,DXB-A2-006,Z10387,Dr. Karim Haddad,Full Semester,30
+20130,202610,ACC311,601,Intermediate Accounting I,3,"Mon,Wed",15:30,16:45,DXB,DXB-C2-042,Z10572,Dr. Leila Farouk,Full Semester,30
+20137,202610,ECN202,601,Understanding Macroeconomics,3,"Tue,Thu",14:00,15:15,DXB,DXB-B3-023,Z10609,Dr. Martin Keller,Full Semester,30
+20144,202610,COM200,501,"Communication, Media and Society",3,"Mon,Wed",08:00,09:15,AUH,AUH-G1-014,Z10646,Dr. Yusuf Demir,Full Semester,30
+20146,202610,COM230,501,Professional and Public Speaking,3,"Mon,Wed",12:30,13:45,AUH,AUH-F2-033,Z10757,Dr. Grace Okafor,Full Semester,30
+20150,202610,ARM240,501,Media Storytelling in Arabic I,3,"Mon,Wed",14:00,15:15,AUH,AUH-D1-015,Z10683,Dr. Elena Petrova,Full Semester,30
+20155,202610,ENG240,501,Critical Thinking and Argumentative Writing,3,"Mon,Wed",11:00,12:15,AUH,AUH-E2-032,Z10535,Dr. James Whitfield,Full Semester,30
+20156,202610,ISC251,501,Introduction to Integrated Strategic Communication,3,"Mon,Wed",09:30,10:45,AUH,AUH-B3-040,Z11127,Dr. Chris Hartley,Full Semester,30
+20159,202610,PSY330,601,Personality and Individual Differences,3,"Mon,Wed",14:00,15:15,DXB,DXB-A2-019,Z10942,Dr. Ian Callaghan,Full Semester,30
+20161,202610,PSY340,601,Mental Health and Psychological Disorders,3,"Tue,Thu",09:30,10:45,DXB,DXB-D3-033,Z10979,Dr. Mei Lin,Full Semester,30
+20163,202610,PSY321,601,Biological Basis for Behavior,3,"Mon,Wed",09:30,10:45,DXB,DXB-F2-014,Z10979,Dr. Mei Lin,Full Semester,30
+20166,202610,IMT375,601,Human Computer Interaction,3,"Mon,Wed",12:30,13:45,DXB,DXB-G1-028,Z10461,Dr. Tomas Novak,Full Semester,30
+20172,202610,MPS220,601,Visual Storytelling,3,"Tue,Thu",12:30,13:45,DXB,DXB-G1-005,Z10646,Dr. Yusuf Demir,Full Semester,30
+20175,202610,PSY451,501,Seminar in Applied Psychology,3,"Mon,Wed",14:00,15:15,AUH,AUH-D1-037,Z10979,Dr. Mei Lin,Full Semester,30
+20179,202610,PSY463,501,Positive Psychology,3,"Tue,Thu",15:30,16:45,AUH,AUH-C2-003,Z11016,Dr. Nadia Rahimi,Full Semester,30
+20180,202610,PSY490,501,Internship in Psychology,3,"Mon,Wed",15:30,16:45,AUH,AUH-E2-008,Z11016,Dr. Nadia Rahimi,Full Semester,30
+20183,202610,PSY491,501,Senior Project in Psychology,3,"Mon,Wed",09:30,10:45,AUH,AUH-A1-016,Z10942,Dr. Ian Callaghan,Full Semester,30
+20184,202610,MTH121,501,Calculus I,3,"Tue,Thu",11:00,12:15,AUH,AUH-A2-044,Z11090,Dr. Amal Youssef,Full Semester,30
+20185,202610,AGD359,601,Information Design,3,"Mon,Wed",15:30,16:45,DXB,DXB-D3-005,Z10831,Dr. Rana Salem,Full Semester,30
+20190,202610,AVA340,601,Photography I,3,"Tue,Thu",15:30,16:45,DXB,DXB-A1-005,Z10905,Dr. Huda Barakat,Full Semester,30
+20191,202610,AGD352,601,Graphic Design II,3,"Tue,Thu",14:00,15:15,DXB,DXB-F2-017,Z10868,Dr. Victor Lindqvist,Full Semester,30
+20194,202610,AGD356,601,Typography I,3,"Mon,Wed",09:30,10:45,DXB,DXB-A2-032,Z10868,Dr. Victor Lindqvist,Full Semester,30
+20197,202610,AAH322,601,History of Islamic Art and Architecture,3,"Mon,Wed",14:00,15:15,DXB,DXB-G1-004,Z10831,Dr. Rana Salem,Full Semester,30
+20203,202610,FYE100,501,Academic Foundations and Development,3,"Mon,Wed",11:00,12:15,AUH,AUH-E3-003,Z11090,Dr. Amal Youssef,Full Semester,30
+20210,202610,FYE110,501,Reasoning with Data,3,"Tue,Thu",14:00,15:15,AUH,AUH-F1-036,Z11053,Dr. Paul Stevens,Full Semester,30
+20216,202610,FYE120,501,Islamic Culture,3,"Tue,Thu",15:30,16:45,AUH,AUH-A2-038,Z11127,Dr. Chris Hartley,Full Semester,30
+20221,202610,FYE140,501,Critical Analysis and Composition,3,"Mon,Wed",14:00,15:15,AUH,AUH-G2-012,Z11053,Dr. Paul Stevens,Full Semester,30
+20223,202610,FYE150,501,Fundamentals of Innovation and Entrepreneurship,3,"Mon,Wed",15:30,16:45,AUH,AUH-F2-042,Z11053,Dr. Paul Stevens,Full Semester,30
+20228,202610,ACC412,501,Contemporary Topics in Financial Accounting,3,"Mon,Wed",12:30,13:45,AUH,AUH-G1-027,Z10572,Dr. Leila Farouk,Full Semester,30
+20233,202610,ACC419,501,Special Topics in Accounting,3,"Mon,Wed",15:30,16:45,AUH,AUH-C2-020,Z10535,Dr. James Whitfield,Full Semester,30
+20236,202610,ACC404,501,Corporate Taxation,3,"Tue,Thu",14:00,15:15,AUH,AUH-C3-018,Z10498,Dr. Hala Nasser,Full Semester,30
+20241,202610,MGT401,501,Business Leadership,3,"Mon,Wed",08:00,09:15,AUH,AUH-C2-034,Z10609,Dr. Martin Keller,Full Semester,30
+20248,202610,FLS361,501,World Cinemas,3,"Tue,Thu",12:30,13:45,AUH,AUH-G1-021,Z11127,Dr. Chris Hartley,Full Semester,30
+20250,202610,CIT210,501,Essentials of IT and Infrastructure,3,"Mon,Wed",14:00,15:15,AUH,AUH-G2-005,Z10424,Dr. Priya Raman,Full Semester,30
+20255,202610,MTH215,501,Computing Foundations,3,"Tue,Thu",09:30,10:45,AUH,AUH-C1-042,Z10387,Dr. Karim Haddad,Full Semester,30
+20258,202610,CIT285,501,Technical Communication,3,"Mon,Wed",09:30,10:45,AUH,AUH-C2-024,Z10387,Dr. Karim Haddad,Full Semester,30
+20259,202610,SEC235,501,Information Security Foundations,3,"Tue,Thu",08:00,09:15,AUH,AUH-D3-025,Z10387,Dr. Karim Haddad,Full Semester,30
+20265,202610,ARA345,502,Advanced Arabic Skills,3,"Mon,Wed",11:00,12:15,AUH,AUH-F1-016,Z10424,Dr. Priya Raman,Full Semester,30
+20266,202610,SWE320,601,Object Oriented Programming,3,"Tue,Thu",12:30,13:45,DXB,DXB-C1-045,Z10350,Dr. Laura Bennett,Full Semester,30
+20267,202610,SWE321,601,Object Oriented Programming Lab,1,Mon,15:00,16:50,DXB,DXB-D2-025,Z10461,Dr. Tomas Novak,Full Semester,15
+20269,202610,SWE245,601,Web Development,3,"Tue,Thu",15:30,16:45,DXB,DXB-F3-005,Z10461,Dr. Tomas Novak,Full Semester,30
+20274,202610,IMT340,601,Computer Graphics,3,"Tue,Thu",11:00,12:15,DXB,DXB-A3-028,Z10424,Dr. Priya Raman,Full Semester,30
+20281,202610,CIT315,601,Operating Systems,3,"Mon,Wed",09:30,10:45,DXB,DXB-A2-040,Z10424,Dr. Priya Raman,Full Semester,30
+20287,202610,FYE100,602,Academic Foundations and Development,3,"Tue,Thu",08:00,09:15,DXB,DXB-A2-013,Z11053,Dr. Paul Stevens,Full Semester,30
+20294,202610,FYE110,602,Reasoning with Data,3,"Tue,Thu",15:30,16:45,DXB,DXB-C3-026,Z11090,Dr. Amal Youssef,Full Semester,30
+20301,202610,FYE120,602,Islamic Culture,3,"Tue,Thu",12:30,13:45,DXB,DXB-F2-023,Z11053,Dr. Paul Stevens,Full Semester,30
+20305,202610,FYE140,602,Critical Analysis and Composition,3,"Tue,Thu",14:00,15:15,DXB,DXB-D1-045,Z11053,Dr. Paul Stevens,Full Semester,30
+20308,202610,FYE150,602,Fundamentals of Innovation and Entrepreneurship,3,"Tue,Thu",09:30,10:45,DXB,DXB-C1-011,Z11090,Dr. Amal Youssef,Full Semester,30
+20315,202610,ACC412,602,Contemporary Topics in Financial Accounting,3,"Mon,Wed",09:30,10:45,DXB,DXB-D3-033,Z10609,Dr. Martin Keller,Full Semester,30
+20319,202610,ACC419,602,Special Topics in Accounting,3,"Mon,Wed",15:30,16:45,DXB,DXB-G3-008,Z10609,Dr. Martin Keller,Full Semester,30
+20323,202610,ACC404,602,Corporate Taxation,3,"Tue,Thu",12:30,13:45,DXB,DXB-C2-022,Z10572,Dr. Leila Farouk,Full Semester,30
+20327,202610,MGT401,602,Business Leadership,3,"Mon,Wed",08:00,09:15,DXB,DXB-C2-042,Z10572,Dr. Leila Farouk,Full Semester,30
+20332,202610,CHL100,601,Chinese Language Level 1,3,"Tue,Thu",14:00,15:15,DXB,DXB-A3-035,Z11090,Dr. Amal Youssef,Full Semester,30
+20338,202610,INS260,601,Management of Information Systems,3,"Tue,Thu",11:00,12:15,DXB,DXB-B1-026,Z10572,Dr. Leila Farouk,Full Semester,30
+20340,202610,MTH213,601,Business Statistics,3,"Mon,Wed",14:00,15:15,DXB,DXB-A2-029,Z10609,Dr. Martin Keller,Full Semester,30
+20343,202610,MTH212,601,Business Calculus,3,"Mon,Wed",12:30,13:45,DXB,DXB-F2-003,Z10609,Dr. Martin Keller,Full Semester,30
+20350,202610,ENG240,602,Critical Thinking and Argumentative Writing,3,"Mon,Wed",11:00,12:15,DXB,DXB-A3-006,Z10498,Dr. Hala Nasser,Full Semester,30
+20354,202610,MGT209,601,Introduction to Management,3,"Mon,Wed",15:30,16:45,DXB,DXB-B2-030,Z10498,Dr. Hala Nasser,Full Semester,30
+20357,202610,ACC203,502,Managerial Accounting,3,"Mon,Wed",15:30,16:45,AUH,AUH-D2-030,Z10498,Dr. Hala Nasser,Full Semester,30
+20362,202610,FIN308,502,Introduction to Finance,3,"Tue,Thu",08:00,09:15,AUH,AUH-C2-038,Z10572,Dr. Leila Farouk,Full Semester,30
+20363,202610,ACC311,502,Intermediate Accounting I,3,"Tue,Thu",12:30,13:45,AUH,AUH-E1-034,Z10535,Dr. James Whitfield,Full Semester,30
+20365,202610,ECN202,502,Understanding Macroeconomics,3,"Tue,Thu",15:30,16:45,AUH,AUH-D2-021,Z10498,Dr. Hala Nasser,Full Semester,30
+20372,202610,MPS321,501,Video Production,3,"Mon,Wed",09:30,10:45,AUH,AUH-C3-014,Z10646,Dr. Yusuf Demir,Full Semester,30
+20376,202610,MPS241,501,Audio Production,3,"Tue,Thu",12:30,13:45,AUH,AUH-B2-026,Z10757,Dr. Grace Okafor,Full Semester,30
+20380,202610,ARM375,501,Public Speaking and Professional Presentation in Arabic,3,"Mon,Wed",15:30,16:45,AUH,AUH-A2-030,Z10757,Dr. Grace Okafor,Full Semester,30
+20382,202610,COM212,501,Digital Storytelling,3,"Mon,Wed",14:00,15:15,AUH,AUH-B2-024,Z10646,Dr. Yusuf Demir,Full Semester,30
+20384,202610,ISC383,501,Introduction to Social Media,3,"Tue,Thu",15:30,16:45,AUH,AUH-A1-012,Z10757,Dr. Grace Okafor,Full Semester,30
+20390,202610,COM200,602,"Communication, Media and Society",3,"Mon,Wed",14:00,15:15,DXB,DXB-G1-019,Z10720,Dr. Samir Khoury,Full Semester,30
+20392,202610,COM230,602,Professional and Public Speaking,3,"Mon,Wed",08:00,09:15,DXB,DXB-C1-034,Z10757,Dr. Grace Okafor,Full Semester,30
+20394,202610,ARM240,602,Media Storytelling in Arabic I,3,"Mon,Wed",15:30,16:45,DXB,DXB-C1-013,Z10646,Dr. Yusuf Demir,Full Semester,30
+20397,202610,FLS361,602,World Cinemas,3,"Tue,Thu",09:30,10:45,DXB,DXB-A3-019,Z11127,Dr. Chris Hartley,Full Semester,30
+20403,202610,MPS321,602,Video Production,3,"Mon,Wed",15:30,16:45,DXB,DXB-C2-005,Z10757,Dr. Grace Okafor,Full Semester,30
+20410,202610,MPS241,602,Audio Production,3,"Tue,Thu",08:00,09:15,DXB,DXB-D1-042,Z10757,Dr. Grace Okafor,Full Semester,30
+20414,202610,ARM375,602,Public Speaking and Professional Presentation in Arabic,3,"Mon,Wed",11:00,12:15,DXB,DXB-F1-002,Z10720,Dr. Samir Khoury,Full Semester,30
+20421,202610,COM212,602,Digital Storytelling,3,"Tue,Thu",09:30,10:45,DXB,DXB-D2-005,Z10683,Dr. Elena Petrova,Full Semester,30
+20422,202610,TCC375,601,Planning and Promotion for Events and Festivals,3,"Tue,Thu",14:00,15:15,DXB,DXB-D3-022,Z10683,Dr. Elena Petrova,Full Semester,30
+20427,202610,COM209,601,Foundations in Media Writing,3,"Mon,Wed",12:30,13:45,DXB,DXB-G1-004,Z10757,Dr. Grace Okafor,Full Semester,30
+20433,202610,MPS481,601,Zajel Student Media Production,3,"Tue,Thu",14:00,15:15,DXB,DXB-F3-020,Z10720,Dr. Samir Khoury,Full Semester,30
+20437,202610,MPS331,501,Media and Cultural Criticism,3,"Mon,Wed",15:30,16:45,AUH,AUH-A3-033,Z10720,Dr. Samir Khoury,Full Semester,30
+20439,202610,MPS457,501,Capstone Project,3,"Mon,Wed",08:00,09:15,AUH,AUH-D1-020,Z10646,Dr. Yusuf Demir,Full Semester,30
+20446,202610,CHL100,502,Chinese Language Level 1,3,"Tue,Thu",09:30,10:45,AUH,AUH-C2-012,Z11090,Dr. Amal Youssef,Full Semester,30
+20452,202610,GEN150,501,Positivity and Wellbeing,3,"Tue,Thu",08:00,09:15,AUH,AUH-E3-015,Z11127,Dr. Chris Hartley,Full Semester,30
+20453,202610,AGD457,601,Designing for the Web II,3,"Mon,Wed",11:00,12:15,DXB,DXB-F2-017,Z10905,Dr. Huda Barakat,Full Semester,30
+20458,202610,AGD357,601,Designing for the Web I,3,"Mon,Wed",14:00,15:15,DXB,DXB-B3-018,Z10831,Dr. Rana Salem,Full Semester,30
+20460,202610,ART121,501,Fundamentals of Art & Design Studies,3,"Mon,Wed",15:30,16:45,AUH,AUH-F2-008,Z10794,Dr. Daniel Moreau,Full Semester,30
+20465,202610,FYE150,503,Fundamentals of Innovation and Entrepreneurship,3,"Tue,Thu",12:30,13:45,AUH,AUH-C1-022,Z11090,Dr. Amal Youssef,Full Semester,30
+20468,202610,ART121,602,Fundamentals of Art & Design Studies,3,"Mon,Wed",12:30,13:45,DXB,DXB-C2-018,Z10868,Dr. Victor Lindqvist,Full Semester,30
+20471,202610,ADR492,601,Senior Research Seminar,3,"Mon,Wed",15:30,16:45,DXB,DXB-E3-013,Z10868,Dr. Victor Lindqvist,Full Semester,30
+20477,202610,AGD314,601,Illustration and Visual Narrative,3,"Mon,Wed",11:00,12:15,DXB,DXB-D1-013,Z10794,Dr. Daniel Moreau,Full Semester,30
+20483,202610,AGD453,601,Graphic Design IV,3,"Mon,Wed",09:30,10:45,DXB,DXB-F3-029,Z10831,Dr. Rana Salem,Full Semester,30
+20485,202610,AGD456,601,Typography II,3,"Tue,Thu",08:00,09:15,DXB,DXB-C1-027,Z10905,Dr. Huda Barakat,Full Semester,30
+20490,202610,ADR321,601,Material Culture of the United Arab Emirates,3,"Tue,Thu",12:30,13:45,DXB,DXB-E2-004,Z10905,Dr. Huda Barakat,Full Semester,30
+20493,202610,ART205,601,Art Foundations,3,"Tue,Thu",11:00,12:15,DXB,DXB-G3-043,Z10831,Dr. Rana Salem,Full Semester,30
+20497,202610,ART201,601,Principles of Design,3,"Mon,Wed",09:30,10:45,DXB,DXB-C1-038,Z10831,Dr. Rana Salem,Full Semester,30
+20504,202610,ART221,601,Research Methods for Artists and Designers,3,"Mon,Wed",12:30,13:45,DXB,DXB-D2-045,Z10868,Dr. Victor Lindqvist,Full Semester,30
+20506,202610,ART223,601,History of Visual Culture II,3,"Mon,Wed",08:00,09:15,DXB,DXB-B1-033,Z10905,Dr. Huda Barakat,Full Semester,30
+20507,202610,ART251,601,Basic Design,3,"Mon,Wed",11:00,12:15,DXB,DXB-B2-030,Z10905,Dr. Huda Barakat,Full Semester,30
+20509,202610,PSY212,601,Introduction to Psychology,3,"Tue,Thu",08:00,09:15,DXB,DXB-G2-021,Z10979,Dr. Mei Lin,Full Semester,30
+20511,202610,PSY207,601,Developmental Psychology,3,"Mon,Wed",14:00,15:15,DXB,DXB-D3-036,Z10942,Dr. Ian Callaghan,Full Semester,30
+20518,202610,PSY310,601,Introduction to Counseling,3,"Mon,Wed",15:30,16:45,DXB,DXB-A1-019,Z10942,Dr. Ian Callaghan,Full Semester,30
+20524,202610,ENG222,601,English in the Professions I,3,"Mon,Wed",09:30,10:45,DXB,DXB-B2-006,Z10979,Dr. Mei Lin,Full Semester,30
+20527,202610,HIS381,601,Legacy of Sheikh Zayed bin Sultan al Nahayan,3,"Mon,Wed",12:30,13:45,DXB,DXB-C1-021,Z11053,Dr. Paul Stevens,Full Semester,30
+20529,202610,PSY330,502,Personality and Individual Differences,3,"Tue,Thu",08:00,09:15,AUH,AUH-C2-026,Z11016,Dr. Nadia Rahimi,Full Semester,30
+20533,202610,PSY340,502,Mental Health and Psychological Disorders,3,"Mon,Wed",15:30,16:45,AUH,AUH-G1-027,Z11016,Dr. Nadia Rahimi,Full Semester,30
+20534,202610,PSY321,502,Biological Basis for Behavior,3,"Tue,Thu",14:00,15:15,AUH,AUH-F1-034,Z11016,Dr. Nadia Rahimi,Full Semester,30
+20539,202610,ENG360,601,Film and Literature,3,"Mon,Wed",08:00,09:15,DXB,DXB-D1-039,Z11090,Dr. Amal Youssef,Full Semester,30
+20540,202610,PSY413,501,Psychological Interventions,3,"Tue,Thu",09:30,10:45,AUH,AUH-D1-025,Z10979,Dr. Mei Lin,Full Semester,30
+20541,202610,PSY425,501,"Cognitive Psychology II: Reasoning, Problem Solving and Decision Making",3,"Tue,Thu",08:00,09:15,AUH,AUH-D2-025,Z11016,Dr. Nadia Rahimi,Full Semester,30
+20544,202610,PSY430,501,Cultural Psychology,3,"Tue,Thu",12:30,13:45,AUH,AUH-D3-016,Z11016,Dr. Nadia Rahimi,Full Semester,30
+20548,202610,PSY466,501,Research Methods II,3,"Tue,Thu",15:30,16:45,AUH,AUH-F1-030,Z11016,Dr. Nadia Rahimi,Full Semester,30
+20554,202610,CHL100,503,Chinese Language Level 1,3,"Tue,Thu",11:00,12:15,AUH,AUH-A1-019,Z11127,Dr. Chris Hartley,Full Semester,30
+20556,202610,ANT362,501,Popular Cultures,3,"Tue,Thu",11:00,12:15,AUH,AUH-D1-012,Z11127,Dr. Chris Hartley,Full Semester,30

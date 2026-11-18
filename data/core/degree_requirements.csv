@@ -1,0 +1,201 @@
+﻿requirement_id,program_code,recommended_semester,requirement_type,course_code,alternative_course_code,course_title,credits
+BSIT-WMAD-01,BSIT-WMAD,1,General Education,FYE100,,Academic Foundations and Development,3
+BSIT-WMAD-02,BSIT-WMAD,1,General Education,FYE110,,Reasoning with Data,3
+BSIT-WMAD-03,BSIT-WMAD,1,General Education,FYE120,,Islamic Culture,3
+BSIT-WMAD-04,BSIT-WMAD,1,General Education,FYE140,,Critical Analysis and Composition,3
+BSIT-WMAD-05,BSIT-WMAD,1,General Education,FYE150,,Fundamentals of Innovation and Entrepreneurship,3
+BSIT-WMAD-06,BSIT-WMAD,2,General Education,FYE105,,Workplace Readiness and Professional Skills,3
+BSIT-WMAD-07,BSIT-WMAD,2,General Education,FYE126,FYE125,Contemporary Emirati Studies,3
+BSIT-WMAD-08,BSIT-WMAD,2,General Education,FYE145,FYE146,Arabic Concepts for Native Speakers,3
+BSIT-WMAD-09,BSIT-WMAD,2,General Education,FYE155,,Digital Humanities,3
+BSIT-WMAD-10,BSIT-WMAD,2,General Education,FYE195,,Artificial Intelligence Essentials and Applications,3
+BSIT-WMAD-11,BSIT-WMAD,3,Program Required,CIT210,,Essentials of IT and Infrastructure,3
+BSIT-WMAD-12,BSIT-WMAD,3,Program Required,MTH215,,Computing Foundations,3
+BSIT-WMAD-13,BSIT-WMAD,3,Program Required,CIT285,,Technical Communication,3
+BSIT-WMAD-14,BSIT-WMAD,3,Program Required,SEC235,,Information Security Foundations,3
+BSIT-WMAD-15,BSIT-WMAD,3,Program Required,ARA345,,Advanced Arabic Skills,3
+BSIT-WMAD-16,BSIT-WMAD,4,Program Required,SWE225,,Introduction to Programming and Problem Solving,3
+BSIT-WMAD-17,BSIT-WMAD,4,Program Required,CIT365,,Database Systems,3
+BSIT-WMAD-18,BSIT-WMAD,4,Program Required,NET256,,Computer Network Foundations,3
+BSIT-WMAD-19,BSIT-WMAD,4,Program Required,NET257,,Computer Network Foundations Lab,1
+BSIT-WMAD-20,BSIT-WMAD,4,Program Required,MTH281,,Probability and Statistics,3
+BSIT-WMAD-21,BSIT-WMAD,4,ZU Elective,,,ZU Elective (any course from the list),3
+BSIT-WMAD-22,BSIT-WMAD,5,Program Required,SWE320,,Object Oriented Programming,3
+BSIT-WMAD-23,BSIT-WMAD,5,Program Required,SWE321,,Object Oriented Programming Lab,1
+BSIT-WMAD-24,BSIT-WMAD,5,Program Required,SWE245,,Web Development,3
+BSIT-WMAD-25,BSIT-WMAD,5,Program Required,IMT375,,Human Computer Interaction,3
+BSIT-WMAD-26,BSIT-WMAD,5,Program Required,IMT340,,Computer Graphics,3
+BSIT-WMAD-27,BSIT-WMAD,5,Program Required,CIT315,,Operating Systems,3
+BSIT-WMAD-28,BSIT-WMAD,6,Program Required,CIT305,,IT in Global and Local Cultures,3
+BSIT-WMAD-29,BSIT-WMAD,6,Program Required,SWE324,,Software Requirements and Design,3
+BSIT-WMAD-30,BSIT-WMAD,6,Program Required,CIT372,,Cloud Computing,3
+BSIT-WMAD-31,BSIT-WMAD,6,Program Required,SWE346,,Dynamic Web Development,3
+BSIT-WMAD-32,BSIT-WMAD,6,Program Required,SWE371,,Mobile Computing,3
+BSIT-WMAD-33,BSIT-WMAD,Summer (after semester 6),Program Required,CIT491,,Internship,6
+BSIT-WMAD-34,BSIT-WMAD,7,Program Required,CIT466,,Data Analytics,3
+BSIT-WMAD-35,BSIT-WMAD,7,Program Required,CIT480,,IT Entrepreneurship,3
+BSIT-WMAD-36,BSIT-WMAD,7,Program Required,IMT376,,"Game Design, Prototyping and Programming",3
+BSIT-WMAD-37,BSIT-WMAD,7,Program Required,INS377,,IT Project Management,3
+BSIT-WMAD-38,BSIT-WMAD,7,ZU Elective,,,ZU Elective (any course from the list),3
+BSIT-WMAD-39,BSIT-WMAD,7,Program Required,CIT497,,Senior Project Seminar,1
+BSIT-WMAD-40,BSIT-WMAD,8,Program Required,CIT470,,Applied Database Systems,3
+BSIT-WMAD-41,BSIT-WMAD,8,Program Required,CIT498,,Senior Project,3
+BSACC-01,BSACC,1,General Education,FYE100,,Academic Foundations and Development,3
+BSACC-02,BSACC,1,General Education,FYE110,,Reasoning with Data,3
+BSACC-03,BSACC,1,General Education,FYE120,,Islamic Culture,3
+BSACC-04,BSACC,1,General Education,FYE140,,Critical Analysis and Composition,3
+BSACC-05,BSACC,1,General Education,FYE150,,Fundamentals of Innovation and Entrepreneurship,3
+BSACC-06,BSACC,2,General Education,FYE105,,Workplace Readiness and Professional Skills,3
+BSACC-07,BSACC,2,General Education,FYE126,FYE125,Contemporary Emirati Studies,3
+BSACC-08,BSACC,2,General Education,FYE145,FYE146,Arabic Concepts for Native Speakers,3
+BSACC-09,BSACC,2,General Education,FYE155,,Digital Humanities,3
+BSACC-10,BSACC,2,General Education,FYE195,,Artificial Intelligence Essentials and Applications,3
+BSACC-11,BSACC,3,Program Required,INS260,,Management of Information Systems,3
+BSACC-12,BSACC,3,Program Required,MTH213,,Business Statistics,3
+BSACC-13,BSACC,3,Program Required,MTH212,,Business Calculus,3
+BSACC-14,BSACC,3,Program Required,ENG240,,Critical Thinking and Argumentative Writing,3
+BSACC-15,BSACC,3,Program Required,MGT209,,Introduction to Management,3
+BSACC-16,BSACC,4,Program Required,ACC202,,Financial Accounting,3
+BSACC-17,BSACC,4,Program Required,LAW200,,Business Law & Ethics,3
+BSACC-18,BSACC,4,Program Required,MKT210,,Introduction to Marketing,3
+BSACC-19,BSACC,4,Program Required,BUS207,,Business Communications,3
+BSACC-20,BSACC,4,Program Required,ECN201,,Foundations of Microeconomics,3
+BSACC-21,BSACC,5,Program Required,ACC203,,Managerial Accounting,3
+BSACC-22,BSACC,5,Program Required,FIN308,,Introduction to Finance,3
+BSACC-23,BSACC,5,Program Required,ARA345,,Advanced Arabic Skills,3
+BSACC-24,BSACC,5,Program Required,ACC311,,Intermediate Accounting I,3
+BSACC-25,BSACC,5,Program Required,ECN202,,Understanding Macroeconomics,3
+BSACC-26,BSACC,6,Program Required,OPR300,,Operations Management,3
+BSACC-27,BSACC,6,Program Required,ACC303,,Cost Accounting,3
+BSACC-28,BSACC,6,Program Required,ACC413,,Accounting Information Systems,3
+BSACC-29,BSACC,6,Program Required,ACC312,,Intermediate Accounting II,3
+BSACC-30,BSACC,6,Program Required,ACC416,,Auditing,3
+BSACC-31,BSACC,7,Program Required,ACC412,,Contemporary Topics in Financial Accounting,3
+BSACC-32,BSACC,7,Program Required,ACC419,,Special Topics in Accounting,3
+BSACC-33,BSACC,7,Program Required,ACC404,,Corporate Taxation,3
+BSACC-34,BSACC,7,Program Required,MGT401,,Business Leadership,3
+BSACC-35,BSACC,7,ZU Elective,,,ZU Elective (any course from the list),3
+BSACC-36,BSACC,8,Program Required,MGT400,,Strategic Management,3
+BSACC-37,BSACC,8,Program Required,BUS407,,Corporate Communication,3
+BSACC-38,BSACC,8,Program Required,ACC403,,Strategic Managerial Accounting,3
+BSACC-39,BSACC,8,ZU Elective,,,ZU Elective (any course from the list),3
+BSACC-40,BSACC,9,Program Required,BUS491,,Internship,3
+BSCMS-MPS-01,BSCMS-MPS,1,General Education,FYE100,,Academic Foundations and Development,3
+BSCMS-MPS-02,BSCMS-MPS,1,General Education,FYE110,,Reasoning with Data,3
+BSCMS-MPS-03,BSCMS-MPS,1,General Education,FYE120,,Islamic Culture,3
+BSCMS-MPS-04,BSCMS-MPS,1,General Education,FYE140,,Critical Analysis and Composition,3
+BSCMS-MPS-05,BSCMS-MPS,1,General Education,FYE150,,Fundamentals of Innovation and Entrepreneurship,3
+BSCMS-MPS-06,BSCMS-MPS,2,General Education,FYE105,,Workplace Readiness and Professional Skills,3
+BSCMS-MPS-07,BSCMS-MPS,2,General Education,FYE126,FYE125,Contemporary Emirati Studies,3
+BSCMS-MPS-08,BSCMS-MPS,2,General Education,FYE145,FYE146,Arabic Concepts for Native Speakers,3
+BSCMS-MPS-09,BSCMS-MPS,2,General Education,FYE155,,Digital Humanities,3
+BSCMS-MPS-10,BSCMS-MPS,2,General Education,FYE195,,Artificial Intelligence Essentials and Applications,3
+BSCMS-MPS-11,BSCMS-MPS,3,Program Required,COM200,,"Communication, Media and Society",3
+BSCMS-MPS-12,BSCMS-MPS,3,Program Required,COM230,,Professional and Public Speaking,3
+BSCMS-MPS-13,BSCMS-MPS,3,Program Required,ARM240,,Media Storytelling in Arabic I,3
+BSCMS-MPS-14,BSCMS-MPS,3,Program Required,ENG240,,Critical Thinking and Argumentative Writing,3
+BSCMS-MPS-15,BSCMS-MPS,3,ZU Elective,,,ZU Elective (any course from the list),3
+BSCMS-MPS-16,BSCMS-MPS,4,Program Required,MPS220,,Visual Storytelling,3
+BSCMS-MPS-17,BSCMS-MPS,4,Program Required,COM210,,Introduction to Media Storytelling,3
+BSCMS-MPS-18,BSCMS-MPS,4,Program Elective,,,Program Elective (any course from the list),3
+BSCMS-MPS-19,BSCMS-MPS,4,Program Required,COM240,,Media Law and Ethics,3
+BSCMS-MPS-20,BSCMS-MPS,4,ZU Elective,,,ZU Elective (any course from the list),3
+BSCMS-MPS-21,BSCMS-MPS,5,Program Required,MPS321,,Video Production,3
+BSCMS-MPS-22,BSCMS-MPS,5,Program Required,MPS241,,Audio Production,3
+BSCMS-MPS-23,BSCMS-MPS,5,Program Required,ARM375,,Public Speaking and Professional Presentation in Arabic,3
+BSCMS-MPS-24,BSCMS-MPS,5,Program Required,COM212,,Digital Storytelling,3
+BSCMS-MPS-25,BSCMS-MPS,5,Program Elective,,,Program Elective (any course from the list),3
+BSCMS-MPS-26,BSCMS-MPS,6,Program Required,COM360,,Applied Media Research and Analysis,3
+BSCMS-MPS-27,BSCMS-MPS,6,Program Required,MPS421,,Advanced Media Production,3
+BSCMS-MPS-28,BSCMS-MPS,6,Program Required,ARM340,,Media Storytelling in Arabic II,3
+BSCMS-MPS-29,BSCMS-MPS,6,Program Elective,,,Program Elective (any course from the list),3
+BSCMS-MPS-30,BSCMS-MPS,6,ZU Elective,,,ZU Elective (any course from the list),3
+BSCMS-MPS-31,BSCMS-MPS,7,Program Required,MPS331,,Media and Cultural Criticism,3
+BSCMS-MPS-32,BSCMS-MPS,7,Program Required,MPS457,,Capstone Project,3
+BSCMS-MPS-33,BSCMS-MPS,7,ZU Elective,,,ZU Elective (any course from the list),3
+BSCMS-MPS-34,BSCMS-MPS,7,ZU Elective,,,ZU Elective (any course from the list),3
+BSCMS-MPS-35,BSCMS-MPS,7,ZU Elective,,,ZU Elective (any course from the list),3
+BSCMS-MPS-36,BSCMS-MPS,8,Program Required,MPS361,,Media History,3
+BSCMS-MPS-37,BSCMS-MPS,8,Program Required,ARM395,,Media Translation Workshop,3
+BSCMS-MPS-38,BSCMS-MPS,8,Program Elective,,,Program Elective (any course from the list),3
+BSCMS-MPS-39,BSCMS-MPS,8,ZU Elective,,,ZU Elective (any course from the list),3
+BSCMS-MPS-40,BSCMS-MPS,8,Program Required,COM490,,Internship,3
+BFAGD-01,BFAGD,1,General Education,ART121,,Fundamentals of Art & Design Studies,3
+BFAGD-02,BFAGD,1,General Education,FYE140,,Critical Analysis and Composition,3
+BFAGD-03,BFAGD,1,General Education,FYE110,,Reasoning with Data,3
+BFAGD-04,BFAGD,1,General Education,FYE150,,Fundamentals of Innovation and Entrepreneurship,3
+BFAGD-05,BFAGD,1,General Education,FYE120,,Islamic Culture,3
+BFAGD-06,BFAGD,2,General Education,FYE105,,Workplace Readiness and Professional Skills,3
+BFAGD-07,BFAGD,2,General Education,FYE126,FYE125,Contemporary Emirati Studies,3
+BFAGD-08,BFAGD,2,General Education,FYE145,FYE146,Arabic Concepts for Native Speakers,3
+BFAGD-09,BFAGD,2,General Education,FYE155,,Digital Humanities,3
+BFAGD-10,BFAGD,2,General Education,FYE195,,Artificial Intelligence Essentials and Applications,3
+BFAGD-11,BFAGD,3,Program Required,ART205,,Art Foundations,3
+BFAGD-12,BFAGD,3,Program Required,ART201,,Principles of Design,3
+BFAGD-13,BFAGD,3,Program Required,ART221,,Research Methods for Artists and Designers,3
+BFAGD-14,BFAGD,3,Program Required,ART223,,History of Visual Culture II,3
+BFAGD-15,BFAGD,3,Program Required,ART251,,Basic Design,3
+BFAGD-16,BFAGD,4,Program Required,AVA310,,Drawing I,3
+BFAGD-17,BFAGD,4,Art History Elective,,,Art History Elective (any course from the list),3
+BFAGD-18,BFAGD,4,Program Required,AAH322,,History of Islamic Art and Architecture,3
+BFAGD-19,BFAGD,4,Program Required,ART220,,Introduction to Art History,3
+BFAGD-20,BFAGD,4,Program Required,AGD351,,Graphic Design I,3
+BFAGD-21,BFAGD,5,Program Required,AGD359,,Information Design,3
+BFAGD-22,BFAGD,5,Program Elective,,,Program Elective (any course from the list),3
+BFAGD-23,BFAGD,5,Program Required,AGD352,,Graphic Design II,3
+BFAGD-24,BFAGD,5,Program Required,AGD356,,Typography I,3
+BFAGD-25,BFAGD,5,Program Required,AGD357,,Designing for the Web I,3
+BFAGD-26,BFAGD,6,Program Required,AGD451,,Graphic Design III,3
+BFAGD-27,BFAGD,6,Program Required,AGD452,,Packaging Design,3
+BFAGD-28,BFAGD,6,Program Required,AGD459,,New Media Design,3
+BFAGD-29,BFAGD,6,Art History Elective,,,Art History Elective (any course from the list),3
+BFAGD-30,BFAGD,6,ZU Elective,,,ZU Elective (any course from the list),3
+BFAGD-31,BFAGD,7,Program Required,ADR492,,Senior Research Seminar,3
+BFAGD-32,BFAGD,7,Program Elective,,,Program Elective (any course from the list),3
+BFAGD-33,BFAGD,7,Program Required,AGD453,,Graphic Design IV,3
+BFAGD-34,BFAGD,7,Program Required,AGD456,,Typography II,3
+BFAGD-35,BFAGD,7,Program Required,ADR321,,Material Culture of the United Arab Emirates,3
+BFAGD-36,BFAGD,8,Program Required,ADR405,,Professional Practice,3
+BFAGD-37,BFAGD,8,Program Required,ART499,,Senior Project,6
+BFAGD-38,BFAGD,8,Program Elective,,,Program Elective (any course from the list),3
+BFAGD-39,BFAGD,9,Program Required,ART490,,Internship,3
+BSPSY-01,BSPSY,1,General Education,FYE100,,Academic Foundations and Development,3
+BSPSY-02,BSPSY,1,General Education,FYE110,,Reasoning with Data,3
+BSPSY-03,BSPSY,1,General Education,FYE120,,Islamic Culture,3
+BSPSY-04,BSPSY,1,General Education,FYE140,,Critical Analysis and Composition,3
+BSPSY-05,BSPSY,1,General Education,FYE150,,Fundamentals of Innovation and Entrepreneurship,3
+BSPSY-06,BSPSY,2,General Education,FYE105,,Workplace Readiness and Professional Skills,3
+BSPSY-07,BSPSY,2,General Education,FYE126,FYE125,Contemporary Emirati Studies,3
+BSPSY-08,BSPSY,2,General Education,FYE145,FYE146,Arabic Concepts for Native Speakers,3
+BSPSY-09,BSPSY,2,General Education,FYE155,,Digital Humanities,3
+BSPSY-10,BSPSY,2,General Education,FYE195,,Artificial Intelligence Essentials and Applications,3
+BSPSY-11,BSPSY,3,Program Required,PSY212,,Introduction to Psychology,3
+BSPSY-12,BSPSY,3,Program Required,PSY207,,Developmental Psychology,3
+BSPSY-13,BSPSY,3,Program Required,PSY310,,Introduction to Counseling,3
+BSPSY-14,BSPSY,3,Program Required,ENG222,,English in the Professions I,3
+BSPSY-15,BSPSY,3,ZU Elective,,,ZU Elective (any course from the list),3
+BSPSY-16,BSPSY,4,Program Required,PSY363,,Social Psychology I,3
+BSPSY-17,BSPSY,4,Program Required,PSY325,,Cognitive Psychology,3
+BSPSY-18,BSPSY,4,Program Required,ARA345,,Advanced Arabic Skills,3
+BSPSY-19,BSPSY,4,ZU Elective,,,ZU Elective (any course from the list),3
+BSPSY-20,BSPSY,4,ZU Elective,,,ZU Elective (any course from the list),3
+BSPSY-21,BSPSY,5,Program Required,PSY330,,Personality and Individual Differences,3
+BSPSY-22,BSPSY,5,Program Required,PSY340,,Mental Health and Psychological Disorders,3
+BSPSY-23,BSPSY,5,Program Required,PSY321,,Biological Basis for Behavior,3
+BSPSY-24,BSPSY,5,ZU Elective,,,ZU Elective (any course from the list),3
+BSPSY-25,BSPSY,5,ZU Elective,,,ZU Elective (any course from the list),3
+BSPSY-26,BSPSY,6,Program Required,PSY366,,Research Methods I,3
+BSPSY-27,BSPSY,6,Program Required,PSY371,,Organizational Psychology,3
+BSPSY-28,BSPSY,6,Program Required,PSY375,,Health Psychology,3
+BSPSY-29,BSPSY,6,Program Required,PSY410,,Individual and Family Assessment,3
+BSPSY-30,BSPSY,6,ZU Elective,,,ZU Elective (any course from the list),3
+BSPSY-31,BSPSY,7,Program Required,PSY413,,Psychological Interventions,3
+BSPSY-32,BSPSY,7,Program Required,PSY425,,"Cognitive Psychology II: Reasoning, Problem Solving and Decision Making",3
+BSPSY-33,BSPSY,7,Program Required,PSY430,,Cultural Psychology,3
+BSPSY-34,BSPSY,7,Program Required,PSY466,,Research Methods II,3
+BSPSY-35,BSPSY,7,ZU Elective,,,ZU Elective (any course from the list),3
+BSPSY-36,BSPSY,8,Program Required,PSY451,,Seminar in Applied Psychology,3
+BSPSY-37,BSPSY,8,Program Required,PSY463,,Positive Psychology,3
+BSPSY-38,BSPSY,8,Program Required,PSY490,,Internship in Psychology,3
+BSPSY-39,BSPSY,8,Program Required,PSY491,,Senior Project in Psychology,3
+BSPSY-40,BSPSY,8,ZU Elective,,,ZU Elective (any course from the list),3

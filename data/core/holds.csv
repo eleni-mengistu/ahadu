@@ -1,0 +1,8 @@
+﻿hold_id,student_id,hold_type,reason,office,blocks_registration,start_date,released_date
+H-1001,202412002,Financial,Unpaid balance for housing and services fees,Finance Office,Yes,2026-10-05,
+H-1002,202312008,Advising,Must meet academic advisor before registration,Center for Student Success,Yes,2026-11-02,
+H-1003,202312008,Library,Overdue library book,Library,No,2026-10-20,
+H-1004,202312008,Financial,Parking fine,Finance Office,Yes,2026-03-01,2026-03-15
+H-1010,202568135,Library,Missing high school certificate copy,Library,No,2026-09-10,2026-10-01
+H-1011,202411170,Registrar,Overdue library book,Library,No,2026-09-11,
+H-1012,202384177,Registrar,Overdue library book,Registrar's Office,No,2026-09-12,

@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, level_chip %}
+{% block content %}
+{% set s = student %}
+<section class="hero p-5 sm:p-7 mb-4">
+  <div class="relative z-10">
+    <div class="flex flex-wrap items-start justify-between gap-3">
+      <div class="min-w-0">
+        <p class="m-0 text-sm hero-soft">Welcome back</p>
+        <h1 class="text-2xl sm:text-4xl font-bold m-0 mt-0.5">{{ s.full_name }}</h1>
+        <p class="m-0 mt-1 text-sm hero-soft"><span class="tnum">{{ s.student_id }}</span> · <span dir="rtl" lang="ar">{{ s.full_name_ar }}</span></p>
+      </div>
+      <div class="text-right">
+        <div class="text-xs hero-soft">Cumulative GPA</div>
+        <div class="display tnum text-4xl sm:text-5xl font-bold leading-none mt-1">{{ record.gpa|gpa }}</div>
+        {% if record.gpa is none %}<div class="text-xs mt-1 hero-soft">First grades after this term</div>{% endif %}
+      </div>
+    </div>
+    <dl class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-3 m-0 mt-5">
+      <div class="hero-fact col-span-2"><dt>Program</dt><dd class="m-0">{{ s.program_name }}{% if s.concentration %}<span class="font-normal"> · {{ s.concentration }}</span>{% endif %}</dd></div>
+      <div class="hero-fact"><dt>Status</dt><dd class="m-0"><span class="hero-chip {% if s.status == 'Active' %}good{% endif %}">{{ s.status }}</span></dd></div>
+      <div class="hero-fact"><dt>Academic standing</dt><dd class="m-0"><span class="hero-chip {% if s.on_probation %}bad{% elif 'Good' in s.academic_standing %}good{% else %}info{% endif %}">{{ s.academic_standing }}</span></dd></div>
+      <div class="hero-fact col-span-2"><dt>Advisor</dt><dd class="m-0"><a href="/links" class="underline underline-offset-2">{{ s.advisor_name }}</a>{% if s.advisor.office %}<span class="font-normal"> · Office {{ s.advisor.office }}</span>{% endif %}</dd></div>
+      <div class="hero-fact"><dt>Semester</dt><dd class="m-0">Semester {{ s.current_semester }}</dd></div>
+      <div class="hero-fact"><dt>Campus</dt><dd class="m-0">{{ s.program_type }}</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="mb-4 space-y-2" aria-label="Needs your attention">
+  {% for alert in alerts[:4] %}
+  <a href="{{ alert.href }}" class="alert-row alert-{{ alert.level }}" style="display:flex">
+    {{ icon("alert") }}
+    <span class="min-w-0 flex-1"><span class="alert-title block">{{ alert.title }}</span><span class="block text-sm">{{ alert.text }}</span></span>
+    <span class="link hide-sm self-center">{{ alert.action }} {{ icon("arrow", 14) }}</span>
+  </a>
+  {% else %}
+  <div class="alert-row alert-good">{{ icon("ok") }}<span><span class="alert-title block">You're all clear</span><span class="text-sm">No holds, no attendance warnings and no exam clashes right now.</span></span></div>
+  {% endfor %}
+  {% if alerts|length > 4 %}<p class="muted text-xs m-0 pl-1">{{ alerts|length - 4 }} more in Attendance, Holds and Exams.</p>{% endif %}
+</section>
+
+<section class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4" aria-label="Summary">
+  <a href="/audit" class="card p-4 sm:p-5">
+    <div class="label">Degree progress</div>
+    <div class="display tnum text-2xl sm:text-3xl font-bold mt-1">{{ audit.percent }}%</div>
+    <div class="stack mt-2" style="height:8px" aria-hidden="true">
+      {% if audit.done_credits %}<span class="fill-done" style="width:{{ audit.percent_done_exact }}%"></span>{% endif %}
+      {% if audit.progress_credits %}<span class="fill-progress" style="width:{{ audit.percent_progress_exact }}%"></span>{% endif %}
+      <span class="fill-remaining" style="flex:1"></span>
+    </div>
+    <div class="muted text-xs mt-2 tnum">{{ audit.done_credits }} of {{ audit.total_credits }} credits</div>
+  </a>
+  <a href="/schedule" class="card p-4 sm:p-5">
+    <div class="label">This term</div>
+    <div class="display tnum text-2xl sm:text-3xl font-bold mt-1">{{ classes|length }} <span class="text-base font-semibold muted">classes</span></div>
+    <div class="muted text-xs mt-2 tnum">{{ term_credits }} credits registered</div>
+  </a>
+  <a href="/attendance" class="card p-4 sm:p-5">
+    <div class="label">Highest absence</div>
+    <div class="display tnum text-2xl sm:text-3xl font-bold mt-1">{{ attendance.worst.percent_label if attendance.worst else "–" }}</div>
+    <div class="text-xs mt-2">{% if attendance.worst %}{{ level_chip(attendance.worst) }}{% endif %}</div>
+  </a>
+  <a href="/holds" class="card p-4 sm:p-5">
+    <div class="label">Holds</div>
+    <div class="display tnum text-2xl sm:text-3xl font-bold mt-1">{{ holds.active|length }} <span class="text-base font-semibold muted">active</span></div>
+    <div class="text-xs mt-2">{% if holds.blocked %}<span class="chip chip-bad">{{ icon("lock", 13) }}Registration blocked</span>{% else %}<span class="chip chip-good">{{ icon("tick", 13) }}Can register</span>{% endif %}</div>
+  </a>
+</section>
+
+<div class="grid lg:grid-cols-3 gap-4 items-start">
+  <div class="lg:col-span-2 space-y-4">
+  <section class="card pb-2">
+    <div class="card-head">
+      <div><h2 class="card-title">Today's classes</h2><div class="label">{{ today.label }}</div></div>
+      <a class="link" href="/schedule">Full week {{ icon("arrow", 14) }}</a>
+    </div>
+    <div class="mt-3 px-3">
+      {% for c in today["items"] %}
+      <a href="/courses/{{ c.crn }}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[rgb(var(--surface-2))] c{{ c.color }}">
+        <div class="w-14 shrink-0 tnum"><div class="font-semibold text-sm">{{ c.start_time }}</div><div class="muted text-xs">{{ c.end_time }}</div></div>
+        <span class="color-bar"></span>
+        <div class="min-w-0 flex-1">
+          <div class="font-semibold text-sm truncate">{{ c.code }} · {{ c.title }}</div>
+          <div class="muted text-xs truncate">Room {{ c.room }} · {{ c.instructor_name }}</div>
+        </div>
+        {% if c.status == "Now" %}<span class="chip chip-good">Now</span>{% elif c.status == "Finished" %}<span class="chip chip-plain">Finished</span>{% elif c.status == "Upcoming" %}<span class="chip chip-info">Upcoming</span>{% endif %}
+      </a>
+      {% else %}
+      <div class="p-5 text-center">
+        <div class="font-semibold">No classes today</div>
+        {% if today.next_day %}<div class="muted text-sm mt-1">Next: {{ today.next_day.name }} at {{ today.next_day.first.start_time }}, {{ today.next_day.first.code }} in {{ today.next_day.first.room }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if attendance.rows %}
+  <section class="card overflow-hidden">
+    <div class="card-head pb-3">
+      <div><h2 class="card-title">This term's courses</h2><div class="label">Absences so far, most urgent first</div></div>
+      <a class="link" href="/courses">Marks and details {{ icon("arrow", 14) }}</a>
+    </div>
+    {% for r in attendance.rows %}
+    <a href="/courses/{{ r.crn }}" class="flex items-center gap-3 px-5 py-2.5 hover:bg-[rgb(var(--surface-2))]" style="border-top:1px solid rgb(var(--line))">
+      <div class="min-w-0 flex-1"><div class="font-semibold text-sm truncate">{{ r.code }} · {{ r.title }}</div><div class="muted text-xs truncate">{{ r.instructor }}</div></div>
+      <div class="text-sm tnum whitespace-nowrap hide-sm">{{ r.absences }} of {{ r.allotted }} · {{ r.percent_label }}</div>
+      {{ level_chip(r) }}
+    </a>
+    {% endfor %}
+  </section>
+  {% endif %}
+  </div>
+
+  <div class="space-y-4">
+    <a href="/holds" class="card p-5">
+      <div class="flex items-center justify-between gap-2"><h2 class="card-title">Registration time ticket</h2><span style="color:rgb(var(--primary))">{{ icon("ticket") }}</span></div>
+      {% if ticket %}
+      <div class="label mt-0.5">{{ ticket.term_name }}</div>
+      <div class="mt-3 text-sm space-y-1">
+        <div class="flex justify-between gap-3"><span class="muted">Opens</span><span class="font-semibold tnum text-right">{{ ticket.start }}</span></div>
+        <div class="flex justify-between gap-3"><span class="muted">Closes</span><span class="font-semibold tnum text-right">{{ ticket.end }}</span></div>
+      </div>
+      <div class="mt-3">
+        {% if ticket.blocked %}<span class="chip chip-bad">{{ icon("lock", 13) }}Blocked until your hold is released</span>
+        {% else %}<span class="chip {% if ticket.state == 'open' %}chip-good{% else %}chip-info{% endif %}">{{ icon("clock", 13) }}{{ ticket.countdown }}</span>{% endif %}
+      </div>
+      {% else %}<p class="muted text-sm mb-0">No time ticket has been issued yet.</p>{% endif %}
+    </a>
+
+    {% if exams.next %}
+    <a href="/exams" class="card p-5">
+      <div class="flex items-center justify-between"><h2 class="card-title">Next final exam</h2><span class="chip chip-plain tnum">in {{ exams.next.days }} days</span></div>
+      <div class="mt-2 text-sm font-semibold">{{ exams.next.code }} · {{ exams.next.title }}</div>
+      <div class="muted text-xs mt-0.5 tnum">{{ exams.next.date_label }}, {{ exams.next.start_time }}–{{ exams.next.end_time }} · {{ exams.next.room }}</div>
+    </a>
+    {% endif %}
+
+    <section class="card p-3 no-print">
+      <h2 class="card-title px-2 pt-1 pb-2">Quick actions</h2>
+      <a class="quick-link" href="/export/summary.pdf" download>{{ icon("download", 17) }}<span>Download my summary (PDF)</span></a>
+      <a class="quick-link" href="/parking">{{ icon("car", 17) }}<span>Find a parking space</span></a>
+      <a class="quick-link" href="/library">{{ icon("library", 17) }}<span>Book a library room</span></a>
+      <a class="quick-link" href="{{ library.aisha }}" target="_blank" rel="noopener">{{ icon("spark", 17) }}<span>Ask Aisha, the library AI</span></a>
+    </section>
+
+    <section class="card pb-3">
+      <div class="card-head"><h2 class="card-title">University news</h2><a class="link" href="/links">All</a></div>
+      <div class="px-5 mt-2">
+        {% for n in news %}
+        <div class="py-2" {% if not loop.first %}style="border-top:1px solid rgb(var(--line))"{% endif %}><div class="text-sm font-semibold leading-snug">{{ n.title }}</div><div class="muted text-xs mt-0.5">{{ n.date|nice_date }} · {{ n.category }}</div></div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, pdf_button, page_head, empty %}
+{% block content %}
+<div class="flex items-start justify-between gap-3">{{ page_head("Exam schedule", current_term_name ~ " final exams, soonest first") }}{{ pdf_button("exams") }}</div>
+
+{% if exams.clashes %}
+<div class="alert-row alert-warning mb-4" role="alert">{{ icon("alert") }}<span class="text-sm"><span class="alert-title block">Exam clash found</span>Two of your exams overlap. Tell your advisor early so it can be sorted out.</span></div>
+{% endif %}
+
+{% if not exams["items"] %}{{ empty("No exams listed", "None of your classes has a final exam on the schedule.", "clock") }}{% endif %}
+<div class="space-y-3">
+  {% for e in exams["items"] %}
+  <a href="/courses/{{ e.crn }}" class="card p-4 items-center gap-4" style="display:flex">
+    <div class="w-14 h-16 shrink-0 rounded-xl grid place-content-center text-center" style="background:rgb(var(--primary-soft));color:rgb(var(--primary-strong))"><div class="text-xs font-semibold">{{ e.month }}</div><div class="display tnum text-2xl font-bold leading-none">{{ e.day }}</div></div>
+    <div class="min-w-0 flex-1">
+      <div class="font-semibold text-sm sm:text-base">{{ e.code }} · {{ e.title }}</div>
+      <div class="muted text-sm tnum">{{ e.weekday }}, {{ e.start_time }}–{{ e.end_time }} · {{ e.room }}</div>
+      {% if e.clash %}<span class="chip chip-bad mt-1">{{ icon("alert", 13) }}Overlaps {{ e.clash }}</span>{% endif %}
+    </div>
+    <span class="chip chip-plain tnum hide-sm">in {{ e.days }} days</span>
+  </a>
+  {% endfor %}
+</div>
+{% if exams.without %}
+<p class="muted text-sm mt-4">No final exam listed for: {{ exams.without|map(attribute="code")|join(", ") }}.</p>
+{% endif %}
+{% endblock %}

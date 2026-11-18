@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, pdf_button, page_head, stat, level_chip, empty %}
+{% block content %}
+<div class="flex items-start justify-between gap-3">{{ page_head("Class attendance", current_term_name ~ (" · recorded up to " ~ attendance.as_of if attendance.as_of else "")) }}{{ pdf_button("attendance") }}</div>
+
+{% if not attendance.rows %}
+  {{ empty("No attendance yet", "Attendance appears once you are registered in classes.", "user") }}
+{% else %}
+{% for r in attendance.rows if r.level == "alert" %}
+<div class="alert-row alert-danger mb-3" role="alert">{{ icon("alert") }}
+  <span class="text-sm"><span class="alert-title block">{{ r.code }} is over the 15% limit: {{ r.percent_label }}</span>You missed {{ r.absences }} of {{ r.allotted }} meetings. More than 15% leads to a WF grade, which counts as 0.0 in your GPA.{% if r.appeal %} <strong>Attendance appeal: {{ r.appeal }}.</strong>{% endif %}</span>
+</div>
+{% endfor %}
+
+<section class="grid grid-cols-3 gap-3 sm:gap-4 mb-4">
+  {{ stat("Total absences", attendance.total, "across " ~ attendance.rows|length ~ " classes") }}
+  {{ stat("Warnings", attendance.warnings, "at 5% and 10%") }}
+  {{ stat("Over 15%", attendance.alerts, "WF risk") }}
+</section>
+
+<section class="card overflow-hidden">
+  {% for r in attendance.rows %}
+  <a href="/courses/{{ r.crn }}" class="block px-4 sm:px-5 py-4 hover:bg-[rgb(var(--surface-2))]" {% if not loop.first %}style="border-top:1px solid rgb(var(--line))"{% endif %}>
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <div class="min-w-0 flex-1 basis-56"><div class="font-semibold text-sm">{{ r.code }} · {{ r.title }}</div><div class="muted text-xs">{{ r.instructor }} · {{ r.held }} of {{ r.allotted }} meetings held</div></div>
+      <div class="text-right tnum"><div class="display font-bold text-xl leading-none">{{ r.absences }}<span class="muted text-sm font-medium"> / {{ r.allotted }}</span></div><div class="label">absences</div></div>
+      <div class="text-right tnum w-16"><div class="display font-bold text-xl leading-none">{{ r.percent_label }}</div><div class="label">of class</div></div>
+      <div class="w-36 text-right">{{ level_chip(r) }}</div>
+    </div>
+    <div class="abs-track mt-3" role="img" aria-label="{{ r.percent_label }} absences. Markers at 5, 10 and 15 percent.">
+      <span class="lvl-{{ r.level }}" style="width:{{ r.bar }}%"></span>
+      <i class="abs-tick" style="inset-inline-start:25%"></i><i class="abs-tick" style="inset-inline-start:50%"></i><i class="abs-tick" style="inset-inline-start:75%"></i>
+    </div>
+    <div class="relative h-4 mt-1 text-[10.5px] muted tnum" aria-hidden="true"><span class="abs-label" style="inset-inline-start:25%">5%</span><span class="abs-label" style="inset-inline-start:50%">10%</span><span class="abs-label" style="inset-inline-start:75%">15%</span></div>
+    <div class="text-xs mt-0.5 muted">
+      {% if r.left < 0 %}Over the limit by {{ -r.left }} {{ "absence" if r.left == -1 else "absences" }}.
+      {% elif r.left == 0 %}No absences left: one more puts you over 15%.
+      {% else %}You can miss {{ r.left }} more {{ "class" if r.left == 1 else "classes" }} and stay within 15%.{% endif %}
+      {% if r.appeal %}<span class="font-semibold"> Appeal: {{ r.appeal }}.</span>{% endif %}
+    </div>
+  </a>
+  {% endfor %}
+</section>
+
+<details class="explain mt-4">
+  <summary>{{ icon("info", 15) }} How is this calculated?</summary>
+  <p class="mt-2 mb-0 max-w-3xl">Absence % = absences ÷ meetings allotted for the whole term. You get a first warning at 5%, a second warning at 10%, and more than 15% leads to a WF grade.</p>
+</details>
+{% endif %}
+{% endblock %}

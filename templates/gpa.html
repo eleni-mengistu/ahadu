@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, page_head, empty %}
+{% block content %}
+{{ page_head("GPA calculator", "See what this term's grades would do to your cumulative GPA. Nothing here changes your record.") }}
+<script type="application/json" id="gpa-data">{{ calc|tojson }}</script>
+
+{% if not classes %}{{ empty("No courses to plan", "You are not registered in any class this term.", "calc") }}{% else %}
+<div class="grid lg:grid-cols-3 gap-4 items-start" x-data="gpaCalc()">
+  <section class="card overflow-hidden lg:col-span-2">
+    <div class="card-head pb-3 flex-wrap">
+      <h2 class="card-title">This term's courses</h2>
+      <div class="flex gap-2"><button class="pill" @click="useEstimates()">Use marks so far</button><button class="pill" @click="setAll('A')">All A</button><button class="pill" @click="setAll('')">Clear</button></div>
+    </div>
+    <template x-for="course in courses" :key="course.crn">
+      <div class="flex items-center gap-3 px-4 sm:px-5 py-2.5" style="border-top:1px solid rgb(var(--line))">
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold"><span x-text="course.code"></span> <span class="muted font-normal" x-text="'· ' + course.credits + ' cr'"></span></div>
+          <div class="muted text-xs truncate" x-text="course.title"></div>
+          <div class="text-xs font-semibold" style="color:rgb(var(--info))" x-show="course.priorFail" x-text="course.priorFail ? 'Retake: a pass replaces your ' + course.priorFail.letter : ''"></div>
+        </div>
+        <select class="input" style="width:104px;min-height:42px" x-model="course.grade" :aria-label="'Grade for ' + course.code">
+          <option value="">No grade</option>
+          <template x-for="g in grades" :key="g.letter"><option :value="g.letter" x-text="g.letter" :selected="g.letter === course.grade"></option></template>
+        </select>
+      </div>
+    </template>
+  </section>
+
+  <div class="space-y-4 lg:sticky lg:top-20">
+    <section class="hero p-5">
+      <div class="relative z-10">
+        <div class="text-sm hero-soft">Projected cumulative GPA</div>
+        <div class="display tnum text-5xl font-bold mt-1" x-text="fmt(result.gpa)"></div>
+        <div class="text-sm mt-1" x-show="change !== null"><span x-text="(change >= 0 ? '+' : '') + change.toFixed(2)"></span> from today's {{ record.gpa|gpa }}</div>
+        <div class="mt-3"><span class="hero-chip" :class="result.gpa === null ? '' : (result.gpa >= 2 ? 'good' : 'bad')" x-text="result.gpa === null ? 'Pick a grade to begin' : (result.gpa >= 2 ? 'Good standing range' : 'Below 2.00: probation range')"></span></div>
+        <div class="grid grid-cols-2 gap-3 mt-4 text-sm">
+          <div><div class="text-xs hero-soft">Term GPA</div><div class="font-semibold tnum" x-text="fmt(result.term)"></div></div>
+          <div><div class="text-xs hero-soft">GPA credits</div><div class="font-semibold tnum" x-text="result.credits"></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="card p-5">
+      <h2 class="card-title">Reach a target</h2>
+      <label class="block mt-3"><span class="label block mb-1">Target cumulative GPA</span><input class="input" type="number" min="0" max="4" step="0.05" x-model="target"></label>
+      <p class="text-sm mt-3 mb-0" x-show="needed !== null">
+        <template x-if="needed > 4"><span>Not reachable this term, even with straight A grades.</span></template>
+        <template x-if="needed <= 0"><span>You reach this target with any passing grades.</span></template>
+        <template x-if="needed > 0 && needed <= 4"><span>You need a term GPA of <strong class="tnum" x-text="fmt(needed)"></strong> or higher.</span></template>
+      </p>
+    </section>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

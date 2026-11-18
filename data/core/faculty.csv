@@ -1,0 +1,23 @@
+﻿faculty_id,title,first_name,last_name,full_name,college,email,office,phone_ext,is_advisor
+Z10350,Dr.,Laura,Bennett,Dr. Laura Bennett,College of Technological Innovation,laura.bennett@demo.zu.ac.ae,AUH-C3-042,4662,Yes
+Z10387,Dr.,Karim,Haddad,Dr. Karim Haddad,College of Technological Innovation,karim.haddad@demo.zu.ac.ae,AUH-B3-049,4569,Yes
+Z10424,Dr.,Priya,Raman,Dr. Priya Raman,College of Technological Innovation,priya.raman@demo.zu.ac.ae,DXB-G3-045,4862,Yes
+Z10461,Dr.,Tomas,Novak,Dr. Tomas Novak,College of Technological Innovation,tomas.novak@demo.zu.ac.ae,DXB-G3-038,4245,Yes
+Z10498,Dr.,Hala,Nasser,Dr. Hala Nasser,College of Business,hala.nasser@demo.zu.ac.ae,AUH-E1-017,4294,Yes
+Z10535,Dr.,James,Whitfield,Dr. James Whitfield,College of Business,james.whitfield@demo.zu.ac.ae,AUH-D1-053,4502,Yes
+Z10572,Dr.,Leila,Farouk,Dr. Leila Farouk,College of Business,leila.farouk@demo.zu.ac.ae,DXB-B2-026,4356,Yes
+Z10609,Dr.,Martin,Keller,Dr. Martin Keller,College of Business,martin.keller@demo.zu.ac.ae,DXB-G2-057,4525,Yes
+Z10646,Dr.,Yusuf,Demir,Dr. Yusuf Demir,College of Communication and Media Sciences,yusuf.demir@demo.zu.ac.ae,AUH-F2-015,4570,Yes
+Z10683,Dr.,Elena,Petrova,Dr. Elena Petrova,College of Communication and Media Sciences,elena.petrova@demo.zu.ac.ae,DXB-C2-019,4897,Yes
+Z10720,Dr.,Samir,Khoury,Dr. Samir Khoury,College of Communication and Media Sciences,samir.khoury@demo.zu.ac.ae,DXB-A3-033,4372,Yes
+Z10757,Dr.,Grace,Okafor,Dr. Grace Okafor,College of Communication and Media Sciences,grace.okafor@demo.zu.ac.ae,DXB-D1-035,4912,Yes
+Z10794,Dr.,Daniel,Moreau,Dr. Daniel Moreau,College of Arts and Creative Enterprises,daniel.moreau@demo.zu.ac.ae,DXB-G1-037,4518,Yes
+Z10831,Dr.,Rana,Salem,Dr. Rana Salem,College of Arts and Creative Enterprises,rana.salem@demo.zu.ac.ae,DXB-D3-026,4864,Yes
+Z10868,Dr.,Victor,Lindqvist,Dr. Victor Lindqvist,College of Arts and Creative Enterprises,victor.lindqvist@demo.zu.ac.ae,DXB-E2-042,4530,Yes
+Z10905,Dr.,Huda,Barakat,Dr. Huda Barakat,College of Arts and Creative Enterprises,huda.barakat@demo.zu.ac.ae,AUH-E1-059,4132,Yes
+Z10942,Dr.,Ian,Callaghan,Dr. Ian Callaghan,College of Natural and Health Sciences,ian.callaghan@demo.zu.ac.ae,AUH-F3-052,4105,Yes
+Z10979,Dr.,Mei,Lin,Dr. Mei Lin,College of Natural and Health Sciences,mei.lin@demo.zu.ac.ae,DXB-D1-040,4905,Yes
+Z11016,Dr.,Nadia,Rahimi,Dr. Nadia Rahimi,College of Natural and Health Sciences,nadia.rahimi@demo.zu.ac.ae,AUH-G1-050,4717,Yes
+Z11053,Dr.,Paul,Stevens,Dr. Paul Stevens,University College (General Education),paul.stevens@demo.zu.ac.ae,DXB-F2-055,4951,No
+Z11090,Dr.,Amal,Youssef,Dr. Amal Youssef,University College (General Education),amal.youssef@demo.zu.ac.ae,DXB-E2-052,4315,No
+Z11127,Dr.,Chris,Hartley,Dr. Chris Hartley,University College (General Education),chris.hartley@demo.zu.ac.ae,DXB-G2-037,4207,No

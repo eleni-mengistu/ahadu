@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, pdf_button, page_head, stat, grade_badge, empty, standing_chip %}
+{% block content %}
+<div class="flex items-start justify-between gap-3">
+  {{ page_head("Academic transcript", student.full_name ~ " · " ~ student.student_id ~ " · " ~ student.program_name) }}
+  {{ pdf_button("transcript") }}
+</div>
+
+<section class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-3">
+  {{ stat("Cumulative GPA", record.gpa|gpa, student.academic_standing) }}
+  {{ stat("Credits earned", record.credits_earned, "of " ~ student.credits_required ~ " required") }}
+  {{ stat("GPA credits", record.gpa_credits, record.points_label ~ " quality points") }}
+  {{ stat("Transfer credits", record.transfer_credits, "Not counted in GPA") }}
+</section>
+
+<details class="explain mb-5 no-print">
+  <summary>{{ icon("info", 15) }} How is my GPA calculated?</summary>
+  <p class="mt-2 mb-0 max-w-3xl">GPA = sum of (quality points × credits) ÷ sum of credits, using grades that count in GPA{% if record.gpa is not none %}: {{ record.points_label }} ÷ {{ record.gpa_credits }} = <strong>{{ record.gpa|gpa }}</strong>{% endif %}. Transfer credits are not included. When you pass a course you failed earlier, the passing grade replaces the F in your cumulative GPA, and the transcript keeps both.</p>
+</details>
+
+{% if not record.terms %}
+  {{ empty("No grades yet", "This is your first semester. Grades appear here once " ~ current_term_name ~ " is complete.", "file") }}
+{% endif %}
+
+<div class="space-y-3">
+{% for t in record.terms|reverse %}
+  <details class="card overflow-hidden" open>
+    <summary class="flex flex-wrap items-center gap-x-5 gap-y-1 px-4 sm:px-5 py-3.5">
+      <span class="min-w-0 flex-1 basis-48"><span class="display font-semibold block">{{ t.name }}</span><span class="label tnum">{{ t.code }} · {{ t["rows"]|length }} courses · {{ t.earned }} credits earned</span></span>
+      <span class="text-right"><span class="label block">Term GPA</span><span class="display tnum font-bold text-lg">{{ t.gpa|gpa }}</span></span>
+      <span class="text-right"><span class="label block">Cumulative</span><span class="display tnum font-bold text-lg">{{ t.cumulative|gpa }}</span></span>
+      <span class="chev muted no-print">{{ icon("chev") }}</span>
+    </summary>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Course</th><th class="hide-sm">Title</th><th class="num">Credits</th><th>Grade</th><th class="num hide-sm">Points</th><th>Note</th></tr></thead>
+        <tbody>
+        {% for r in t["rows"] %}
+          <tr>
+            <td class="font-semibold whitespace-nowrap">{{ r.course_code }}</td>
+            <td class="hide-sm">{{ r.course_title }}</td>
+            <td class="num">{{ r.credits }}</td>
+            <td>{{ grade_badge(r.letter_grade) }}</td>
+            <td class="num hide-sm">{{ r.points_label }}</td>
+            <td class="text-xs">
+              {% if r.replaced_in %}<span class="chip chip-warn">Replaced by {{ r.replaced_by }} in GPA</span>
+              {% elif r.replaces %}<span class="chip chip-info">Repeat: replaces {{ r.replaces }}</span>
+              {% elif r.letter_grade in ["F", "WF"] %}<span class="chip chip-bad">Counts in GPA until passed</span>{% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% if t.gpa_without_replaced is not none %}
+    <p class="muted text-xs m-0 px-5 py-2.5" style="border-top:1px solid rgb(var(--line))">Term GPA is shown as earned that term. Without the replaced grade it would be {{ t.gpa_without_replaced|gpa }}.</p>
+    {% endif %}
+  </details>
+{% endfor %}
+</div>
+
+<section class="card mt-5 overflow-hidden">
+  <div class="card-head pb-3"><div><h2 class="card-title">Transfer credits</h2><div class="label">Accepted from other universities. They earn credit but are not in your GPA.</div></div><span class="chip chip-info tnum">{{ record.transfer_credits }} credits</span></div>
+  {% if record.transfers %}
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Institution</th><th>External course</th><th>ZU equivalent</th><th class="num">Credits</th><th>Grade</th><th class="hide-sm">Awarded</th></tr></thead>
+    <tbody>{% for r in record.transfers %}<tr>
+      <td>{{ r.institution }}</td>
+      <td><span class="font-semibold">{{ r.external_course_code }}</span><span class="muted block text-xs">{{ r.external_course_title }}</span></td>
+      <td><span class="font-semibold">{{ r.zu_equivalent_code }}</span><span class="muted block text-xs">{{ r.zu_equivalent_title }}</span></td>
+      <td class="num">{{ r.credits }}</td><td>{{ grade_badge(r.grade) }}</td><td class="hide-sm">{{ r.term_name }}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+  {% else %}<p class="muted text-sm px-5 pb-4 m-0">You have no transfer credits on record.</p>{% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, pdf_button, page_head, grade_badge %}
+{% block content %}
+<div class="flex items-start justify-between gap-3">{{ page_head("Degree audit", audit.program.program_name ~ (" · " ~ audit.program.concentration if audit.program.concentration else "")) }}{{ pdf_button("audit") }}</div>
+
+<section class="card p-5 sm:p-6 mb-3">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <div class="label">Overall progress</div>
+      <div class="display tnum text-5xl font-bold mt-1">{{ audit.percent }}%</div>
+      <div class="muted text-sm mt-1 tnum">{{ audit.done_credits }} of {{ audit.total_credits }} required credits complete</div>
+    </div>
+    <div class="grid grid-cols-3 gap-5 sm:gap-8 text-sm">
+      <div><div class="flex items-center gap-1.5 label"><span class="w-2.5 h-2.5 rounded-sm fill-done inline-block"></span>Done</div><div class="display tnum text-2xl font-bold">{{ audit.done }}</div><div class="muted text-xs tnum">{{ audit.done_credits }} cr</div></div>
+      <div><div class="flex items-center gap-1.5 label"><span class="w-2.5 h-2.5 rounded-sm fill-progress inline-block"></span>In progress</div><div class="display tnum text-2xl font-bold">{{ audit.in_progress }}</div><div class="muted text-xs tnum">{{ audit.progress_credits }} cr</div></div>
+      <div><div class="flex items-center gap-1.5 label"><span class="w-2.5 h-2.5 rounded-sm fill-remaining inline-block"></span>Remaining</div><div class="display tnum text-2xl font-bold">{{ audit.remaining }}</div><div class="muted text-xs tnum">{{ audit.remaining_credits }} cr</div></div>
+    </div>
+  </div>
+  <div class="stack mt-4" role="img" aria-label="{{ audit.done_credits }} credits done, {{ audit.progress_credits }} in progress, {{ audit.remaining_credits }} remaining">
+    {% if audit.done_credits %}<span class="fill-done" style="width:{{ audit.percent_done_exact }}%"></span>{% endif %}
+    {% if audit.progress_credits %}<span class="fill-progress" style="width:{{ audit.percent_progress_exact }}%"></span>{% endif %}
+    {% if audit.remaining_credits %}<span class="fill-remaining" style="flex:1"></span>{% endif %}
+  </div>
+  <div class="flex flex-wrap gap-2 mt-4 text-xs">
+    <span class="chip {% if audit.done_credits >= audit.total_credits %}chip-good{% else %}chip-plain{% endif %}">Graduation credits: {{ audit.done_credits }} / {{ audit.total_credits }}</span>
+    <span class="chip {% if audit.gpa_ok %}chip-good{% elif record.gpa is none %}chip-plain{% else %}chip-bad{% endif %}">Minimum GPA 2.00: {{ "no GPA yet" if record.gpa is none else ("met" if audit.gpa_ok else "not met") }} ({{ record.gpa|gpa }})</span>
+  </div>
+</section>
+
+<details class="explain mb-4">
+  <summary>{{ icon("info", 15) }} How is this worked out?</summary>
+  <p class="mt-2 mb-0 max-w-3xl">Each requirement of your program is matched to your record. A passed course or accepted transfer credit is <strong>Done</strong>, a course you are registered in this term is <strong>In progress</strong>, and anything else is <strong>Remaining</strong>. Courses outside the named requirements fill your elective slots. Progress = completed requirement credits ÷ {{ audit.total_credits }}.</p>
+</details>
+
+<div x-data="{ show: 'all' }">
+  <div class="flex flex-wrap gap-2 mb-3" role="group" aria-label="Filter requirements">
+    <button class="pill" :class="show === 'all' && 'on'" @click="show = 'all'">All {{ audit.total }}</button>
+    <button class="pill" :class="show === 'remaining' && 'on'" @click="show = 'remaining'">Remaining {{ audit.remaining }}</button>
+    <button class="pill" :class="show === 'progress' && 'on'" @click="show = 'progress'">In progress {{ audit.in_progress }}</button>
+    <button class="pill" :class="show === 'done' && 'on'" @click="show = 'done'">Done {{ audit.done }}</button>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-3 items-start">
+  {% for g in audit.groups %}
+    {% set statuses = g["items"]|map(attribute="status")|join(" ") %}
+    <section class="card overflow-hidden" x-show="show === 'all' || '{{ statuses }}'.includes(show)">
+      <div class="flex items-center justify-between gap-3 px-4 py-3" style="background:rgb(var(--surface-2))">
+        <h2 class="card-title text-[15px]">{{ g.label }}</h2>
+        <span class="label tnum">{{ g.done_credits }} / {{ g.credits }} credits</span>
+      </div>
+      {% for r in g["items"] %}
+      <div class="flex items-center gap-3 px-4 py-2.5" style="border-top:1px solid rgb(var(--line))" x-show="show === 'all' || show === '{{ r.status }}'">
+        <span class="status-dot dot-{{ r.status }}" title="{{ {'done':'Done','progress':'In progress','remaining':'Remaining'}[r.status] }}">{% if r.status == "done" %}{{ icon("tick", 14) }}{% elif r.status == "progress" %}{{ icon("clock", 14) }}{% endif %}</span>
+        <div class="min-w-0 flex-1">
+          <div class="text-sm font-semibold">
+            {% if r.via %}{{ r.via.code }}{% elif r.course_code %}{{ r.course_code }}{% if r.alternative_course_code %} or {{ r.alternative_course_code }}{% endif %}{% else %}{{ r.requirement_type }}{% endif %}
+            <span class="font-normal">· {{ r.via.title if r.via else r.course_title }}</span>
+          </div>
+          <div class="muted text-xs">
+            {{ r.credits }} cr{% if r.is_elective %} · {{ r.requirement_type }}{% endif %}{% if r.via %} · {{ r.via.term }}{% endif %}{% if r.via and r.via.grade == "TR" %} · Transfer{% endif %}
+            {% if r.note %}<span style="color:rgb(var(--bad));font-weight:600"> · {{ r.note }}</span>{% endif %}
+          </div>
+        </div>
+        {% if r.status == "done" %}{{ grade_badge(r.via.grade) }}
+        {% elif r.status == "progress" %}<a class="chip chip-warn" href="/courses/{{ r.via.crn }}">In progress</a>
+        {% else %}<span class="chip chip-plain">Remaining</span>{% endif %}
+      </div>
+      {% endfor %}
+    </section>
+  {% endfor %}
+  </div>
+</div>
+
+{% if audit.not_applied %}
+<section class="card mt-4 p-5">
+  <h2 class="card-title">Credits not applied to a requirement</h2>
+  <p class="muted text-sm mt-1">These passed courses do not fit any open requirement.</p>
+  <div class="flex flex-wrap gap-2">{% for c in audit.not_applied %}<span class="chip chip-plain">{{ c.code }} · {{ c.credits }} cr</span>{% endfor %}</div>
+</section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,618 @@
+﻿student_id,term_code,course_code,course_title,credits,letter_grade
+202312001,202310,FYE100,Academic Foundations and Development,3,A
+202312001,202310,FYE110,Reasoning with Data,3,A-
+202312001,202310,FYE120,Islamic Culture,3,A
+202312001,202310,FYE140,Critical Analysis and Composition,3,B
+202312001,202310,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A
+202312001,202320,FYE105,Workplace Readiness and Professional Skills,3,A
+202312001,202320,FYE125,Contemporary Emirati Studies (in Arabic),3,A-
+202312001,202320,FYE145,Arabic Concepts for Native Speakers,3,A
+202312001,202320,FYE155,Digital Humanities,3,A
+202312001,202320,FYE195,Artificial Intelligence Essentials and Applications,3,A
+202312001,202410,CIT210,Essentials of IT and Infrastructure,3,B
+202312001,202410,MTH215,Computing Foundations,3,A
+202312001,202410,CIT285,Technical Communication,3,A
+202312001,202410,SEC235,Information Security Foundations,3,A
+202312001,202410,ARA345,Advanced Arabic Skills,3,A
+202312001,202420,SWE225,Introduction to Programming and Problem Solving,3,A
+202312001,202420,CIT365,Database Systems,3,A
+202312001,202420,NET256,Computer Network Foundations,3,B-
+202312001,202420,NET257,Computer Network Foundations Lab,1,A
+202312001,202420,MTH281,Probability and Statistics,3,B+
+202312001,202420,ISC251,Introduction to Integrated Strategic Communication,3,A-
+202312001,202510,SWE320,Object Oriented Programming,3,A
+202312001,202510,SWE321,Object Oriented Programming Lab,1,B+
+202312001,202510,SWE245,Web Development,3,A-
+202312001,202510,IMT375,Human Computer Interaction,3,A-
+202312001,202510,IMT340,Computer Graphics,3,A-
+202312001,202510,CIT315,Operating Systems,3,A
+202312001,202520,CIT305,IT in Global and Local Cultures,3,A
+202312001,202520,SWE324,Software Requirements and Design,3,A
+202312001,202520,CIT372,Cloud Computing,3,A
+202312001,202520,SWE346,Dynamic Web Development,3,A
+202312001,202520,SWE371,Mobile Computing,3,B+
+202312001,202530,CIT491,Internship,6,A
+202412002,202410,FYE100,Academic Foundations and Development,3,B
+202412002,202410,FYE110,Reasoning with Data,3,D+
+202412002,202410,FYE120,Islamic Culture,3,C
+202412002,202410,FYE140,Critical Analysis and Composition,3,C
+202412002,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,C
+202412002,202420,FYE105,Workplace Readiness and Professional Skills,3,B-
+202412002,202420,FYE126,Contemporary Emirati Studies,3,B+
+202412002,202420,FYE146,Arabic Concepts for Non-Native Speakers,3,A-
+202412002,202420,FYE155,Digital Humanities,3,C
+202412002,202420,FYE195,Artificial Intelligence Essentials and Applications,3,B+
+202412002,202510,INS260,Management of Information Systems,3,C+
+202412002,202510,MTH213,Business Statistics,3,B-
+202412002,202510,MTH212,Business Calculus,3,C
+202412002,202510,ENG240,Critical Thinking and Argumentative Writing,3,C+
+202412002,202510,MGT209,Introduction to Management,3,A
+202412002,202520,ACC202,Financial Accounting,3,B
+202412002,202520,LAW200,Business Law & Ethics,3,C
+202412002,202520,MKT210,Introduction to Marketing,3,C+
+202412002,202520,BUS207,Business Communications,3,A-
+202412002,202520,ECN201,Foundations of Microeconomics,3,B-
+202512003,202510,FYE100,Academic Foundations and Development,3,B-
+202512003,202510,FYE110,Reasoning with Data,3,B
+202512003,202510,FYE120,Islamic Culture,3,C-
+202512003,202510,FYE140,Critical Analysis and Composition,3,A
+202512003,202510,FYE150,Fundamentals of Innovation and Entrepreneurship,3,B
+202512003,202520,FYE105,Workplace Readiness and Professional Skills,3,A-
+202512003,202520,FYE126,Contemporary Emirati Studies,3,C
+202512003,202520,FYE145,Arabic Concepts for Native Speakers,3,C
+202512003,202520,FYE155,Digital Humanities,3,B-
+202512003,202520,FYE195,Artificial Intelligence Essentials and Applications,3,B-
+202412004,202410,FYE100,Academic Foundations and Development,3,B+
+202412004,202410,FYE120,Islamic Culture,3,A
+202412004,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A-
+202412004,202420,FYE105,Workplace Readiness and Professional Skills,3,A
+202412004,202420,FYE125,Contemporary Emirati Studies (in Arabic),3,C+
+202412004,202420,FYE145,Arabic Concepts for Native Speakers,3,A
+202412004,202420,FYE155,Digital Humanities,3,B+
+202412004,202420,FYE195,Artificial Intelligence Essentials and Applications,3,B+
+202412004,202510,PSY212,Introduction to Psychology,3,A
+202412004,202510,PSY207,Developmental Psychology,3,B
+202412004,202510,PSY310,Introduction to Counseling,3,B+
+202412004,202510,ENG222,English in the Professions I,3,A
+202412004,202520,PSY363,Social Psychology I,3,A
+202412004,202520,PSY325,Cognitive Psychology,3,B-
+202412004,202520,ARA345,Advanced Arabic Skills,3,A
+202412004,202520,GEN175,Introduction to Information Technology,3,A
+202412004,202520,ANT385,Bedouin Society,3,B-
+202305005,202220,FYE100,Academic Foundations and Development,3,A-
+202305005,202220,FYE110,Reasoning with Data,3,C
+202305005,202220,FYE120,Islamic Culture,3,C+
+202305005,202220,FYE140,Critical Analysis and Composition,3,A-
+202305005,202220,FYE150,Fundamentals of Innovation and Entrepreneurship,3,C
+202305005,202310,FYE105,Workplace Readiness and Professional Skills,3,D+
+202305005,202310,FYE126,Contemporary Emirati Studies,3,C+
+202305005,202310,FYE145,Arabic Concepts for Native Speakers,3,A-
+202305005,202310,FYE155,Digital Humanities,3,B-
+202305005,202310,FYE195,Artificial Intelligence Essentials and Applications,3,B-
+202305005,202320,PSY212,Introduction to Psychology,3,B
+202305005,202320,PSY207,Developmental Psychology,3,B+
+202305005,202320,PSY310,Introduction to Counseling,3,C
+202305005,202320,ENG222,English in the Professions I,3,C
+202305005,202320,GEN175,Introduction to Information Technology,3,C+
+202305005,202410,PSY363,Social Psychology I,3,A
+202305005,202410,PSY325,Cognitive Psychology,3,C
+202305005,202410,ARA345,Advanced Arabic Skills,3,B-
+202305005,202410,FLS361,World Cinemas,3,B-
+202305005,202410,ARA211,Masterpieces of Arabic Literature,3,B
+202305005,202420,PSY330,Personality and Individual Differences,3,A-
+202305005,202420,PSY340,Mental Health and Psychological Disorders,3,C+
+202305005,202420,PSY321,Biological Basis for Behavior,3,B-
+202305005,202420,CHL100,Chinese Language Level 1,3,B+
+202305005,202420,MKT340,Social Entrepreneurship and Shared Value,3,B-
+202305005,202510,PSY366,Research Methods I,3,B-
+202305005,202510,PSY371,Organizational Psychology,3,A-
+202305005,202510,PSY375,Health Psychology,3,C
+202305005,202510,PSY410,Individual and Family Assessment,3,B-
+202305005,202510,ISC383,Introduction to Social Media,3,C+
+202305005,202520,PSY413,Psychological Interventions,3,C-
+202305005,202520,PSY425,"Cognitive Psychology II: Reasoning, Problem Solving and Decision Making",3,B
+202305005,202520,PSY430,Cultural Psychology,3,B-
+202305005,202520,PSY466,Research Methods II,3,B
+202305005,202520,ANT385,Bedouin Society,3,B+
+202412006,202410,ART121,Fundamentals of Art & Design Studies,3,D
+202412006,202410,FYE140,Critical Analysis and Composition,3,C+
+202412006,202410,FYE110,Reasoning with Data,3,D+
+202412006,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,C
+202412006,202410,FYE120,Islamic Culture,3,B-
+202412006,202420,FYE105,Workplace Readiness and Professional Skills,3,D
+202412006,202420,FYE126,Contemporary Emirati Studies,3,B-
+202412006,202420,FYE145,Arabic Concepts for Native Speakers,3,C
+202412006,202420,FYE155,Digital Humanities,3,F
+202412006,202420,FYE195,Artificial Intelligence Essentials and Applications,3,C+
+202412006,202510,ART205,Art Foundations,3,F
+202412006,202510,ART201,Principles of Design,3,B-
+202412006,202510,ART221,Research Methods for Artists and Designers,3,B-
+202412006,202510,ART223,History of Visual Culture II,3,C-
+202412006,202510,ART251,Basic Design,3,C
+202412006,202520,AVA310,Drawing I,3,C
+202412006,202520,AAH324,Contemporary Islamic Art and Architecture,3,C
+202412006,202520,AAH322,History of Islamic Art and Architecture,3,F
+202412006,202520,ART220,Introduction to Art History,3,B-
+202412006,202520,AGD351,Graphic Design I,3,B-
+202412006,202510,FYE155,Digital Humanities,3,C
+202312008,202310,FYE100,Academic Foundations and Development,3,C-
+202312008,202310,FYE110,Reasoning with Data,3,B+
+202312008,202310,FYE120,Islamic Culture,3,A-
+202312008,202310,FYE140,Critical Analysis and Composition,3,A-
+202312008,202310,FYE150,Fundamentals of Innovation and Entrepreneurship,3,B+
+202312008,202320,FYE105,Workplace Readiness and Professional Skills,3,B
+202312008,202320,FYE126,Contemporary Emirati Studies,3,B
+202312008,202320,FYE145,Arabic Concepts for Native Speakers,3,A-
+202312008,202320,FYE155,Digital Humanities,3,B+
+202312008,202320,FYE195,Artificial Intelligence Essentials and Applications,3,C+
+202312008,202410,INS260,Management of Information Systems,3,B+
+202312008,202410,MTH213,Business Statistics,3,C
+202312008,202410,MTH212,Business Calculus,3,B-
+202312008,202410,ENG240,Critical Thinking and Argumentative Writing,3,A-
+202312008,202410,MGT209,Introduction to Management,3,A-
+202312008,202420,ACC202,Financial Accounting,3,B
+202312008,202420,LAW200,Business Law & Ethics,3,D
+202312008,202420,MKT210,Introduction to Marketing,3,B
+202312008,202420,BUS207,Business Communications,3,B-
+202312008,202420,ECN201,Foundations of Microeconomics,3,B
+202312008,202510,ACC203,Managerial Accounting,3,A
+202312008,202510,FIN308,Introduction to Finance,3,B
+202312008,202510,ARA345,Advanced Arabic Skills,3,B+
+202312008,202510,ACC311,Intermediate Accounting I,3,B+
+202312008,202510,ECN202,Understanding Macroeconomics,3,B-
+202312008,202520,OPR300,Operations Management,3,B
+202312008,202520,ACC303,Cost Accounting,3,B+
+202312008,202520,ACC413,Accounting Information Systems,3,A
+202312008,202520,ACC312,Intermediate Accounting II,3,A-
+202312008,202520,ACC416,Auditing,3,B+
+202511100,202510,FYE100,Academic Foundations and Development,3,C+
+202511100,202510,FYE110,Reasoning with Data,3,C-
+202511100,202510,FYE120,Islamic Culture,3,C+
+202511100,202510,FYE140,Critical Analysis and Composition,3,A-
+202511100,202510,FYE150,Fundamentals of Innovation and Entrepreneurship,3,B-
+202511100,202520,FYE105,Workplace Readiness and Professional Skills,3,A
+202511100,202520,FYE126,Contemporary Emirati Studies,3,C
+202511100,202520,FYE145,Arabic Concepts for Native Speakers,3,C-
+202511100,202520,FYE155,Digital Humanities,3,B+
+202511100,202520,FYE195,Artificial Intelligence Essentials and Applications,3,A-
+202486107,202410,FYE100,Academic Foundations and Development,3,B-
+202486107,202410,FYE110,Reasoning with Data,3,A
+202486107,202410,FYE120,Islamic Culture,3,A
+202486107,202410,FYE140,Critical Analysis and Composition,3,A
+202486107,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A
+202486107,202420,FYE105,Workplace Readiness and Professional Skills,3,A-
+202486107,202420,FYE126,Contemporary Emirati Studies,3,B+
+202486107,202420,FYE146,Arabic Concepts for Non-Native Speakers,3,A
+202486107,202420,FYE155,Digital Humanities,3,A
+202486107,202420,FYE195,Artificial Intelligence Essentials and Applications,3,B
+202486107,202510,CIT210,Essentials of IT and Infrastructure,3,A-
+202486107,202510,MTH215,Computing Foundations,3,A
+202486107,202510,CIT285,Technical Communication,3,A
+202486107,202510,SEC235,Information Security Foundations,3,A
+202486107,202510,ARA345,Advanced Arabic Skills,3,A-
+202486107,202520,SWE225,Introduction to Programming and Problem Solving,3,C+
+202486107,202520,CIT365,Database Systems,3,A
+202486107,202520,NET256,Computer Network Foundations,3,A-
+202486107,202520,NET257,Computer Network Foundations Lab,1,B+
+202486107,202520,MTH281,Probability and Statistics,3,B-
+202486107,202520,MPS220,Visual Storytelling,3,B
+202568135,202510,FYE100,Academic Foundations and Development,3,C-
+202568135,202510,FYE110,Reasoning with Data,3,C-
+202568135,202510,FYE120,Islamic Culture,3,A
+202568135,202510,FYE140,Critical Analysis and Composition,3,C+
+202568135,202510,FYE150,Fundamentals of Innovation and Entrepreneurship,3,C
+202568135,202520,FYE105,Workplace Readiness and Professional Skills,3,D+
+202568135,202520,FYE126,Contemporary Emirati Studies,3,D
+202568135,202520,FYE146,Arabic Concepts for Non-Native Speakers,3,C
+202568135,202520,FYE155,Digital Humanities,3,B
+202568135,202520,FYE195,Artificial Intelligence Essentials and Applications,3,B
+202344156,202310,FYE100,Academic Foundations and Development,3,A-
+202344156,202310,FYE110,Reasoning with Data,3,C-
+202344156,202310,FYE120,Islamic Culture,3,A-
+202344156,202310,FYE140,Critical Analysis and Composition,3,A-
+202344156,202310,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A
+202344156,202320,FYE105,Workplace Readiness and Professional Skills,3,A
+202344156,202320,FYE126,Contemporary Emirati Studies,3,A
+202344156,202320,FYE145,Arabic Concepts for Native Speakers,3,B
+202344156,202320,FYE155,Digital Humanities,3,A-
+202344156,202320,FYE195,Artificial Intelligence Essentials and Applications,3,B-
+202344156,202410,INS260,Management of Information Systems,3,B+
+202344156,202410,MTH213,Business Statistics,3,A
+202344156,202410,MTH212,Business Calculus,3,B+
+202344156,202410,ENG240,Critical Thinking and Argumentative Writing,3,A
+202344156,202410,MGT209,Introduction to Management,3,B+
+202344156,202420,ACC202,Financial Accounting,3,A-
+202344156,202420,LAW200,Business Law & Ethics,3,B-
+202344156,202420,MKT210,Introduction to Marketing,3,B+
+202344156,202420,BUS207,Business Communications,3,B+
+202344156,202420,ECN201,Foundations of Microeconomics,3,A
+202344156,202510,ACC203,Managerial Accounting,3,B
+202344156,202510,FIN308,Introduction to Finance,3,A
+202344156,202510,ARA345,Advanced Arabic Skills,3,A
+202344156,202510,ACC311,Intermediate Accounting I,3,B-
+202344156,202510,ECN202,Understanding Macroeconomics,3,A-
+202344156,202520,OPR300,Operations Management,3,A
+202344156,202520,ACC303,Cost Accounting,3,C+
+202344156,202520,ACC413,Accounting Information Systems,3,B-
+202344156,202520,ACC312,Intermediate Accounting II,3,A-
+202344156,202520,ACC416,Auditing,3,C
+202534163,202510,FYE100,Academic Foundations and Development,3,A-
+202534163,202510,FYE110,Reasoning with Data,3,A
+202534163,202510,FYE120,Islamic Culture,3,B
+202534163,202510,FYE140,Critical Analysis and Composition,3,C
+202534163,202510,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A
+202534163,202520,FYE105,Workplace Readiness and Professional Skills,3,B
+202534163,202520,FYE126,Contemporary Emirati Studies,3,B+
+202534163,202520,FYE146,Arabic Concepts for Non-Native Speakers,3,C
+202534163,202520,FYE155,Digital Humanities,3,A
+202534163,202520,FYE195,Artificial Intelligence Essentials and Applications,3,C-
+202411170,202410,FYE100,Academic Foundations and Development,3,B
+202411170,202410,FYE110,Reasoning with Data,3,A-
+202411170,202410,FYE120,Islamic Culture,3,A
+202411170,202410,FYE140,Critical Analysis and Composition,3,A
+202411170,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A
+202411170,202420,FYE105,Workplace Readiness and Professional Skills,3,B
+202411170,202420,FYE126,Contemporary Emirati Studies,3,A-
+202411170,202420,FYE145,Arabic Concepts for Native Speakers,3,A-
+202411170,202420,FYE155,Digital Humanities,3,B-
+202411170,202420,FYE195,Artificial Intelligence Essentials and Applications,3,A
+202411170,202510,INS260,Management of Information Systems,3,A
+202411170,202510,MTH213,Business Statistics,3,A
+202411170,202510,MTH212,Business Calculus,3,B
+202411170,202510,ENG240,Critical Thinking and Argumentative Writing,3,B
+202411170,202510,MGT209,Introduction to Management,3,A-
+202411170,202520,ACC202,Financial Accounting,3,C-
+202411170,202520,LAW200,Business Law & Ethics,3,A-
+202411170,202520,MKT210,Introduction to Marketing,3,A
+202411170,202520,BUS207,Business Communications,3,A-
+202411170,202520,ECN201,Foundations of Microeconomics,3,B
+202384177,202310,FYE100,Academic Foundations and Development,3,A
+202384177,202310,FYE110,Reasoning with Data,3,A
+202384177,202310,FYE120,Islamic Culture,3,A
+202384177,202310,FYE140,Critical Analysis and Composition,3,A
+202384177,202310,FYE150,Fundamentals of Innovation and Entrepreneurship,3,C-
+202384177,202320,FYE105,Workplace Readiness and Professional Skills,3,B-
+202384177,202320,FYE126,Contemporary Emirati Studies,3,A-
+202384177,202320,FYE146,Arabic Concepts for Non-Native Speakers,3,A-
+202384177,202320,FYE155,Digital Humanities,3,B+
+202384177,202320,FYE195,Artificial Intelligence Essentials and Applications,3,A-
+202384177,202410,INS260,Management of Information Systems,3,A
+202384177,202410,MTH213,Business Statistics,3,A
+202384177,202410,MTH212,Business Calculus,3,A-
+202384177,202410,ENG240,Critical Thinking and Argumentative Writing,3,A-
+202384177,202410,MGT209,Introduction to Management,3,A-
+202384177,202420,ACC202,Financial Accounting,3,A-
+202384177,202420,LAW200,Business Law & Ethics,3,B
+202384177,202420,MKT210,Introduction to Marketing,3,A
+202384177,202420,BUS207,Business Communications,3,A-
+202384177,202420,ECN201,Foundations of Microeconomics,3,A
+202384177,202510,ACC203,Managerial Accounting,3,A
+202384177,202510,FIN308,Introduction to Finance,3,B+
+202384177,202510,ARA345,Advanced Arabic Skills,3,B+
+202384177,202510,ACC311,Intermediate Accounting I,3,A
+202384177,202510,ECN202,Understanding Macroeconomics,3,A
+202384177,202520,OPR300,Operations Management,3,B-
+202384177,202520,ACC303,Cost Accounting,3,A
+202384177,202520,ACC413,Accounting Information Systems,3,A
+202384177,202520,ACC312,Intermediate Accounting II,3,A
+202384177,202520,ACC416,Auditing,3,A-
+202425184,202410,FYE100,Academic Foundations and Development,3,C
+202425184,202410,FYE110,Reasoning with Data,3,B+
+202425184,202410,FYE120,Islamic Culture,3,D+
+202425184,202410,FYE140,Critical Analysis and Composition,3,A-
+202425184,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,B+
+202425184,202420,FYE105,Workplace Readiness and Professional Skills,3,B-
+202425184,202420,FYE126,Contemporary Emirati Studies,3,C-
+202425184,202420,FYE145,Arabic Concepts for Native Speakers,3,B-
+202425184,202420,FYE155,Digital Humanities,3,C
+202425184,202420,FYE195,Artificial Intelligence Essentials and Applications,3,C+
+202425184,202510,COM200,"Communication, Media and Society",3,C
+202425184,202510,COM230,Professional and Public Speaking,3,C
+202425184,202510,ARM240,Media Storytelling in Arabic I,3,B+
+202425184,202510,ENG240,Critical Thinking and Argumentative Writing,3,C+
+202425184,202510,ISC251,Introduction to Integrated Strategic Communication,3,B
+202425184,202520,MPS220,Visual Storytelling,3,C
+202425184,202520,COM210,Introduction to Media Storytelling,3,C
+202425184,202520,MPS380,Web Production,3,C
+202425184,202520,COM240,Media Law and Ethics,3,C+
+202425184,202520,HRM301,Human Resource Management,3,C+
+202591191,202510,FYE100,Academic Foundations and Development,3,B
+202591191,202510,FYE110,Reasoning with Data,3,B-
+202591191,202510,FYE120,Islamic Culture,3,C+
+202591191,202510,FYE140,Critical Analysis and Composition,3,C+
+202591191,202510,FYE150,Fundamentals of Innovation and Entrepreneurship,3,B
+202591191,202520,FYE105,Workplace Readiness and Professional Skills,3,B
+202591191,202520,FYE126,Contemporary Emirati Studies,3,B
+202591191,202520,FYE145,Arabic Concepts for Native Speakers,3,B
+202591191,202520,FYE155,Digital Humanities,3,A-
+202591191,202520,FYE195,Artificial Intelligence Essentials and Applications,3,B-
+202450198,202410,FYE100,Academic Foundations and Development,3,A
+202450198,202410,FYE110,Reasoning with Data,3,A
+202450198,202410,FYE120,Islamic Culture,3,C+
+202450198,202410,FYE140,Critical Analysis and Composition,3,B+
+202450198,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A-
+202450198,202420,FYE105,Workplace Readiness and Professional Skills,3,A
+202450198,202420,FYE126,Contemporary Emirati Studies,3,A
+202450198,202420,FYE145,Arabic Concepts for Native Speakers,3,B
+202450198,202420,FYE155,Digital Humanities,3,A
+202450198,202420,FYE195,Artificial Intelligence Essentials and Applications,3,A-
+202450198,202510,COM200,"Communication, Media and Society",3,B
+202450198,202510,COM230,Professional and Public Speaking,3,B+
+202450198,202510,ARM240,Media Storytelling in Arabic I,3,A
+202450198,202510,ENG240,Critical Thinking and Argumentative Writing,3,B
+202450198,202510,ANT385,Bedouin Society,3,B
+202450198,202520,MPS220,Visual Storytelling,3,A
+202450198,202520,COM210,Introduction to Media Storytelling,3,B+
+202450198,202520,ISC383,Introduction to Social Media,3,B
+202450198,202520,COM240,Media Law and Ethics,3,B+
+202450198,202520,HIS321,Heritage of the Gulf,3,B-
+202438205,202410,FYE100,Academic Foundations and Development,3,A-
+202438205,202410,FYE110,Reasoning with Data,3,A
+202438205,202410,FYE120,Islamic Culture,3,A-
+202438205,202410,FYE140,Critical Analysis and Composition,3,A
+202438205,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A-
+202438205,202420,FYE105,Workplace Readiness and Professional Skills,3,A
+202438205,202420,FYE126,Contemporary Emirati Studies,3,C+
+202438205,202420,FYE145,Arabic Concepts for Native Speakers,3,A
+202438205,202420,FYE155,Digital Humanities,3,A-
+202438205,202420,FYE195,Artificial Intelligence Essentials and Applications,3,B-
+202438205,202510,COM200,"Communication, Media and Society",3,B+
+202438205,202510,COM230,Professional and Public Speaking,3,A
+202438205,202510,ARM240,Media Storytelling in Arabic I,3,A
+202438205,202510,ENG240,Critical Thinking and Argumentative Writing,3,A-
+202438205,202510,MKT335,Consumer Behavior,3,B
+202438205,202520,MPS220,Visual Storytelling,3,A
+202438205,202520,COM210,Introduction to Media Storytelling,3,B
+202438205,202520,MPS481,Zajel Student Media Production,3,A
+202438205,202520,COM240,Media Law and Ethics,3,B-
+202438205,202520,GEN175,Introduction to Information Technology,3,C
+202498212,202410,FYE100,Academic Foundations and Development,3,A-
+202498212,202410,FYE110,Reasoning with Data,3,C
+202498212,202410,FYE120,Islamic Culture,3,B+
+202498212,202410,FYE140,Critical Analysis and Composition,3,B+
+202498212,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,B
+202498212,202420,FYE105,Workplace Readiness and Professional Skills,3,B
+202498212,202420,FYE126,Contemporary Emirati Studies,3,C
+202498212,202420,FYE146,Arabic Concepts for Non-Native Speakers,3,A
+202498212,202420,FYE155,Digital Humanities,3,B+
+202498212,202420,FYE195,Artificial Intelligence Essentials and Applications,3,B+
+202498212,202510,COM200,"Communication, Media and Society",3,C+
+202498212,202510,COM230,Professional and Public Speaking,3,A
+202498212,202510,ARM240,Media Storytelling in Arabic I,3,B
+202498212,202510,ENG240,Critical Thinking and Argumentative Writing,3,C+
+202498212,202510,ANT362,Popular Cultures,3,B
+202498212,202520,MPS220,Visual Storytelling,3,A-
+202498212,202520,COM210,Introduction to Media Storytelling,3,A
+202498212,202520,COM209,Foundations in Media Writing,3,B
+202498212,202520,COM240,Media Law and Ethics,3,A
+202498212,202520,ANT385,Bedouin Society,3,C+
+202395219,202310,FYE100,Academic Foundations and Development,3,A-
+202395219,202310,FYE110,Reasoning with Data,3,B
+202395219,202310,FYE120,Islamic Culture,3,B+
+202395219,202310,FYE140,Critical Analysis and Composition,3,A
+202395219,202310,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A-
+202395219,202320,FYE105,Workplace Readiness and Professional Skills,3,B+
+202395219,202320,FYE126,Contemporary Emirati Studies,3,B-
+202395219,202320,FYE145,Arabic Concepts for Native Speakers,3,A-
+202395219,202320,FYE155,Digital Humanities,3,A-
+202395219,202320,FYE195,Artificial Intelligence Essentials and Applications,3,B+
+202395219,202410,COM200,"Communication, Media and Society",3,A
+202395219,202410,COM230,Professional and Public Speaking,3,B+
+202395219,202410,ARM240,Media Storytelling in Arabic I,3,A
+202395219,202410,ENG240,Critical Thinking and Argumentative Writing,3,A
+202395219,202410,ARA211,Masterpieces of Arabic Literature,3,A
+202395219,202420,MPS220,Visual Storytelling,3,A
+202395219,202420,COM210,Introduction to Media Storytelling,3,A-
+202395219,202420,TCC375,Planning and Promotion for Events and Festivals,3,A-
+202395219,202420,COM240,Media Law and Ethics,3,A-
+202395219,202420,GEN110,Data Management and Analysis,3,A
+202395219,202510,MPS321,Video Production,3,B+
+202395219,202510,MPS241,Audio Production,3,A
+202395219,202510,ARM375,Public Speaking and Professional Presentation in Arabic,3,A-
+202395219,202510,COM212,Digital Storytelling,3,A
+202395219,202510,ISC383,Introduction to Social Media,3,A
+202395219,202520,COM360,Applied Media Research and Analysis,3,A
+202395219,202520,MPS421,Advanced Media Production,3,A-
+202395219,202520,ARM340,Media Storytelling in Arabic II,3,A
+202395219,202520,COM209,Foundations in Media Writing,3,A-
+202395219,202520,HSS101,The Big Questions,3,C
+202449226,202410,ART121,Fundamentals of Art & Design Studies,3,D
+202449226,202410,FYE140,Critical Analysis and Composition,3,B+
+202449226,202410,FYE110,Reasoning with Data,3,B+
+202449226,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,D+
+202449226,202410,FYE120,Islamic Culture,3,B+
+202449226,202420,FYE105,Workplace Readiness and Professional Skills,3,D
+202449226,202420,FYE126,Contemporary Emirati Studies,3,B+
+202449226,202420,FYE146,Arabic Concepts for Non-Native Speakers,3,B+
+202449226,202420,FYE155,Digital Humanities,3,C-
+202449226,202420,FYE195,Artificial Intelligence Essentials and Applications,3,B-
+202449226,202510,ART205,Art Foundations,3,B-
+202449226,202510,ART201,Principles of Design,3,D
+202449226,202510,ART221,Research Methods for Artists and Designers,3,B-
+202449226,202510,ART223,History of Visual Culture II,3,D+
+202449226,202510,ART251,Basic Design,3,C+
+202449226,202520,AVA310,Drawing I,3,C
+202449226,202520,AAH324,Contemporary Islamic Art and Architecture,3,B-
+202449226,202520,AAH322,History of Islamic Art and Architecture,3,C+
+202449226,202520,ART220,Introduction to Art History,3,D+
+202449226,202520,AGD351,Graphic Design I,3,B
+202354247,202310,ART121,Fundamentals of Art & Design Studies,3,B
+202354247,202310,FYE140,Critical Analysis and Composition,3,B-
+202354247,202310,FYE110,Reasoning with Data,3,B
+202354247,202310,FYE150,Fundamentals of Innovation and Entrepreneurship,3,B+
+202354247,202310,FYE120,Islamic Culture,3,B
+202354247,202320,FYE105,Workplace Readiness and Professional Skills,3,B-
+202354247,202320,FYE125,Contemporary Emirati Studies (in Arabic),3,B+
+202354247,202320,FYE146,Arabic Concepts for Non-Native Speakers,3,B+
+202354247,202320,FYE155,Digital Humanities,3,A
+202354247,202320,FYE195,Artificial Intelligence Essentials and Applications,3,A
+202354247,202410,ART205,Art Foundations,3,B+
+202354247,202410,ART201,Principles of Design,3,A
+202354247,202410,ART221,Research Methods for Artists and Designers,3,B
+202354247,202410,ART223,History of Visual Culture II,3,A
+202354247,202410,ART251,Basic Design,3,C
+202354247,202420,AVA310,Drawing I,3,A
+202354247,202420,AAH422,Contemporary Art Theory,3,B
+202354247,202420,AAH322,History of Islamic Art and Architecture,3,A
+202354247,202420,ART220,Introduction to Art History,3,A-
+202354247,202420,AGD351,Graphic Design I,3,C
+202354247,202510,AGD359,Information Design,3,B+
+202354247,202510,AVA309,Digital Illustration,3,A-
+202354247,202510,AGD352,Graphic Design II,3,B+
+202354247,202510,AGD356,Typography I,3,A
+202354247,202510,AGD357,Designing for the Web I,3,C+
+202354247,202520,AGD451,Graphic Design III,3,B+
+202354247,202520,AGD452,Packaging Design,3,B
+202354247,202520,AGD459,New Media Design,3,C
+202354247,202520,AAH324,Contemporary Islamic Art and Architecture,3,A
+202354247,202520,MTH121,Calculus I,3,A-
+202375254,202310,ART121,Fundamentals of Art & Design Studies,3,C
+202375254,202310,FYE140,Critical Analysis and Composition,3,C-
+202375254,202310,FYE110,Reasoning with Data,3,C
+202375254,202310,FYE150,Fundamentals of Innovation and Entrepreneurship,3,B-
+202375254,202310,FYE120,Islamic Culture,3,C
+202375254,202320,FYE105,Workplace Readiness and Professional Skills,3,B
+202375254,202320,FYE126,Contemporary Emirati Studies,3,B-
+202375254,202320,FYE145,Arabic Concepts for Native Speakers,3,C-
+202375254,202320,FYE155,Digital Humanities,3,D
+202375254,202320,FYE195,Artificial Intelligence Essentials and Applications,3,C+
+202375254,202410,ART205,Art Foundations,3,C
+202375254,202410,ART201,Principles of Design,3,C-
+202375254,202410,ART221,Research Methods for Artists and Designers,3,B-
+202375254,202410,ART223,History of Visual Culture II,3,A-
+202375254,202410,ART251,Basic Design,3,C
+202375254,202420,AVA310,Drawing I,3,C
+202375254,202420,AAH325,History of Design,3,C
+202375254,202420,AAH322,History of Islamic Art and Architecture,3,C
+202375254,202420,ART220,Introduction to Art History,3,C
+202375254,202420,AGD351,Graphic Design I,3,C
+202375254,202510,AGD359,Information Design,3,C-
+202375254,202510,AVA309,Digital Illustration,3,C
+202375254,202510,AGD352,Graphic Design II,3,C
+202375254,202510,AGD356,Typography I,3,C-
+202375254,202510,AGD357,Designing for the Web I,3,C
+202375254,202520,AGD451,Graphic Design III,3,C
+202375254,202520,AGD452,Packaging Design,3,D+
+202375254,202520,AGD459,New Media Design,3,C
+202375254,202520,AAH425,History of Graphic Design,3,B+
+202375254,202520,GEN150,Positivity and Wellbeing,3,D
+202548261,202510,ART121,Fundamentals of Art & Design Studies,3,C
+202548261,202510,FYE140,Critical Analysis and Composition,3,C
+202548261,202510,FYE110,Reasoning with Data,3,C+
+202548261,202510,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A-
+202548261,202510,FYE120,Islamic Culture,3,C
+202548261,202520,FYE105,Workplace Readiness and Professional Skills,3,D
+202548261,202520,FYE126,Contemporary Emirati Studies,3,C-
+202548261,202520,FYE146,Arabic Concepts for Non-Native Speakers,3,B-
+202548261,202520,FYE155,Digital Humanities,3,B+
+202548261,202520,FYE195,Artificial Intelligence Essentials and Applications,3,C+
+202573268,202510,FYE100,Academic Foundations and Development,3,C+
+202573268,202510,FYE110,Reasoning with Data,3,D
+202573268,202510,FYE120,Islamic Culture,3,C+
+202573268,202510,FYE140,Critical Analysis and Composition,3,B
+202573268,202510,FYE150,Fundamentals of Innovation and Entrepreneurship,3,C+
+202573268,202520,FYE105,Workplace Readiness and Professional Skills,3,C-
+202573268,202520,FYE126,Contemporary Emirati Studies,3,D
+202573268,202520,FYE145,Arabic Concepts for Native Speakers,3,C
+202573268,202520,FYE155,Digital Humanities,3,C-
+202573268,202520,FYE195,Artificial Intelligence Essentials and Applications,3,C
+202485275,202410,FYE100,Academic Foundations and Development,3,B
+202485275,202410,FYE110,Reasoning with Data,3,A
+202485275,202410,FYE120,Islamic Culture,3,A-
+202485275,202410,FYE140,Critical Analysis and Composition,3,B
+202485275,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,C
+202485275,202420,FYE105,Workplace Readiness and Professional Skills,3,A
+202485275,202420,FYE125,Contemporary Emirati Studies (in Arabic),3,B
+202485275,202420,FYE145,Arabic Concepts for Native Speakers,3,A
+202485275,202420,FYE155,Digital Humanities,3,B+
+202485275,202420,FYE195,Artificial Intelligence Essentials and Applications,3,B+
+202485275,202510,PSY212,Introduction to Psychology,3,A
+202485275,202510,PSY207,Developmental Psychology,3,B
+202485275,202510,PSY310,Introduction to Counseling,3,A
+202485275,202510,ENG222,English in the Professions I,3,B
+202485275,202510,ARA235,Principles of Translation,3,B-
+202485275,202520,PSY363,Social Psychology I,3,B
+202485275,202520,PSY325,Cognitive Psychology,3,C-
+202485275,202520,ARA345,Advanced Arabic Skills,3,C
+202485275,202520,MTH121,Calculus I,3,A
+202485275,202520,MKT340,Social Entrepreneurship and Shared Value,3,C
+202418289,202410,FYE100,Academic Foundations and Development,3,B
+202418289,202410,FYE110,Reasoning with Data,3,B
+202418289,202410,FYE120,Islamic Culture,3,A
+202418289,202410,FYE140,Critical Analysis and Composition,3,A
+202418289,202410,FYE150,Fundamentals of Innovation and Entrepreneurship,3,A-
+202418289,202420,FYE105,Workplace Readiness and Professional Skills,3,A
+202418289,202420,FYE126,Contemporary Emirati Studies,3,C+
+202418289,202420,FYE145,Arabic Concepts for Native Speakers,3,B
+202418289,202420,FYE155,Digital Humanities,3,A
+202418289,202420,FYE195,Artificial Intelligence Essentials and Applications,3,A-
+202418289,202510,PSY212,Introduction to Psychology,3,A
+202418289,202510,PSY207,Developmental Psychology,3,B+
+202418289,202510,PSY310,Introduction to Counseling,3,A
+202418289,202510,ENG222,English in the Professions I,3,A
+202418289,202510,ARA211,Masterpieces of Arabic Literature,3,A
+202418289,202520,PSY363,Social Psychology I,3,A
+202418289,202520,PSY325,Cognitive Psychology,3,B+
+202418289,202520,ARA345,Advanced Arabic Skills,3,A-
+202418289,202520,HSS353,Politics of Identity,3,B-
+202418289,202520,ISU202,Principles of Sustainability,3,A
+202392296,202310,FYE100,Academic Foundations and Development,3,B+
+202392296,202310,FYE110,Reasoning with Data,3,B
+202392296,202310,FYE120,Islamic Culture,3,B
+202392296,202310,FYE140,Critical Analysis and Composition,3,B+
+202392296,202310,FYE150,Fundamentals of Innovation and Entrepreneurship,3,C
+202392296,202320,FYE105,Workplace Readiness and Professional Skills,3,A-
+202392296,202320,FYE125,Contemporary Emirati Studies (in Arabic),3,B
+202392296,202320,FYE145,Arabic Concepts for Native Speakers,3,C-
+202392296,202320,FYE155,Digital Humanities,3,B
+202392296,202320,FYE195,Artificial Intelligence Essentials and Applications,3,B
+202392296,202410,PSY212,Introduction to Psychology,3,B+
+202392296,202410,PSY207,Developmental Psychology,3,A
+202392296,202410,PSY310,Introduction to Counseling,3,A
+202392296,202410,ENG222,English in the Professions I,3,A-
+202392296,202410,HSS101,The Big Questions,3,A-
+202392296,202420,PSY363,Social Psychology I,3,B+
+202392296,202420,PSY325,Cognitive Psychology,3,A-
+202392296,202420,ARA345,Advanced Arabic Skills,3,B+
+202392296,202420,ANT261,Introduction to Culture and Society,3,A-
+202392296,202420,ENG322,Creative Writing: Experiments in Genre,3,A-
+202392296,202510,PSY330,Personality and Individual Differences,3,B+
+202392296,202510,PSY340,Mental Health and Psychological Disorders,3,B
+202392296,202510,PSY321,Biological Basis for Behavior,3,B
+202392296,202510,MKT335,Consumer Behavior,3,A
+202392296,202510,MTH121,Calculus I,3,B
+202392296,202520,PSY366,Research Methods I,3,A-
+202392296,202520,PSY371,Organizational Psychology,3,B+
+202392296,202520,PSY375,Health Psychology,3,B+
+202392296,202520,PSY410,Individual and Family Assessment,3,A
+202392296,202520,IMT375,Human Computer Interaction,3,B
+202379303,202310,FYE100,Academic Foundations and Development,3,B
+202379303,202310,FYE110,Reasoning with Data,3,D
+202379303,202310,FYE120,Islamic Culture,3,B
+202379303,202310,FYE140,Critical Analysis and Composition,3,D
+202379303,202310,FYE150,Fundamentals of Innovation and Entrepreneurship,3,B+
+202379303,202320,FYE105,Workplace Readiness and Professional Skills,3,B-
+202379303,202320,FYE125,Contemporary Emirati Studies (in Arabic),3,C+
+202379303,202320,FYE145,Arabic Concepts for Native Speakers,3,B
+202379303,202320,FYE155,Digital Humanities,3,B-
+202379303,202320,FYE195,Artificial Intelligence Essentials and Applications,3,B-
+202379303,202410,PSY212,Introduction to Psychology,3,B+
+202379303,202410,PSY207,Developmental Psychology,3,C
+202379303,202410,PSY310,Introduction to Counseling,3,B+
+202379303,202410,ENG222,English in the Professions I,3,D+
+202379303,202410,MKT340,Social Entrepreneurship and Shared Value,3,C
+202379303,202420,PSY363,Social Psychology I,3,C
+202379303,202420,PSY325,Cognitive Psychology,3,B
+202379303,202420,ARA345,Advanced Arabic Skills,3,C
+202379303,202420,ENG331,Introduction to Linguistics,3,C+
+202379303,202420,GEN150,Positivity and Wellbeing,3,B-
+202379303,202510,PSY330,Personality and Individual Differences,3,C+
+202379303,202510,PSY340,Mental Health and Psychological Disorders,3,B
+202379303,202510,PSY321,Biological Basis for Behavior,3,C
+202379303,202510,ENV240,Principles of Environmental Sustainability,3,B-
+202379303,202510,ISC251,Introduction to Integrated Strategic Communication,3,C+
+202379303,202520,PSY366,Research Methods I,3,B
+202379303,202520,PSY371,Organizational Psychology,3,C+
+202379303,202520,PSY375,Health Psychology,3,C
+202379303,202520,PSY410,Individual and Family Assessment,3,B
+202379303,202520,MKT335,Consumer Behavior,3,B

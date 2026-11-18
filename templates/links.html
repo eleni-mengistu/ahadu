@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, page_head %}
+{% block content %}
+{{ page_head("Advisor, people & news", "Everyone you may need this term, in one place") }}
+{% set adv = student.advisor %}
+<section class="hero p-5 sm:p-6 mb-5">
+  <div class="relative z-10 flex flex-wrap items-center justify-between gap-4">
+    <div><div class="text-sm hero-soft">Your academic advisor</div><h2 class="text-2xl font-bold m-0 mt-0.5">{{ student.advisor_name }}</h2>
+      <div class="text-sm mt-1 hero-soft">{{ adv.college }}{% if adv.office %} · Office {{ adv.office }}{% endif %}{% if adv.phone_ext %} · Ext. {{ adv.phone_ext }}{% endif %}</div></div>
+    {% if adv.email %}<a class="btn" style="background:#fff;color:#2b181e" href="mailto:{{ adv.email }}">{{ icon("mail", 16) }}Email advisor</a>{% endif %}
+  </div>
+</section>
+
+<div class="grid lg:grid-cols-3 gap-4 items-start">
+  <section class="lg:col-span-2">
+    <h2 class="text-lg font-semibold mb-3">Your instructors</h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      {% for p in people %}
+      <article class="card p-4">
+        <div class="font-semibold">{{ p.full_name }}</div>
+        <div class="muted text-xs">{{ p.teaches|join(", ") }}</div>
+        <div class="text-sm mt-2 tnum">Office {{ p.office }} · Ext. {{ p.phone_ext }}</div>
+        <a class="link mt-1" href="mailto:{{ p.email }}">{{ icon("mail", 14) }}{{ p.email }}</a>
+      </article>
+      {% else %}<p class="muted text-sm">No instructors this term.</p>{% endfor %}
+    </div>
+  </section>
+  <section>
+    <h2 class="text-lg font-semibold mb-3">University news</h2>
+    <div class="card px-5 py-2">
+      {% for n in all_news %}
+      <article class="py-3" {% if not loop.first %}style="border-top:1px solid rgb(var(--line))"{% endif %}>
+        <div class="label">{{ n.date|nice_date }} · {{ n.category }}</div>
+        <div class="text-sm font-semibold mt-0.5">{{ n.title }}</div>
+        <p class="muted text-xs m-0 mt-1 leading-relaxed">{{ n.summary }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock %}

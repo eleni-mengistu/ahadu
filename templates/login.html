@@ -1,0 +1,44 @@
+{% from "_ui.html" import icon %}
+<!doctype html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+  <title>Sign in | ZU Student Access Portal</title>
+  {% include "_head.html" %}
+  <script src="/static/vendor/alpine.js" defer></script>
+</head>
+<body>
+<main class="login">
+  <section class="login-art">
+    <div class="display font-bold login-title">Student Access Portal</div>
+    <img class="login-quote" src="/static/zayed-quote.jpg" alt="Education is like a lantern which lights your way in a dark alley. H.H Late Sheikh Zayed bin Sultan Al Nahyan, Former President of the United Arab Emirates">
+    <div class="text-xs opacity-80 login-points">{{ current_term_name }}</div>
+  </section>
+
+  <section class="login-side">
+    <a class="btn btn-ghost login-lang" lang="{{ 'en' if lang == 'ar' else 'ar' }}" href="/lang/{{ 'en' if lang == 'ar' else 'ar' }}?next=/login"><span data-raw>{{ "English" if lang == "ar" else "العربية" }}</span></a>
+    <form method="post" action="/login" class="w-full max-w-sm" x-data="{ show: false, busy: false }" @submit="busy = true">
+      <img class="login-logo" src="/static/zu-logo-clear.png" alt="Zayed University">
+      <h2 class="text-2xl sm:text-3xl font-bold m-0">Welcome back</h2>
+      <p class="muted mt-1 mb-6 text-sm">Sign in with your student ID and password.</p>
+
+      {% if error %}
+      <div class="alert-row alert-danger mb-4" role="alert">{{ icon("alert") }}<div class="text-sm font-medium">{{ error }}</div></div>
+      {% endif %}
+
+      <label class="block mb-4">
+        <span class="block text-sm font-semibold mb-1.5">Student ID</span>
+        <input class="input" name="student_id" value="{{ student_id }}" inputmode="numeric" autocomplete="username" placeholder="e.g. 2023XXXXX" required {% if not student_id %}autofocus{% endif %}>
+      </label>
+      <label class="block mb-5">
+        <span class="block text-sm font-semibold mb-1.5">Password</span>
+        <span class="relative block">
+          <input class="input password-input" name="password" :type="show ? 'text' : 'password'" type="password" autocomplete="current-password" placeholder="Your password" required {% if student_id %}autofocus{% endif %}>
+          <button type="button" class="link password-toggle" @click="show = !show" x-text="show ? 'Hide' : 'Show'">Show</button>
+        </span>
+      </label>
+      <button class="btn btn-primary w-full" type="submit" :disabled="busy"><span x-text="busy ? 'Signing in…' : 'Sign in'">Sign in</span>{{ icon("arrow", 16) }}</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>

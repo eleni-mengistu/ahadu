@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, page_head, level_chip, empty %}
+{% block content %}
+{{ page_head("My courses", "Marks so far, attendance and final exam for each class") }}
+{% if not classes %}{{ empty("No courses this term", "You are not registered in any class.", "book") }}{% endif %}
+<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
+  {% for c in classes %}
+  {% set sc = scores[c.crn] %}{% set at = attendance_by_crn.get(c.crn) %}{% set ex = exam_by_crn.get(c.crn) %}
+  <a href="/courses/{{ c.crn }}" class="card p-5 c{{ c.color }}">
+    <div class="flex gap-3"><span class="color-bar"></span><div class="min-w-0"><div class="display font-bold">{{ c.code }}</div><div class="text-sm leading-snug">{{ c.title }}</div><div class="muted text-xs mt-1">{{ c.instructor_name }}</div></div></div>
+    <div class="grid grid-cols-2 gap-3 mt-4">
+      <div><div class="label">Marks so far</div><div class="display tnum text-xl font-bold">{% if sc.average is not none %}{{ "%.1f"|format(sc.average) }}%{% else %}–{% endif %}</div></div>
+      <div><div class="label">Absences</div><div class="display tnum text-xl font-bold">{{ at.percent_label if at else "–" }}</div></div>
+    </div>
+    <div class="flex flex-wrap items-center gap-2 mt-3">{% if at %}{{ level_chip(at) }}{% endif %}<span class="chip chip-plain tnum">{% if ex %}Exam {{ ex.date_label }}{% else %}No final exam listed{% endif %}</span></div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

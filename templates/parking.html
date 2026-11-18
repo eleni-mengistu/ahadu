@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, page_head, empty %}
+{% block content %}
+<div class="flex items-start justify-between gap-3">
+  {{ page_head("Smart parking", "A parking suggestion based on when and where you usually arrive") }}
+  <span class="chip chip-info">Preview</span>
+</div>
+{% if not parking %}
+  {{ empty("No entry records yet", "Parking suggestions appear after your first campus visits.", "car") }}
+{% else %}
+{% set best = parking.best %}
+<section class="hero p-5 sm:p-7 mb-4" x-data="{ held: false }">
+  <div class="relative z-10 flex flex-wrap items-center justify-between gap-5">
+    <div>
+      <div class="text-sm hero-soft">Suggested for you</div>
+      <h2 class="text-4xl font-bold m-0 mt-1">{{ best.name }}</h2>
+      <p class="m-0 mt-1 text-sm hero-soft">Enter through {{ best.gate }}</p>
+      <p class="m-0 mt-3 text-sm">Best match for your usual {{ parking.usual }} arrival.</p>
+    </div>
+    <div class="parking-free">
+      <div class="display text-5xl font-bold leading-none">{{ best.free }}</div>
+      <div class="text-sm mt-1 hero-soft">free spaces</div>
+      <button class="btn parking-hold" x-show="!held" @click="held = true">{{ icon("car", 17) }}<span>Hold this space</span></button>
+      <div x-show="held" x-cloak class="mt-3 text-sm font-semibold"><span class="flex items-center justify-center gap-1">{{ icon("tick", 15) }}<span>Space held for 20 minutes</span></span><button class="parking-cancel" @click="held = false">Cancel</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="grid grid-cols-3 gap-3 sm:gap-4 mb-4" aria-label="Your arrival pattern">
+  <div class="card p-4"><div class="label">Usual arrival</div><div class="display text-2xl font-bold mt-1 tnum">{{ parking.usual }}</div></div>
+  <div class="card p-4"><div class="label">Most used gate</div><div class="font-semibold mt-1 text-sm sm:text-base">{{ parking.favorite }}</div></div>
+  <div class="card p-4"><div class="label">Visits analysed</div><div class="display text-2xl font-bold mt-1">{{ parking.visits }}</div></div>
+</section>
+
+<div class="grid lg:grid-cols-5 gap-4 items-start">
+  <section class="lg:col-span-3">
+    <h2 class="text-lg font-semibold mt-0 mb-3">Parking zones</h2>
+    <div class="space-y-3">
+      {% for z in parking.zones %}
+      <article class="card p-4 {% if z.best %}zone-best{% endif %}">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+          <h3 class="m-0 text-lg font-bold">{{ z.name }}</h3>
+          {% if z.best %}<span class="chip chip-good">{{ icon("tick", 13) }}Best match</span>{% endif %}
+          {% if z.favorite %}<span class="chip chip-plain">Your usual gate</span>{% endif %}
+          <span class="ml-auto text-sm font-semibold">{{ z.free }} free spaces</span>
+        </div>
+        <div class="muted text-xs mt-0.5">{{ z.gate }} · of {{ z.capacity }} spaces</div>
+        <div class="meter mt-3" role="img" aria-label="{{ z.percent }}% free"><span class="zone-{{ z.level }}" style="width:{{ z.percent }}%"></span></div>
+        <div class="flex justify-between text-xs mt-1.5"><span class="zone-text-{{ z.level }} font-semibold">{{ "Plenty of space" if z.level == "good" else "Filling up" if z.level == "warn" else "Almost full" }}</span><span class="muted">{{ z.percent }}% free</span></div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="card p-5 lg:col-span-2">
+    <h2 class="card-title">Campus arrivals by time</h2>
+    <div class="label">Taken from campus entry logs</div>
+    <div class="arrivals" role="img" aria-label="Campus arrivals by time">
+      {% for b in parking.bins %}
+      <div class="arrival" title="{{ b.label }}: {{ b.count }} arrivals">
+        <span class="arrival-value">{% if b.mine %}You{% elif b.peak %}Busiest{% endif %}</span>
+        <span class="arrival-track"><i class="{% if b.mine %}mine{% endif %}" style="height:{{ b.height }}%"></i></span>
+        <span class="arrival-label tnum">{{ b.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="text-sm font-medium mt-3 mb-0">Quietest arrival time: {{ parking.quiet.label }}</p>
+  </section>
+</div>
+<p class="muted text-xs mt-4">Arrival times come from the real entry logs. Parking zones and free spaces are simulated for this preview.</p>
+{% endif %}
+{% endblock %}

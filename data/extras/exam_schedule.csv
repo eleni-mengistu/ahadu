@@ -1,0 +1,117 @@
+﻿crn,course_code,course_title,term_code,exam_date,start_time,end_time,room,campus
+20101,CIT466,Data Analytics,202610,2026-12-01,11:30,13:30,AUH-Exam Hall 2,AUH
+20106,CIT480,IT Entrepreneurship,202610,2026-12-07,11:30,13:30,AUH-Exam Hall 2,AUH
+20108,IMT376,"Game Design, Prototyping and Programming",202610,2026-11-30,11:30,13:30,AUH-Exam Hall 1,AUH
+20109,INS377,IT Project Management,202610,2026-11-30,08:30,10:30,AUH-Exam Hall 2,AUH
+20112,ANT261,Introduction to Culture and Society,202610,2026-12-08,08:30,10:30,AUH-Exam Hall 4,AUH
+20117,ACC203,Managerial Accounting,202610,2026-11-30,08:30,10:30,DXB-Exam Hall 1,DXB
+20120,FIN308,Introduction to Finance,202610,2026-12-04,11:30,13:30,DXB-Exam Hall 1,DXB
+20124,ARA345,Advanced Arabic Skills,202610,2026-12-10,11:30,13:30,DXB-Exam Hall 4,DXB
+20130,ACC311,Intermediate Accounting I,202610,2026-12-04,08:30,10:30,DXB-Exam Hall 3,DXB
+20137,ECN202,Understanding Macroeconomics,202610,2026-12-07,08:30,10:30,DXB-Exam Hall 4,DXB
+20144,COM200,"Communication, Media and Society",202610,2026-12-03,11:30,13:30,AUH-Exam Hall 3,AUH
+20146,COM230,Professional and Public Speaking,202610,2026-12-02,11:30,13:30,AUH-Exam Hall 3,AUH
+20150,ARM240,Media Storytelling in Arabic I,202610,2026-11-30,14:30,16:30,AUH-Exam Hall 4,AUH
+20155,ENG240,Critical Thinking and Argumentative Writing,202610,2026-12-02,08:30,10:30,AUH-Exam Hall 3,AUH
+20156,ISC251,Introduction to Integrated Strategic Communication,202610,2026-12-04,11:30,13:30,AUH-Exam Hall 4,AUH
+20159,PSY330,Personality and Individual Differences,202610,2026-12-01,08:30,10:30,DXB-Exam Hall 4,DXB
+20161,PSY340,Mental Health and Psychological Disorders,202610,2026-12-04,11:30,13:30,DXB-Exam Hall 2,DXB
+20163,PSY321,Biological Basis for Behavior,202610,2026-12-02,08:30,10:30,DXB-Exam Hall 1,DXB
+20166,IMT375,Human Computer Interaction,202610,2026-12-02,08:30,10:30,DXB-Exam Hall 3,DXB
+20172,MPS220,Visual Storytelling,202610,2026-12-10,14:30,16:30,DXB-Exam Hall 3,DXB
+20175,PSY451,Seminar in Applied Psychology,202610,2026-12-01,08:30,10:30,AUH-Exam Hall 2,AUH
+20179,PSY463,Positive Psychology,202610,2026-12-10,08:30,10:30,AUH-Exam Hall 2,AUH
+20184,MTH121,Calculus I,202610,2026-12-07,14:30,16:30,AUH-Exam Hall 3,AUH
+20185,AGD359,Information Design,202610,2026-12-10,14:30,16:30,DXB-Exam Hall 2,DXB
+20190,AVA340,Photography I,202610,2026-12-07,11:30,13:30,DXB-Exam Hall 1,DXB
+20191,AGD352,Graphic Design II,202610,2026-12-04,11:30,13:30,DXB-Exam Hall 3,DXB
+20194,AGD356,Typography I,202610,2026-12-02,11:30,13:30,DXB-Exam Hall 2,DXB
+20197,AAH322,History of Islamic Art and Architecture,202610,2026-12-02,11:30,13:30,DXB-Exam Hall 2,DXB
+20203,FYE100,Academic Foundations and Development,202610,2026-12-08,08:30,10:30,AUH-Exam Hall 1,AUH
+20210,FYE110,Reasoning with Data,202610,2026-12-10,14:30,16:30,AUH-Exam Hall 3,AUH
+20216,FYE120,Islamic Culture,202610,2026-12-09,11:30,13:30,AUH-Exam Hall 3,AUH
+20221,FYE140,Critical Analysis and Composition,202610,2026-12-02,11:30,13:30,AUH-Exam Hall 1,AUH
+20223,FYE150,Fundamentals of Innovation and Entrepreneurship,202610,2026-12-07,14:30,16:30,AUH-Exam Hall 1,AUH
+20228,ACC412,Contemporary Topics in Financial Accounting,202610,2026-12-10,08:30,10:30,AUH-Exam Hall 1,AUH
+20233,ACC419,Special Topics in Accounting,202610,2026-12-08,08:30,10:30,AUH-Exam Hall 4,AUH
+20236,ACC404,Corporate Taxation,202610,2026-12-09,08:30,10:30,AUH-Exam Hall 1,AUH
+20241,MGT401,Business Leadership,202610,2026-12-09,08:30,10:30,AUH-Exam Hall 3,AUH
+20248,FLS361,World Cinemas,202610,2026-12-02,11:30,13:30,AUH-Exam Hall 4,AUH
+20250,CIT210,Essentials of IT and Infrastructure,202610,2026-12-04,14:30,16:30,AUH-Exam Hall 2,AUH
+20255,MTH215,Computing Foundations,202610,2026-12-03,11:30,13:30,AUH-Exam Hall 3,AUH
+20258,CIT285,Technical Communication,202610,2026-12-07,11:30,13:30,AUH-Exam Hall 4,AUH
+20259,SEC235,Information Security Foundations,202610,2026-12-02,08:30,10:30,AUH-Exam Hall 4,AUH
+20265,ARA345,Advanced Arabic Skills,202610,2026-12-03,08:30,10:30,AUH-Exam Hall 4,AUH
+20266,SWE320,Object Oriented Programming,202610,2026-12-04,11:30,13:30,DXB-Exam Hall 2,DXB
+20267,SWE321,Object Oriented Programming Lab,202610,2026-12-08,08:30,10:30,DXB-Exam Hall 2,DXB
+20269,SWE245,Web Development,202610,2026-12-03,08:30,10:30,DXB-Exam Hall 3,DXB
+20274,IMT340,Computer Graphics,202610,2026-12-10,08:30,10:30,DXB-Exam Hall 3,DXB
+20281,CIT315,Operating Systems,202610,2026-12-01,11:30,13:30,DXB-Exam Hall 2,DXB
+20287,FYE100,Academic Foundations and Development,202610,2026-12-04,14:30,16:30,DXB-Exam Hall 2,DXB
+20294,FYE110,Reasoning with Data,202610,2026-12-10,11:30,13:30,DXB-Exam Hall 3,DXB
+20301,FYE120,Islamic Culture,202610,2026-12-08,11:30,13:30,DXB-Exam Hall 2,DXB
+20305,FYE140,Critical Analysis and Composition,202610,2026-12-10,14:30,16:30,DXB-Exam Hall 3,DXB
+20308,FYE150,Fundamentals of Innovation and Entrepreneurship,202610,2026-12-02,14:30,16:30,DXB-Exam Hall 4,DXB
+20315,ACC412,Contemporary Topics in Financial Accounting,202610,2026-12-03,08:30,10:30,DXB-Exam Hall 2,DXB
+20319,ACC419,Special Topics in Accounting,202610,2026-12-08,11:30,13:30,DXB-Exam Hall 2,DXB
+20323,ACC404,Corporate Taxation,202610,2026-11-30,08:30,10:30,DXB-Exam Hall 2,DXB
+20327,MGT401,Business Leadership,202610,2026-12-02,14:30,16:30,DXB-Exam Hall 1,DXB
+20332,CHL100,Chinese Language Level 1,202610,2026-11-30,14:30,16:30,DXB-Exam Hall 2,DXB
+20338,INS260,Management of Information Systems,202610,2026-12-09,14:30,16:30,DXB-Exam Hall 1,DXB
+20340,MTH213,Business Statistics,202610,2026-12-07,11:30,13:30,DXB-Exam Hall 4,DXB
+20343,MTH212,Business Calculus,202610,2026-12-10,11:30,13:30,DXB-Exam Hall 1,DXB
+20350,ENG240,Critical Thinking and Argumentative Writing,202610,2026-12-04,08:30,10:30,DXB-Exam Hall 1,DXB
+20354,MGT209,Introduction to Management,202610,2026-11-30,08:30,10:30,DXB-Exam Hall 4,DXB
+20357,ACC203,Managerial Accounting,202610,2026-12-09,14:30,16:30,AUH-Exam Hall 3,AUH
+20362,FIN308,Introduction to Finance,202610,2026-12-09,08:30,10:30,AUH-Exam Hall 2,AUH
+20363,ACC311,Intermediate Accounting I,202610,2026-12-09,08:30,10:30,AUH-Exam Hall 1,AUH
+20365,ECN202,Understanding Macroeconomics,202610,2026-11-30,14:30,16:30,AUH-Exam Hall 1,AUH
+20372,MPS321,Video Production,202610,2026-12-09,08:30,10:30,AUH-Exam Hall 3,AUH
+20376,MPS241,Audio Production,202610,2026-12-10,11:30,13:30,AUH-Exam Hall 4,AUH
+20380,ARM375,Public Speaking and Professional Presentation in Arabic,202610,2026-12-10,14:30,16:30,AUH-Exam Hall 2,AUH
+20382,COM212,Digital Storytelling,202610,2026-12-07,14:30,16:30,AUH-Exam Hall 1,AUH
+20384,ISC383,Introduction to Social Media,202610,2026-12-04,08:30,10:30,AUH-Exam Hall 4,AUH
+20390,COM200,"Communication, Media and Society",202610,2026-12-01,14:30,16:30,DXB-Exam Hall 4,DXB
+20392,COM230,Professional and Public Speaking,202610,2026-12-02,11:30,13:30,DXB-Exam Hall 2,DXB
+20394,ARM240,Media Storytelling in Arabic I,202610,2026-12-04,08:30,10:30,DXB-Exam Hall 4,DXB
+20397,FLS361,World Cinemas,202610,2026-12-10,11:30,13:30,DXB-Exam Hall 2,DXB
+20403,MPS321,Video Production,202610,2026-11-30,08:30,10:30,DXB-Exam Hall 4,DXB
+20410,MPS241,Audio Production,202610,2026-12-04,14:30,16:30,DXB-Exam Hall 3,DXB
+20414,ARM375,Public Speaking and Professional Presentation in Arabic,202610,2026-12-07,08:30,10:30,DXB-Exam Hall 1,DXB
+20421,COM212,Digital Storytelling,202610,2026-11-30,11:30,13:30,DXB-Exam Hall 1,DXB
+20422,TCC375,Planning and Promotion for Events and Festivals,202610,2026-12-03,11:30,13:30,DXB-Exam Hall 1,DXB
+20427,COM209,Foundations in Media Writing,202610,2026-12-09,08:30,10:30,DXB-Exam Hall 2,DXB
+20433,MPS481,Zajel Student Media Production,202610,2026-12-01,08:30,10:30,DXB-Exam Hall 4,DXB
+20437,MPS331,Media and Cultural Criticism,202610,2026-12-02,11:30,13:30,AUH-Exam Hall 2,AUH
+20446,CHL100,Chinese Language Level 1,202610,2026-12-02,11:30,13:30,AUH-Exam Hall 4,AUH
+20452,GEN150,Positivity and Wellbeing,202610,2026-11-30,08:30,10:30,AUH-Exam Hall 1,AUH
+20453,AGD457,Designing for the Web II,202610,2026-12-10,14:30,16:30,DXB-Exam Hall 3,DXB
+20458,AGD357,Designing for the Web I,202610,2026-12-09,11:30,13:30,DXB-Exam Hall 2,DXB
+20460,ART121,Fundamentals of Art & Design Studies,202610,2026-12-03,11:30,13:30,AUH-Exam Hall 3,AUH
+20465,FYE150,Fundamentals of Innovation and Entrepreneurship,202610,2026-12-07,11:30,13:30,AUH-Exam Hall 4,AUH
+20468,ART121,Fundamentals of Art & Design Studies,202610,2026-11-30,08:30,10:30,DXB-Exam Hall 3,DXB
+20471,ADR492,Senior Research Seminar,202610,2026-12-02,11:30,13:30,DXB-Exam Hall 1,DXB
+20477,AGD314,Illustration and Visual Narrative,202610,2026-12-03,08:30,10:30,DXB-Exam Hall 3,DXB
+20483,AGD453,Graphic Design IV,202610,2026-12-10,08:30,10:30,DXB-Exam Hall 3,DXB
+20485,AGD456,Typography II,202610,2026-11-30,14:30,16:30,DXB-Exam Hall 4,DXB
+20490,ADR321,Material Culture of the United Arab Emirates,202610,2026-12-10,08:30,10:30,DXB-Exam Hall 3,DXB
+20493,ART205,Art Foundations,202610,2026-12-02,11:30,13:30,DXB-Exam Hall 1,DXB
+20497,ART201,Principles of Design,202610,2026-12-07,11:30,13:30,DXB-Exam Hall 4,DXB
+20504,ART221,Research Methods for Artists and Designers,202610,2026-12-10,08:30,10:30,DXB-Exam Hall 4,DXB
+20506,ART223,History of Visual Culture II,202610,2026-12-10,14:30,16:30,DXB-Exam Hall 2,DXB
+20507,ART251,Basic Design,202610,2026-12-07,11:30,13:30,DXB-Exam Hall 3,DXB
+20509,PSY212,Introduction to Psychology,202610,2026-11-30,11:30,13:30,DXB-Exam Hall 2,DXB
+20511,PSY207,Developmental Psychology,202610,2026-12-09,08:30,10:30,DXB-Exam Hall 4,DXB
+20518,PSY310,Introduction to Counseling,202610,2026-12-04,08:30,10:30,DXB-Exam Hall 1,DXB
+20524,ENG222,English in the Professions I,202610,2026-12-02,11:30,13:30,DXB-Exam Hall 1,DXB
+20527,HIS381,Legacy of Sheikh Zayed bin Sultan al Nahayan,202610,2026-12-04,14:30,16:30,DXB-Exam Hall 3,DXB
+20529,PSY330,Personality and Individual Differences,202610,2026-11-30,14:30,16:30,AUH-Exam Hall 4,AUH
+20533,PSY340,Mental Health and Psychological Disorders,202610,2026-12-04,08:30,10:30,AUH-Exam Hall 1,AUH
+20534,PSY321,Biological Basis for Behavior,202610,2026-12-03,14:30,16:30,AUH-Exam Hall 4,AUH
+20539,ENG360,Film and Literature,202610,2026-12-04,08:30,10:30,DXB-Exam Hall 3,DXB
+20540,PSY413,Psychological Interventions,202610,2026-11-30,14:30,16:30,AUH-Exam Hall 3,AUH
+20541,PSY425,"Cognitive Psychology II: Reasoning, Problem Solving and Decision Making",202610,2026-11-30,08:30,10:30,AUH-Exam Hall 4,AUH
+20544,PSY430,Cultural Psychology,202610,2026-12-01,11:30,13:30,AUH-Exam Hall 1,AUH
+20548,PSY466,Research Methods II,202610,2026-12-09,11:30,13:30,AUH-Exam Hall 3,AUH
+20554,CHL100,Chinese Language Level 1,202610,2026-11-30,08:30,10:30,AUH-Exam Hall 3,AUH
+20556,ANT362,Popular Cultures,202610,2026-12-04,14:30,16:30,AUH-Exam Hall 3,AUH

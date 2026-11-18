@@ -1,0 +1,4 @@
+﻿student_id,institution,external_course_code,external_course_title,zu_equivalent_code,zu_equivalent_title,credits,grade,term_awarded
+202412004,Gulf Coast Community College (fictional),ENG101,English Composition I,FYE140,Critical Analysis and Composition,3,TR,202410
+202412004,Gulf Coast Community College (fictional),MAT110,Quantitative Reasoning,FYE110,Reasoning with Data,3,TR,202410
+202412004,Gulf Coast Community College (fictional),PSY101,General Psychology,HSS101,The Big Questions,3,TR,202410

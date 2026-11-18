@@ -1,0 +1,122 @@
+{% from "_ui.html" import icon %}
+<!doctype html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+  <title>{{ title }} | ZU Student Access Portal</title>
+  {% include "_head.html" %}
+  <script src="/static/app.js" defer></script>
+  <script src="/static/vendor/alpine.js" defer></script>
+  <script type="application/json" id="palette-data">{{ palette|tojson }}</script>
+  <script type="application/json" id="assistant-config">{{ assistant_config|tojson }}</script>
+</head>
+<body x-data="shell()" @keydown.window="keys($event)">
+  <div class="scrim" x-show="drawer" x-cloak @click="drawer = false"></div>
+
+  <aside class="sidebar" :class="drawer && 'open'" aria-label="Main menu">
+    <a href="/" class="brand">
+      <span class="brand-mark"><img src="/static/zu-emblem.png" alt="Zayed University"></span>
+      <span><span class="display font-bold block leading-tight">Student Access</span><span class="text-xs side-muted">{{ current_term_name }}</span></span>
+    </a>
+    <nav class="side-scroll">
+      {% for group in nav %}
+      <div class="nav-group">{{ group.group }}</div>
+      {% for item in group["items"] %}
+      <a class="nav-link {% if active == item.key %}active{% endif %}" href="{{ item.href }}" {% if active == item.key %}aria-current="page"{% endif %}>
+        {{ icon(item.icon) }}<span>{{ item.label }}</span>
+        {% if item.badge %}<span class="nav-badge {{ item.badge_level }}">{{ item.badge }}</span>{% endif %}
+      </a>
+      {% endfor %}
+      {% endfor %}
+    </nav>
+    <div class="side-user">
+      <span class="side-avatar">{{ student.initials }}</span>
+      <span class="min-w-0"><span class="block text-sm font-semibold truncate">{{ student.full_name }}</span><span class="block text-xs tnum side-muted">{{ student.student_id }}</span></span>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar no-print">
+      <button class="icon-btn lg:hidden" @click="drawer = true" aria-label="Open menu">{{ icon("menu") }}</button>
+      <button class="search-btn" @click="openFinder()">{{ icon("search", 16) }}<span class="truncate">Find a page or course</span><span class="kbd hide-sm">Ctrl K</span></button>
+      <span class="ml-auto text-sm muted font-medium hide-md">{{ today_label }}</span>
+      <span class="ml-auto show-md"></span>
+
+      <div class="relative" @click.outside="appearance = false">
+        <button class="icon-btn" @click="appearance = !appearance" :aria-expanded="appearance" aria-label="Appearance" title="Appearance">{{ icon("palette") }}</button>
+        <div class="popover card" x-show="appearance" x-cloak>
+          <div class="label mb-2">Color theme</div>
+          <div class="flex gap-2 flex-wrap">
+            {% for a in accents %}
+            <button class="swatch" style="background:{{ a.color }}" :class="accent === '{{ a.key }}' && 'on'" @click="setAccent('{{ a.key }}')" :aria-pressed="accent === '{{ a.key }}'" aria-label="{{ a.label }}" title="{{ a.label }}"><span x-show="accent === '{{ a.key }}'">{{ icon("tick", 15) }}</span></button>
+            {% endfor %}
+          </div>
+          <div class="label mt-4 mb-2">Mode</div>
+          <div class="segmented">
+            <button :class="theme === 'light' && 'on'" @click="setTheme('light')">{{ icon("sun", 15) }}<span>Light</span></button>
+            <button :class="theme === 'dark' && 'on'" @click="setTheme('dark')">{{ icon("moon", 15) }}<span>Dark</span></button>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn-ghost lang-btn" lang="{{ 'en' if lang == 'ar' else 'ar' }}" href="/lang/{{ 'en' if lang == 'ar' else 'ar' }}?next={{ path|urlencode }}"><span data-raw>{{ "English" if lang == "ar" else "العربية" }}</span></a>
+      <form method="post" action="/logout" class="m-0" @submit="clearChat()"><button class="btn btn-ghost" style="min-height:40px" title="Sign out" aria-label="Sign out">{{ icon("logout", 16) }}<span class="hide-sm">Sign out</span></button></form>
+    </div>
+    <main class="content">{% block content %}{% endblock %}</main>
+  </div>
+
+  <nav class="bottom-nav no-print" aria-label="Quick menu">
+    <a href="/" class="{% if active == 'home' %}on{% endif %}">{{ icon("home", 20) }}Home</a>
+    <a href="/transcript" class="{% if active == 'transcript' %}on{% endif %}">{{ icon("file", 20) }}Grades</a>
+    <a href="/schedule" class="{% if active == 'schedule' %}on{% endif %}">{{ icon("calendar", 20) }}Schedule</a>
+    <a href="/attendance" class="{% if active == 'attendance' %}on{% endif %}">{{ icon("user", 20) }}Attendance</a>
+    <button @click="drawer = true">{{ icon("menu", 20) }}More</button>
+  </nav>
+
+  <div class="scrim" style="z-index:55" x-show="finder" x-cloak @click="finder = false"></div>
+  <div class="palette card" x-show="finder" x-cloak role="dialog" aria-label="Find a page or course">
+    <div class="flex items-center gap-2 px-3" style="border-bottom:1px solid rgb(var(--line))">
+      {{ icon("search", 17) }}
+      <input x-ref="finderInput" x-model="query" @input="cursor = 0" @keydown.down.prevent="move(1)" @keydown.up.prevent="move(-1)" @keydown.enter.prevent="go()" class="w-full border-0 bg-transparent py-3.5 text-[15px] outline-none" style="color:inherit;font:inherit" placeholder="Try “attendance” or a course code" aria-label="Search">
+    </div>
+    <div class="p-2">
+      <template x-for="(item, i) in results" :key="item.href">
+        <a class="palette-item" :class="i === cursor && 'on'" :href="item.href" @mouseenter="cursor = i"><span x-text="item.label"></span><span class="muted text-xs" x-text="item.hint"></span></a>
+      </template>
+      <p class="muted text-sm px-3 py-2 m-0" x-show="!results.length">Nothing matches that search.</p>
+    </div>
+  </div>
+
+  <div class="assistant no-print" x-data="assistant()">
+    <section class="chat card" x-show="open" x-cloak role="dialog" :aria-label="text.title">
+      <header class="chat-head">
+        <span class="chat-mark">{{ icon("spark", 18) }}</span>
+        <div class="min-w-0 flex-1"><div class="font-semibold text-sm" x-text="text.title"></div><div class="text-xs chat-sub" x-text="text.subtitle"></div></div>
+        <button class="chat-icon" x-show="messages.length" @click="reset()" :title="text.clear" :aria-label="text.clear">{{ icon("refresh", 16) }}</button>
+        <button class="chat-icon" @click="open = false" :title="text.close" :aria-label="text.close">{{ icon("close", 16) }}</button>
+      </header>
+      <div class="chat-log" x-ref="chatLog" aria-live="polite">
+        <div class="bubble bot" dir="auto" x-text="text.greeting"></div>
+        <div class="chat-chips" x-show="!messages.length">
+          <template x-for="chip in chips" :key="chip"><button class="chat-chip" @click="send(chip)" x-text="chip"></button></template>
+        </div>
+        <template x-for="(m, i) in messages" :key="i">
+          <div>
+            <div class="bubble" :class="m.role === 'user' ? 'me' : 'bot'" dir="auto" x-text="m.content"></div>
+            <div class="chat-links" x-show="m.links && m.links.length">
+              <template x-for="l in (m.links || [])" :key="l.href"><a class="chat-link" :href="l.href" :target="isExternal(l.href) ? '_blank' : null" :rel="isExternal(l.href) ? 'noopener' : null" x-text="l.label"></a></template>
+            </div>
+          </div>
+        </template>
+        <div class="bubble bot typing" x-show="busy"><i></i><i></i><i></i><span class="sr-only" x-text="text.thinking"></span></div>
+      </div>
+      <form class="chat-form" @submit.prevent="send()">
+        <input class="input" x-ref="chatInput" x-model="draft" maxlength="1500" dir="auto" :placeholder="text.placeholder" :aria-label="text.placeholder" autocomplete="off">
+        <button class="btn btn-primary chat-send" :disabled="busy || !draft.trim()" :aria-label="text.send" :title="text.send">{{ icon("send", 17) }}</button>
+      </form>
+    </section>
+    <button class="chat-fab" @click="toggle()" :aria-expanded="open" :aria-label="text.open" :title="text.open">
+      <span x-show="!open">{{ icon("spark", 24) }}</span><span x-show="open" x-cloak>{{ icon("close", 22) }}</span>
+    </button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% from "_ui.html" import icon, pdf_button, page_head %}
+{% block content %}
+<div class="flex items-start justify-between gap-3">{{ page_head("Holds", "What is on your account, and whether you can register") }}{{ pdf_button("holds") }}</div>
+
+{% if holds.blocked %}
+<section class="alert-row alert-danger mb-4 p-5" role="alert">{{ icon("lock", 24) }}
+  <div><div class="alert-title text-lg display">Registration is blocked</div>
+  <div class="text-sm mt-0.5">You cannot register for {{ ticket.term_name if ticket else "the next term" }} until {{ "this hold is" if holds.blocking|length == 1 else "these holds are" }} released: {{ holds.blocking|map(attribute="hold_type")|join(", ") }}.</div></div>
+</section>
+{% else %}
+<section class="alert-row alert-good mb-4 p-5">{{ icon("ok", 24) }}
+  <div><div class="alert-title text-lg display">You can register</div>
+  <div class="text-sm mt-0.5">{% if holds.active %}Your active {{ "hold does" if holds.active|length == 1 else "holds do" }} not block registration.{% else %}There are no active holds on your account.{% endif %}</div></div>
+</section>
+{% endif %}
+
+{% if ticket %}
+<section class="card p-4 sm:p-5 mb-5 flex flex-wrap items-center gap-x-8 gap-y-2">
+  <div class="flex items-center gap-2 font-semibold">{{ icon("ticket") }} {{ ticket.term_name }} time ticket</div>
+  <div class="text-sm"><span class="muted">Opens</span> <span class="font-semibold tnum">{{ ticket.start }}</span></div>
+  <div class="text-sm"><span class="muted">Closes</span> <span class="font-semibold tnum">{{ ticket.end }}</span></div>
+  {% if ticket.blocked %}<span class="chip chip-bad">Blocked</span>{% else %}<span class="chip chip-info">{{ ticket.countdown }}</span>{% endif %}
+</section>
+{% endif %}
+
+<h2 class="text-lg font-semibold mb-3">Active holds <span class="muted font-normal tnum">({{ holds.active|length }})</span></h2>
+{% if holds.active %}
+<div class="grid md:grid-cols-2 gap-3 mb-6">
+  {% for h in holds.active %}
+  <article class="card p-5">
+    <div class="flex items-start justify-between gap-3">
+      <div><div class="label">Hold type</div><h3 class="m-0 text-xl font-bold">{{ h.hold_type }}</h3></div>
+      {% if h.blocks %}<span class="chip chip-bad">{{ icon("lock", 13) }}Blocks registration</span>{% else %}<span class="chip chip-warn">Does not block</span>{% endif %}
+    </div>
+    <div class="label mt-3">Reason</div>
+    <p class="m-0 text-sm font-medium">{{ h.reason }}</p>
+    <dl class="grid grid-cols-2 gap-3 m-0 mt-3 text-sm">
+      <div><dt class="label">Resolve with</dt><dd class="m-0 font-semibold">{{ h.office }}</dd></div>
+      <div><dt class="label">Since</dt><dd class="m-0 font-semibold tnum">{{ h.start_label }}</dd></div>
+    </dl>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p class="muted text-sm mb-6">Nothing active. You are good to go.</p>
+{% endif %}
+
+{% if holds.released %}
+<h2 class="text-lg font-semibold mb-3">Released holds <span class="muted font-normal tnum">({{ holds.released|length }})</span></h2>
+<section class="card overflow-hidden"><div class="tbl-wrap"><table class="tbl">
+  <thead><tr><th>Type</th><th>Reason</th><th class="hide-sm">Office</th><th class="hide-sm">Started</th><th>Released</th></tr></thead>
+  <tbody>{% for h in holds.released %}<tr><td class="font-semibold">{{ h.hold_type }}</td><td>{{ h.reason }}</td><td class="hide-sm">{{ h.office }}</td><td class="hide-sm tnum whitespace-nowrap">{{ h.start_label }}</td><td class="tnum whitespace-nowrap"><span class="chip chip-good">{{ h.released_label }}</span></td></tr>{% endfor %}</tbody>
+</table></div></section>
+{% endif %}
+{% endblock %}
